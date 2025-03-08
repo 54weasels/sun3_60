@@ -1,0 +1,428 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr USLedger 17000 11000
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CPU_NXP_68000:68020 U?
+U 1 1 5E78FA73
+P 7700 1600
+F 0 "U?" H 7675 2381 50  0000 C CNN
+F 1 "68020" H 7675 2290 50  0000 C CNN
+F 2 "" H 7700 1600 50  0001 C CNN
+F 3 "" H 7700 1600 50  0001 C CNN
+	1    7700 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CPU_NXP_68000:68881 U?
+U 1 1 5E7EF15E
+P 5850 1500
+F 0 "U?" H 5850 1815 50  0000 C CNN
+F 1 "68881" H 5850 1724 50  0000 C CNN
+F 2 "" H 5850 1500 50  0001 C CNN
+F 3 "" H 5850 1500 50  0001 C CNN
+	1    5850 1500
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	4950 650  6700 650 
+Entry Wire Line
+	4950 4750 5050 4850
+Entry Wire Line
+	4950 1650 5050 1750
+Entry Wire Line
+	4950 1750 5050 1850
+Entry Wire Line
+	4950 1850 5050 1950
+Entry Wire Line
+	4950 1950 5050 2050
+Entry Wire Line
+	4950 2050 5050 2150
+Entry Wire Line
+	4950 2150 5050 2250
+Entry Wire Line
+	4950 2250 5050 2350
+Entry Wire Line
+	4950 2350 5050 2450
+Entry Wire Line
+	4950 2450 5050 2550
+Entry Wire Line
+	4950 2550 5050 2650
+Entry Wire Line
+	4950 2650 5050 2750
+Entry Wire Line
+	4950 2750 5050 2850
+Entry Wire Line
+	4950 2850 5050 2950
+Entry Wire Line
+	4950 2950 5050 3050
+Entry Wire Line
+	4950 3050 5050 3150
+Entry Wire Line
+	4950 3150 5050 3250
+Entry Wire Line
+	4950 3250 5050 3350
+Entry Wire Line
+	4950 3350 5050 3450
+Entry Wire Line
+	4950 3450 5050 3550
+Entry Wire Line
+	4950 3550 5050 3650
+Entry Wire Line
+	4950 3650 5050 3750
+Entry Wire Line
+	4950 3750 5050 3850
+Entry Wire Line
+	4950 3850 5050 3950
+Entry Wire Line
+	4950 3950 5050 4050
+Entry Wire Line
+	4950 4050 5050 4150
+Entry Wire Line
+	4950 4150 5050 4250
+Entry Wire Line
+	4950 4250 5050 4350
+Entry Wire Line
+	4950 4350 5050 4450
+Entry Wire Line
+	4950 4450 5050 4550
+Entry Wire Line
+	4950 4550 5050 4650
+Entry Wire Line
+	4950 4650 5050 4750
+Wire Wire Line
+	5050 1750 5300 1750
+Wire Wire Line
+	5050 1850 5300 1850
+Wire Wire Line
+	5050 1950 5300 1950
+Wire Wire Line
+	5050 2050 5300 2050
+Wire Wire Line
+	5050 2150 5300 2150
+Wire Wire Line
+	5050 2250 5300 2250
+Wire Wire Line
+	5050 2350 5300 2350
+Wire Wire Line
+	5050 2450 5300 2450
+Wire Wire Line
+	5050 2550 5300 2550
+Wire Wire Line
+	5050 2650 5300 2650
+Wire Wire Line
+	5050 2750 5300 2750
+Wire Wire Line
+	5050 2850 5300 2850
+Wire Wire Line
+	5050 2950 5300 2950
+Wire Wire Line
+	5050 3050 5300 3050
+Wire Wire Line
+	5050 3150 5300 3150
+Wire Wire Line
+	5050 3250 5300 3250
+Wire Wire Line
+	5050 3350 5300 3350
+Wire Wire Line
+	5050 3450 5300 3450
+Wire Wire Line
+	5050 3550 5300 3550
+Wire Wire Line
+	5050 3650 5300 3650
+Wire Wire Line
+	5050 3750 5300 3750
+Wire Wire Line
+	5050 3850 5300 3850
+Wire Wire Line
+	5050 3950 5300 3950
+Wire Wire Line
+	5050 4050 5300 4050
+Wire Wire Line
+	5050 4150 5300 4150
+Wire Wire Line
+	5050 4250 5300 4250
+Wire Wire Line
+	5050 4350 5300 4350
+Wire Wire Line
+	5050 4450 5300 4450
+Wire Wire Line
+	5050 4550 5300 4550
+Wire Wire Line
+	5050 4650 5300 4650
+Wire Wire Line
+	5050 4750 5300 4750
+Wire Wire Line
+	5050 4850 5300 4850
+Entry Wire Line
+	6700 1650 6800 1750
+Entry Wire Line
+	6700 1750 6800 1850
+Entry Wire Line
+	6700 1850 6800 1950
+Entry Wire Line
+	6700 1950 6800 2050
+Entry Wire Line
+	6700 2050 6800 2150
+Entry Wire Line
+	6700 2150 6800 2250
+Entry Wire Line
+	6700 2250 6800 2350
+Entry Wire Line
+	6700 2350 6800 2450
+Entry Wire Line
+	6700 2450 6800 2550
+Entry Wire Line
+	6700 2550 6800 2650
+Entry Wire Line
+	6700 2650 6800 2750
+Entry Wire Line
+	6700 2750 6800 2850
+Entry Wire Line
+	6700 2850 6800 2950
+Entry Wire Line
+	6700 2950 6800 3050
+Entry Wire Line
+	6700 3050 6800 3150
+Entry Wire Line
+	6700 3150 6800 3250
+Entry Wire Line
+	6700 3250 6800 3350
+Entry Wire Line
+	6700 3350 6800 3450
+Entry Wire Line
+	6700 3450 6800 3550
+Entry Wire Line
+	6700 3550 6800 3650
+Entry Wire Line
+	6700 3650 6800 3750
+Entry Wire Line
+	6700 3750 6800 3850
+Entry Wire Line
+	6700 3850 6800 3950
+Entry Wire Line
+	6700 3950 6800 4050
+Entry Wire Line
+	6700 4050 6800 4150
+Entry Wire Line
+	6700 4150 6800 4250
+Entry Wire Line
+	6700 4250 6800 4350
+Entry Wire Line
+	6700 4350 6800 4450
+Entry Wire Line
+	6700 4450 6800 4550
+Entry Wire Line
+	6700 4550 6800 4650
+Entry Wire Line
+	6700 4650 6800 4750
+Entry Wire Line
+	6700 4750 6800 4850
+Wire Wire Line
+	6800 4850 7050 4850
+Wire Wire Line
+	6800 4750 7050 4750
+Wire Wire Line
+	6800 4650 7050 4650
+Wire Wire Line
+	6800 4550 7050 4550
+Wire Wire Line
+	6800 4450 7050 4450
+Wire Wire Line
+	6800 4350 7050 4350
+Wire Wire Line
+	6800 4250 7050 4250
+Wire Wire Line
+	6800 4150 7050 4150
+Wire Wire Line
+	6800 4050 7050 4050
+Wire Wire Line
+	6800 3950 7050 3950
+Wire Wire Line
+	6800 3850 7050 3850
+Wire Wire Line
+	6800 3750 7050 3750
+Wire Wire Line
+	6800 3650 7050 3650
+Wire Wire Line
+	6800 3550 7050 3550
+Wire Wire Line
+	6800 3450 7050 3450
+Wire Wire Line
+	6800 3350 7050 3350
+Wire Wire Line
+	6800 3250 7050 3250
+Wire Wire Line
+	6800 3150 7050 3150
+Wire Wire Line
+	6800 3050 7050 3050
+Wire Wire Line
+	6800 2950 7050 2950
+Wire Wire Line
+	6800 2850 7050 2850
+Wire Wire Line
+	6800 2750 7050 2750
+Wire Wire Line
+	6800 2650 7050 2650
+Wire Wire Line
+	6800 2550 7050 2550
+Wire Wire Line
+	6800 2450 7050 2450
+Wire Wire Line
+	6800 2350 7050 2350
+Wire Wire Line
+	6800 2250 7050 2250
+Wire Wire Line
+	6800 2150 7050 2150
+Wire Wire Line
+	6800 2050 7050 2050
+Wire Wire Line
+	6800 1950 7050 1950
+Wire Wire Line
+	6800 1850 7050 1850
+Wire Wire Line
+	6800 1750 7050 1750
+Text Label 5100 1750 0    50   ~ 0
+D00
+Text Label 5100 1850 0    50   ~ 0
+D01
+Text Label 5100 1950 0    50   ~ 0
+D02
+Text Label 5100 2050 0    50   ~ 0
+D03
+Text Label 5100 2150 0    50   ~ 0
+D04
+Text Label 5100 2250 0    50   ~ 0
+D05
+Text Label 5100 2350 0    50   ~ 0
+D06
+Text Label 5100 2450 0    50   ~ 0
+D07
+Text Label 5100 2550 0    50   ~ 0
+D08
+Text Label 5100 2650 0    50   ~ 0
+D09
+Text Label 5100 2750 0    50   ~ 0
+D10
+Text Label 5100 2850 0    50   ~ 0
+D11
+Text Label 5100 2950 0    50   ~ 0
+D12
+Text Label 5100 3050 0    50   ~ 0
+D13
+Text Label 5100 3150 0    50   ~ 0
+D14
+Text Label 5100 3250 0    50   ~ 0
+D15
+Text Label 5100 3350 0    50   ~ 0
+D16
+Text Label 5100 3450 0    50   ~ 0
+D17
+Text Label 5100 3550 0    50   ~ 0
+D18
+Text Label 5100 3650 0    50   ~ 0
+D19
+Text Label 5100 3750 0    50   ~ 0
+D20
+Text Label 5100 3850 0    50   ~ 0
+D21
+Text Label 5100 3950 0    50   ~ 0
+D22
+Text Label 5100 4050 0    50   ~ 0
+D23
+Text Label 5100 4150 0    50   ~ 0
+D24
+Text Label 5100 4250 0    50   ~ 0
+D25
+Text Label 5100 4350 0    50   ~ 0
+D26
+Text Label 5100 4450 0    50   ~ 0
+D27
+Wire Bus Line
+	6700 650  6700 4750
+Wire Bus Line
+	4950 650  4950 4750
+Text Label 5100 4550 0    50   ~ 0
+D28
+Text Label 5100 4650 0    50   ~ 0
+D29
+Text Label 5100 4750 0    50   ~ 0
+D30
+Text Label 5100 4850 0    50   ~ 0
+D31
+Text Label 6850 1750 0    50   ~ 0
+D00
+Text Label 6850 1850 0    50   ~ 0
+D01
+Text Label 6850 1950 0    50   ~ 0
+D02
+Text Label 6850 2050 0    50   ~ 0
+D03
+Text Label 6850 2150 0    50   ~ 0
+D04
+Text Label 6850 2250 0    50   ~ 0
+D05
+Text Label 6850 2350 0    50   ~ 0
+D06
+Text Label 6850 2450 0    50   ~ 0
+D07
+Text Label 6850 2550 0    50   ~ 0
+D08
+Text Label 6850 2650 0    50   ~ 0
+D09
+Text Label 6850 2750 0    50   ~ 0
+D10
+Text Label 6850 2850 0    50   ~ 0
+D11
+Text Label 6850 2950 0    50   ~ 0
+D12
+Text Label 6850 3050 0    50   ~ 0
+D13
+Text Label 6850 3150 0    50   ~ 0
+D14
+Text Label 6850 3250 0    50   ~ 0
+D15
+Text Label 6850 3350 0    50   ~ 0
+D16
+Text Label 6850 3450 0    50   ~ 0
+D17
+Text Label 6850 3550 0    50   ~ 0
+D18
+Text Label 6850 3650 0    50   ~ 0
+D19
+Text Label 6850 3750 0    50   ~ 0
+D20
+Text Label 6850 3850 0    50   ~ 0
+D21
+Text Label 6850 3950 0    50   ~ 0
+D22
+Text Label 6850 4050 0    50   ~ 0
+D23
+Text Label 6850 4150 0    50   ~ 0
+D24
+Text Label 6850 4250 0    50   ~ 0
+D25
+Text Label 6850 4350 0    50   ~ 0
+D26
+Text Label 6850 4450 0    50   ~ 0
+D27
+Text Label 6850 4550 0    50   ~ 0
+D28
+Text Label 6850 4650 0    50   ~ 0
+D29
+Text Label 6850 4750 0    50   ~ 0
+D30
+Text Label 6850 4850 0    50   ~ 0
+D31
+$EndSCHEMATC

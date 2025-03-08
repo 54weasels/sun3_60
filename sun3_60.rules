@@ -1,0 +1,108 @@
+
+(rules PCB sun3_60
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 3243)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.6)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    VCC GND "/sun3_60_mmu_diag/MODIFYX" "/sun3_60_mmu_diag/MODIFY" "/sun3_60_mmu_diag/ACCESSX" "/sun3_60_mmu_diag/ACCESS" "/sun3_60_mmu_diag/TYPE0X" "/sun3_60_mmu_diag/TYPE0"
+    "/sun3_60_mmu_diag/TYPE1X" "/sun3_60_mmu_diag/TYPE1" "/sun3_60_cpu/D22" "/sun3_60_cpu/D24" "/sun3_60_cpu/D26" "/sun3_60_cpu/D27" "/sun3_60_cpu/D29" "/sun3_60_cpu/D30"
+    "/sun3_60_cpu/DSACK1-" "Net-(U1-Pad92)" "/sun3_60_cpu/A1" "/sun3_60_cpu/D21" "/sun3_60_cpu/D23" "/sun3_60_cpu/D25" "/sun3_60_cpu/D28" "/sun3_60_cpu/D31"
+    "/sun3_60_cpu/DSACK0-" "Net-(U1-Pad83)" "/sun3_60_cpu/A3" "/sun3_60_cpu/D19" "Net-(U1-Pad73)" "/sun3_60_cpu/A2" "Net-(U1-Pad71)" "/sun3_60_cpu/D18"
+    "/sun3_60_cpu/D20" "/sun3_60_cpu/A4" "Net-(U1-Pad61)" "/sun3_60_cpu/D16" "/sun3_60_cpu/D17" "Net-(U1-Pad51)" "/sun3_60_cpu/D15" "/sun3_60_cpu/D12"
+    "Net-(U1-Pad31)" "/sun3_60_cpu/D14" "/sun3_60_cpu/D13" "/sun3_60_cpu/D9" "Net-(U1-Pad22)" "/sun3_60_cpu/D11" "/sun3_60_cpu/D10" "/sun3_60_cpu/D5"
+    "/sun3_60_cpu/D2" "/sun3_60_cpu/D8" "/sun3_60_cpu/D7" "/sun3_60_cpu/D6" "/sun3_60_cpu/D4" "/sun3_60_cpu/D3" "/sun3_60_cpu/D1" "/sun3_60_cpu/D0"
+    "Net-(U2-Pad1)" "/sun3_60_cpu/A31" "/sun3_60_cpu/A28" "/sun3_60_cpu/A26" "/sun3_60_cpu/A23" "/sun3_60_cpu/A22" "/sun3_60_cpu/A19" "/sun3_60_cpu/A14"
+    "/sun3_60_cpu/A11" "/sun3_60_cpu/A8" "Net-(U2-Pad15)" "Net-(U2-Pad16)" "/sun3_60_cpu/A30" "/sun3_60_cpu/A27" "/sun3_60_cpu/A24" "/sun3_60_cpu/A20"
+    "/sun3_60_cpu/A18" "/sun3_60_cpu/A15" "/sun3_60_cpu/A13" "/sun3_60_cpu/A10" "/sun3_60_cpu/A6" "Net-(U2-Pad28)" "/sun3_60_cpu/A0" "/sun3_60_cpu/A29"
+    "/sun3_60_cpu/A25" "/sun3_60_cpu/A21" "/sun3_60_cpu/A17" "/sun3_60_cpu/A16" "/sun3_60_cpu/A12" "/sun3_60_cpu/A9" "/sun3_60_cpu/A7" "/sun3_60_cpu/A5"
+    "Net-(U2-Pad53)" "Net-(U2-Pad54)" "Net-(U2-Pad65)" "Net-(U2-Pad66)" "Net-(U2-Pad67)" "Net-(U2-Pad68)" "Net-(U2-Pad78)" "Net-(U2-Pad79)"
+    "Net-(U2-Pad80)" "Net-(U2-Pad81)" "Net-(U2-Pad92)" "Net-(U2-Pad93)" "Net-(U2-Pad103)" "Net-(U2-Pad106)" "Net-(U2-Pad116)" "Net-(U2-Pad117)"
+    "Net-(U2-Pad119)" "Net-(U2-Pad131)" "Net-(U2-Pad132)" "Net-(U2-Pad144)" "Net-(U200-Pad11)" "/sun3_60_mmu_diag/WE.SMAP-" "/sun3_60_mmu_diag/PD0-" "/sun3_60_mmu_diag/SA24"
+    "/sun3_60_mmu_diag/SA23" "/sun3_60_mmu_diag/SA22" "/sun3_60_mmu_diag/SA21" "/sun3_60_mmu_diag/CX2" "/sun3_60_mmu_diag/CX1" "/sun3_60_mmu_diag/CX0" "Net-(U200-Pad22)" "Net-(U201-Pad11)"
+    "/sun3_60_mmu_diag/SA20" "/sun3_60_mmu_diag/SA19" "/sun3_60_mmu_diag/SA18" "/sun3_60_mmu_diag/SA17" "Net-(U201-Pad22)" "Net-(U202-Pad10)" "/sun3_60_mmu_diag/WE.PMAP0-" "/sun3_60_mmu_diag/PD1-"
+    "/sun3_60_mmu_diag/MMU.X" "/sun3_60_mmu_diag/MMU.S" "/sun3_60_mmu_diag/MMU.W" "/sun3_60_mmu_diag/MMU.V" "Net-(U202-Pad20)" "Net-(U203-Pad10)" "/sun3_60_mmu_diag/WE.STAT-" "Net-(U203-Pad20)"
+    "Net-(U205-Pad10)" "/sun3_60_mmu_diag/WE.PMAP2-" "/sun3_60_mmu_diag/PA25" "/sun3_60_mmu_diag/PA26" "/sun3_60_mmu_diag/PA27" "/sun3_60_mmu_diag/PA28" "Net-(U205-Pad20)" "Net-(U206-Pad10)"
+    "/sun3_60_mmu_diag/PA21" "/sun3_60_mmu_diag/PA22" "/sun3_60_mmu_diag/PA23" "/sun3_60_mmu_diag/PA24" "Net-(U206-Pad20)" "Net-(U207-Pad10)" "/sun3_60_mmu_diag/WE.PMAP3-" "/sun3_60_mmu_diag/PA17"
+    "/sun3_60_mmu_diag/PA18" "/sun3_60_mmu_diag/PA19" "/sun3_60_mmu_diag/PA20" "Net-(U207-Pad20)" "Net-(U208-Pad10)" "/sun3_60_mmu_diag/PA13" "/sun3_60_mmu_diag/PA14" "/sun3_60_mmu_diag/PA15"
+    "/sun3_60_mmu_diag/PA16" "Net-(U208-Pad20)" "Net-(U210-Pad8)" "/sun3_60_mmu_diag/WR.CX-" "/sun3_60_mmu_diag/RD.CX-" "/sun3_60_mmu_diag/MMU2" "/sun3_60_mmu_diag/MMU1" "/sun3_60_mmu_diag/MMU3"
+    "/sun3_60_mmu_diag/MMU0" "Net-(U210-Pad14)" "Net-(U210-Pad16)" "Net-(U212-Pad10)" "/sun3_60_mmu_diag/MMU7" "/sun3_60_mmu_diag/MMU6" "/sun3_60_mmu_diag/MMU5" "/sun3_60_mmu_diag/MMU4"
+    "/sun3_60_mmu_diag/EN.CTL-" "/sun3_60_mmu_diag/READ-" "Net-(U212-Pad20)" "Net-(U213-Pad10)" "/sun3_60_mmu_diag/EN.SMAP-" "Net-(U213-Pad20)" "Net-(U215-Pad10)" "/sun3_60_mmu_diag/EN.PMAP0-"
+    "Net-(U215-Pad20)" "Net-(U217-Pad10)" "/sun3_60_mmu_diag/EN.PMAP2-" "Net-(U217-Pad20)" "Net-(U218-Pad10)" "/sun3_60_mmu_diag/EN.PMAP3-" "Net-(U218-Pad20)" "Net-(U223-Pad10)"
+    "/sun3_60_mmu_diag/BERRCLK" "Net-(U223-Pad8)" "Net-(U223-Pad13)" "Net-(U223-Pad7)" "/sun3_60_mmu_diag/BERR.T-" "Net-(U223-Pad4)" "/sun3_60_mmu_diag/BERR.P-" "Net-(U223-Pad3)"
+    "/sun3_60_mmu_diag/BERR.V-" "/sun3_60_mmu_diag/RD.BERR-" "Net-(U224-Pad8)" "/sun3_60_mmu_diag/RD.ID-" "Net-(U224-Pad16)" "Net-(U225-Pad10)" "/sun3_60_mmu_diag/WR.SYSEN-" "/sun3_60_mmu_diag/EN.VIDEO"
+    "Net-(U225-Pad12)" "Net-(U225-Pad6)" "Net-(U225-Pad15)" "Net-(U225-Pad5)" "/sun3_60_mmu_diag/EN.FPP" "Net-(U225-Pad2)" "/sun3_60_mmu_diag/EN.BOOT-" "/sun3_60_mmu_diag/INIT-"
+    "Net-(U225-Pad20)" "Net-(U226-Pad10)" "/sun3_60_mmu_diag/RD.SYSEN-" "/sun3_60_mmu_diag/DIAG-" "Net-(U226-Pad20)" "Net-(U227-Pad10)" "/sun3_60_mmu_diag/WR.DIAG-" "/sun3_60_mmu_diag/LED3"
+    "/sun3_60_mmu_diag/LED4" "/sun3_60_mmu_diag/IO.D3" "/sun3_60_mmu_diag/IO.D4" "/sun3_60_mmu_diag/IO.D2" "/sun3_60_mmu_diag/IO.D5" "/sun3_60_mmu_diag/LED2" "/sun3_60_mmu_diag/LED5" "/sun3_60_mmu_diag/LED1"
+    "/sun3_60_mmu_diag/LED6" "/sun3_60_mmu_diag/IO.D1" "/sun3_60_mmu_diag/IO.D6" "/sun3_60_mmu_diag/IO.D0" "/sun3_60_mmu_diag/IO.D7" "/sun3_60_mmu_diag/LED0" "/sun3_60_mmu_diag/LED7" "Net-(U227-Pad20)"
+    "Net-(U230-Pad10)" "/sun3_60_mmu_diag/C.S7X-" "/sun3_60_mmu_diag/C.S5-" "/sun3_60_mmu_diag/C.S3-" "/sun3_60_mmu_diag/WRITE-" "Net-(U230-Pad20)" "Net-(U231-Pad10)" "Net-(U231-Pad20)"
+    "Net-(U232-Pad10)" "Net-(U232-Pad11)" "Net-(U232-Pad9)" "Net-(U232-Pad8)" "/sun3_60_mmu_diag/DISACC-" "Net-(U232-Pad7)" "Net-(U232-Pad6)" "Net-(U232-Pad5)"
+    "Net-(U232-Pad4)" "Net-(U232-Pad3)" "Net-(U232-Pad2)" "Net-(U232-Pad1)" "Net-(U232-Pad20)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

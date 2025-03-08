@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "custom")(type "KiCad")(uri "${KIPRJMOD}/custom.kicad_sym")(options "")(descr ""))
+  (lib (name "sun3_60-rescue")(type "KiCad")(uri "${KIPRJMOD}/sun3_60-rescue.kicad_sym")(options "")(descr ""))
+)

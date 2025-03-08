@@ -1,0 +1,1717 @@
+{
+  "board": {
+    "3dviewports": [],
+    "design_settings": {
+      "defaults": {
+        "apply_defaults_to_fp_fields": false,
+        "apply_defaults_to_fp_shapes": false,
+        "apply_defaults_to_fp_text": false,
+        "board_outline_line_width": 0.05,
+        "copper_line_width": 0.2,
+        "copper_text_italic": false,
+        "copper_text_size_h": 1.5,
+        "copper_text_size_v": 1.5,
+        "copper_text_thickness": 0.3,
+        "copper_text_upright": false,
+        "courtyard_line_width": 0.05,
+        "dimension_precision": 4,
+        "dimension_units": 3,
+        "dimensions": {
+          "arrow_length": 1270000,
+          "extension_offset": 500000,
+          "keep_text_aligned": true,
+          "suppress_zeroes": false,
+          "text_position": 0,
+          "units_format": 1
+        },
+        "fab_line_width": 0.1,
+        "fab_text_italic": false,
+        "fab_text_size_h": 1.0,
+        "fab_text_size_v": 1.0,
+        "fab_text_thickness": 0.15,
+        "fab_text_upright": false,
+        "other_line_width": 0.1,
+        "other_text_italic": false,
+        "other_text_size_h": 1.0,
+        "other_text_size_v": 1.0,
+        "other_text_thickness": 0.15,
+        "other_text_upright": false,
+        "pads": {
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
+        },
+        "silk_line_width": 0.12,
+        "silk_text_italic": false,
+        "silk_text_size_h": 1.0,
+        "silk_text_size_v": 1.0,
+        "silk_text_thickness": 0.15,
+        "silk_text_upright": false,
+        "zones": {
+          "min_clearance": 0.508
+        }
+      },
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [],
+      "meta": {
+        "filename": "board_design_settings.json",
+        "version": 2
+      },
+      "rule_severities": {
+        "annular_width": "error",
+        "clearance": "error",
+        "connection_width": "warning",
+        "copper_edge_clearance": "error",
+        "copper_sliver": "warning",
+        "courtyards_overlap": "error",
+        "diff_pair_gap_out_of_range": "error",
+        "diff_pair_uncoupled_length_too_long": "error",
+        "drill_out_of_range": "error",
+        "duplicate_footprints": "warning",
+        "extra_footprint": "warning",
+        "footprint": "error",
+        "footprint_symbol_mismatch": "warning",
+        "footprint_type_mismatch": "ignore",
+        "hole_clearance": "error",
+        "hole_near_hole": "error",
+        "holes_co_located": "warning",
+        "invalid_outline": "error",
+        "isolated_copper": "warning",
+        "item_on_disabled_layer": "error",
+        "items_not_allowed": "error",
+        "length_out_of_range": "error",
+        "lib_footprint_issues": "warning",
+        "lib_footprint_mismatch": "warning",
+        "malformed_courtyard": "error",
+        "microvia_drill_out_of_range": "error",
+        "missing_courtyard": "ignore",
+        "missing_footprint": "warning",
+        "net_conflict": "warning",
+        "npth_inside_courtyard": "ignore",
+        "padstack": "warning",
+        "pth_inside_courtyard": "ignore",
+        "shorting_items": "error",
+        "silk_edge_clearance": "warning",
+        "silk_over_copper": "warning",
+        "silk_overlap": "warning",
+        "skew_out_of_range": "error",
+        "solder_mask_bridge": "error",
+        "starved_thermal": "error",
+        "text_height": "warning",
+        "text_thickness": "warning",
+        "through_hole_pad_without_hole": "error",
+        "too_many_vias": "error",
+        "track_dangling": "warning",
+        "track_width": "error",
+        "tracks_crossing": "error",
+        "unconnected_items": "error",
+        "unresolved_variable": "error",
+        "via_dangling": "warning",
+        "zones_intersect": "error"
+      },
+      "rule_severitieslegacy_courtyards_overlap": true,
+      "rule_severitieslegacy_no_courtyard_defined": false,
+      "rules": {
+        "max_error": 0.005,
+        "min_clearance": 0.0,
+        "min_connection": 0.0,
+        "min_copper_edge_clearance": 0.0,
+        "min_hole_clearance": 0.25,
+        "min_hole_to_hole": 0.25,
+        "min_microvia_diameter": 0.2,
+        "min_microvia_drill": 0.1,
+        "min_resolved_spokes": 2,
+        "min_silk_clearance": 0.0,
+        "min_text_height": 0.8,
+        "min_text_thickness": 0.08,
+        "min_through_hole_diameter": 0.3,
+        "min_track_width": 0.2,
+        "min_via_annular_width": 0.1,
+        "min_via_diameter": 0.4,
+        "solder_mask_to_copper_clearance": 0.0,
+        "use_height_for_length_calcs": true
+      },
+      "teardrop_options": [
+        {
+          "td_onpadsmd": true,
+          "td_onroundshapesonly": false,
+          "td_ontrackend": false,
+          "td_onviapad": true
+        }
+      ],
+      "teardrop_parameters": [
+        {
+          "td_allow_use_two_tracks": true,
+          "td_curve_segcount": 0,
+          "td_height_ratio": 1.0,
+          "td_length_ratio": 0.5,
+          "td_maxheight": 2.0,
+          "td_maxlen": 1.0,
+          "td_on_pad_in_zone": false,
+          "td_target_name": "td_round_shape",
+          "td_width_to_size_filter_ratio": 0.9
+        },
+        {
+          "td_allow_use_two_tracks": true,
+          "td_curve_segcount": 0,
+          "td_height_ratio": 1.0,
+          "td_length_ratio": 0.5,
+          "td_maxheight": 2.0,
+          "td_maxlen": 1.0,
+          "td_on_pad_in_zone": false,
+          "td_target_name": "td_rect_shape",
+          "td_width_to_size_filter_ratio": 0.9
+        },
+        {
+          "td_allow_use_two_tracks": true,
+          "td_curve_segcount": 0,
+          "td_height_ratio": 1.0,
+          "td_length_ratio": 0.5,
+          "td_maxheight": 2.0,
+          "td_maxlen": 1.0,
+          "td_on_pad_in_zone": false,
+          "td_target_name": "td_track_end",
+          "td_width_to_size_filter_ratio": 0.9
+        }
+      ],
+      "track_widths": [
+        0.0
+      ],
+      "tuning_pattern_settings": {
+        "diff_pair_defaults": {
+          "corner_radius_percentage": 80,
+          "corner_style": 1,
+          "max_amplitude": 1.0,
+          "min_amplitude": 0.2,
+          "single_sided": false,
+          "spacing": 1.0
+        },
+        "diff_pair_skew_defaults": {
+          "corner_radius_percentage": 80,
+          "corner_style": 1,
+          "max_amplitude": 1.0,
+          "min_amplitude": 0.2,
+          "single_sided": false,
+          "spacing": 0.6
+        },
+        "single_track_defaults": {
+          "corner_radius_percentage": 80,
+          "corner_style": 1,
+          "max_amplitude": 1.0,
+          "min_amplitude": 0.2,
+          "single_sided": false,
+          "spacing": 0.6
+        }
+      },
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
+      "zones_allow_external_fillets": false
+    },
+    "ipc2581": {
+      "dist": "",
+      "distpn": "",
+      "internal_id": "",
+      "mfg": "",
+      "mpn": ""
+    },
+    "layer_presets": [],
+    "viewports": []
+  },
+  "boards": [],
+  "cvpcb": {
+    "equivalence_files": []
+  },
+  "erc": {
+    "erc_exclusions": [],
+    "meta": {
+      "version": 0
+    },
+    "pin_map": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        0,
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0,
+        2
+      ],
+      [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    "rule_severities": {
+      "bus_definition_conflict": "error",
+      "bus_entry_needed": "error",
+      "bus_to_bus_conflict": "error",
+      "bus_to_net_conflict": "error",
+      "conflicting_netclasses": "error",
+      "different_unit_footprint": "error",
+      "different_unit_net": "error",
+      "duplicate_reference": "error",
+      "duplicate_sheet_names": "error",
+      "endpoint_off_grid": "warning",
+      "extra_units": "error",
+      "global_label_dangling": "warning",
+      "hier_label_mismatch": "error",
+      "label_dangling": "error",
+      "lib_symbol_issues": "warning",
+      "missing_bidi_pin": "warning",
+      "missing_input_pin": "warning",
+      "missing_power_pin": "error",
+      "missing_unit": "warning",
+      "multiple_net_names": "warning",
+      "net_not_bus_member": "warning",
+      "no_connect_connected": "warning",
+      "no_connect_dangling": "warning",
+      "pin_not_connected": "error",
+      "pin_not_driven": "error",
+      "pin_to_pin": "warning",
+      "power_pin_not_driven": "error",
+      "similar_labels": "warning",
+      "simulation_model_issue": "error",
+      "unannotated": "error",
+      "unit_value_mismatch": "error",
+      "unresolved_variable": "error",
+      "wire_dangling": "error"
+    }
+  },
+  "libraries": {
+    "pinned_footprint_libs": [],
+    "pinned_symbol_libs": []
+  },
+  "meta": {
+    "filename": "sun3_60.kicad_pro",
+    "version": 1
+  },
+  "net_settings": {
+    "classes": [
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Default",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "GND",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "wire_width": 6
+      }
+    ],
+    "meta": {
+      "version": 3
+    },
+    "net_colors": null,
+    "netclass_assignments": null,
+    "netclass_patterns": [
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A10"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A11"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A12"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A13"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A14"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A15"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A16"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A17"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A18"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A19"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A20"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A21"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A22"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A23"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A24"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A25"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A26"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A27"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A28"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A29"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A30"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A31"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A8"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/A9"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D10"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D11"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D12"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D13"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D14"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D15"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D16"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D17"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D18"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D19"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D20"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D21"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D22"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D23"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D24"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D25"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D26"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D27"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D28"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D29"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D30"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D31"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D8"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/D9"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/DSACK0-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_cpu/DSACK1-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/ACCESS"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/ACCESSX"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/BERR.P-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/BERR.T-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/BERR.V-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/BERRCLK"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/C.S3-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/C.S5-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/C.S7X-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/CX0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/CX1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/CX2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/DIAG-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/DISACC-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/EN.BOOT-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/EN.CTL-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/EN.FPP"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/EN.PMAP0-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/EN.PMAP2-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/EN.PMAP3-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/EN.SMAP-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/EN.VIDEO"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/INIT-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/IO.D0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/IO.D1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/IO.D2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/IO.D3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/IO.D4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/IO.D5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/IO.D6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/IO.D7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/LED0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/LED1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/LED2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/LED3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/LED4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/LED5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/LED6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/LED7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU.S"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU.V"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU.W"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU.X"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MMU7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MODIFY"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/MODIFYX"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA13"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA14"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA15"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA16"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA17"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA18"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA19"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA20"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA21"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA22"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA23"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA24"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA25"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA26"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA27"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PA28"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PD0-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/PD1-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/RD.BERR-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/RD.CX-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/RD.ID-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/RD.SYSEN-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/READ-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/SA17"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/SA18"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/SA19"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/SA20"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/SA21"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/SA22"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/SA23"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/SA24"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/TYPE0"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/TYPE0X"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/TYPE1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/TYPE1X"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/WE.PMAP0-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/WE.PMAP2-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/WE.PMAP3-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/WE.SMAP-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/WE.STAT-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/WR.CX-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/WR.DIAG-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/WR.SYSEN-"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/sun3_60_mmu_diag/WRITE-"
+      },
+      {
+        "netclass": "GND",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad22)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad31)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad51)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad61)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad71)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad73)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad83)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad92)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad103)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad106)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad116)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad117)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad119)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad131)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad132)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad144)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad15)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad16)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad28)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad53)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad54)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad65)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad66)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad67)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad68)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad78)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad79)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad80)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad81)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad92)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U2-Pad93)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U200-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U200-Pad22)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U201-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U201-Pad22)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U202-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U202-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U203-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U203-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U205-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U205-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U206-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U206-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U207-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U207-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U208-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U208-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U210-Pad14)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U210-Pad16)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U210-Pad8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U212-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U212-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U213-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U213-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U215-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U215-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U217-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U217-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U218-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U218-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U223-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U223-Pad13)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U223-Pad3)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U223-Pad4)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U223-Pad7)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U223-Pad8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U224-Pad16)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U224-Pad8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U225-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U225-Pad12)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U225-Pad15)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U225-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U225-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U225-Pad5)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U225-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U226-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U226-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U227-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U227-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U230-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U230-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U231-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U231-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad3)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad4)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad5)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad7)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U232-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "VCC"
+      }
+    ]
+  },
+  "pcbnew": {
+    "last_paths": {
+      "gencad": "",
+      "idf": "",
+      "netlist": "sun3_60_cpu.net",
+      "plot": "",
+      "pos_files": "",
+      "specctra_dsn": "",
+      "step": "",
+      "svg": "",
+      "vrml": ""
+    },
+    "page_layout_descr_file": ""
+  },
+  "schematic": {
+    "annotate_start_num": 0,
+    "bom_export_filename": "",
+    "bom_fmt_presets": [],
+    "bom_fmt_settings": {
+      "field_delimiter": ",",
+      "keep_line_breaks": false,
+      "keep_tabs": false,
+      "name": "CSV",
+      "ref_delimiter": ",",
+      "ref_range_delimiter": "",
+      "string_delimiter": "\""
+    },
+    "bom_presets": [],
+    "bom_settings": {
+      "exclude_dnp": false,
+      "fields_ordered": [
+        {
+          "group_by": false,
+          "label": "Reference",
+          "name": "Reference",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Value",
+          "name": "Value",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Datasheet",
+          "name": "Datasheet",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Footprint",
+          "name": "Footprint",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Qty",
+          "name": "${QUANTITY}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "DNP",
+          "name": "${DNP}",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Speed",
+          "name": "Speed",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        }
+      ],
+      "filter_string": "",
+      "group_symbols": true,
+      "name": "",
+      "sort_asc": true,
+      "sort_field": "Reference"
+    },
+    "connection_grid_size": 50.0,
+    "drawing": {
+      "dashed_lines_dash_length_ratio": 12.0,
+      "dashed_lines_gap_length_ratio": 3.0,
+      "default_line_thickness": 6.0,
+      "default_text_size": 50.0,
+      "field_names": [],
+      "intersheets_ref_own_page": false,
+      "intersheets_ref_prefix": "",
+      "intersheets_ref_short": false,
+      "intersheets_ref_show": false,
+      "intersheets_ref_suffix": "",
+      "junction_size_choice": 3,
+      "label_size_ratio": 0.25,
+      "operating_point_overlay_i_precision": 3,
+      "operating_point_overlay_i_range": "~A",
+      "operating_point_overlay_v_precision": 3,
+      "operating_point_overlay_v_range": "~V",
+      "overbar_offset_ratio": 1.23,
+      "pin_symbol_size": 0.0,
+      "text_offset_ratio": 0.08
+    },
+    "legacy_lib_dir": "",
+    "legacy_lib_list": [],
+    "meta": {
+      "version": 1
+    },
+    "net_format_name": "Pcbnew",
+    "page_layout_descr_file": "",
+    "plot_directory": "",
+    "spice_adjust_passive_values": false,
+    "spice_current_sheet_as_root": false,
+    "spice_external_command": "spice \"%I\"",
+    "spice_model_current_sheet_as_root": true,
+    "spice_save_all_currents": false,
+    "spice_save_all_dissipations": false,
+    "spice_save_all_voltages": false,
+    "subpart_first_id": 65,
+    "subpart_id_separator": 0
+  },
+  "sheets": [
+    [
+      "d6b5cf90-8df0-4384-868a-524abed7c432",
+      "Root"
+    ],
+    [
+      "00000000-0000-0000-0000-00005e882e52",
+      "sun3_60_cpu"
+    ],
+    [
+      "00000000-0000-0000-0000-00005e8be6e4",
+      "sun3_60_mmu_diag"
+    ],
+    [
+      "00000000-0000-0000-0000-00005fa4b7bb",
+      "sun3_60_eeprom"
+    ],
+    [
+      "054c9f34-4c69-4214-aead-9eddc8182f56",
+      "sun3_60_serial"
+    ],
+    [
+      "4ddea228-6046-4162-aa7d-ddd42f69c802",
+      "Ethernet"
+    ],
+    [
+      "e13c7ebe-3934-46e1-bace-5072d9bf7df1",
+      "SCSI 2, Parity"
+    ],
+    [
+      "1dee99d4-22f0-4f1a-86d3-2134beb952b4",
+      "S8A Memory"
+    ],
+    [
+      "0295036f-cde4-4db2-97f7-0ebf300634cd",
+      "SIMMs 1"
+    ],
+    [
+      "7821c383-5d2f-440a-8458-9adb4df58643",
+      "misc"
+    ]
+  ],
+  "text_variables": {}
+}
