@@ -1,5 +1,14 @@
-# Sun 3/60 reproduction
+# Homebrew Sun 3/60
 This project reproduces the Sun 3/60 computer from available schematics such as https://www.sun3arc.org/schematics/3_60/index.phtml
+# Changelog
+## V2
+Lay out the PCB to match the original board sans the missing components. No routing yet.
+- Pick standard library footprints instead of custom ones for some components.
+- Change some ERC errors into warnings - like output pin connected to output pin.
+- Change resistor network S200 from DIP to SIP type.
+- Set Serial keyboard/mouse section to “Do Not Populate” to gain some space, and it wasn’t going to be used with no video possible anyway. However, in knockout testing with 3.0.1 boot PROM self tests pass, then a warning message tests were interrupted is emitted. Tests then re-run, but system hangs before giving a prompt.
+- Fix the LED blocks for the diag register to match the original Dialight 555-4003 part.
+
 ## V1
 Basic schematics for Sun 3/60 with some obvious corrections.
 
