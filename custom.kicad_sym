@@ -25,7 +25,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sun3_60:2168"
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm"
 			(at 0 5.08 0)
 			(effects
 				(font
@@ -4734,7 +4734,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sun3_60:7188"
+		(property "Footprint" "Package_DIP:DIP-22_W7.62mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -6586,7 +6586,7 @@
 				)
 			)
 		)
-		(property "Footprint" "https://www.ti.com/lit/ds/symlink/sn54als257a.pdf?ts=1740512058610"
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
 			(at -0.762 -37.846 0)
 			(effects
 				(font
@@ -6595,7 +6595,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn54als257a.pdf?ts=1740512058610"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11191,7 +11191,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sun3_60:ALS245"
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -11659,7 +11659,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sun3_60:ALS273"
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm"
 			(at 0 1.27 0)
 			(effects
 				(font
@@ -12085,7 +12085,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sun3_60:ALS373"
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm"
 			(at 0 1.27 0)
 			(effects
 				(font
@@ -12511,7 +12511,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sun3_60:ALS373"
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm"
 			(at 0 1.27 0)
 			(effects
 				(font
@@ -13430,7 +13430,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sun3_60:AM27S19"
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -15610,7 +15610,7 @@
 			)
 			(polyline
 				(pts
-					(xy -1.27 3.556) (xy -1.27 1.524)
+					(xy 1.27 3.556) (xy 1.27 1.524)
 				)
 				(stroke
 					(width 0.254)
@@ -15622,7 +15622,7 @@
 			)
 			(polyline
 				(pts
-					(xy -1.27 6.096) (xy -1.27 4.064)
+					(xy 1.27 6.096) (xy 1.27 4.064)
 				)
 				(stroke
 					(width 0.254)
@@ -15634,7 +15634,7 @@
 			)
 			(polyline
 				(pts
-					(xy -1.27 8.636) (xy -1.27 6.604)
+					(xy 1.27 8.636) (xy 1.27 6.604)
 				)
 				(stroke
 					(width 0.254)
@@ -15646,7 +15646,7 @@
 			)
 			(polyline
 				(pts
-					(xy -1.27 11.176) (xy -1.27 9.144)
+					(xy 1.27 11.176) (xy 1.27 9.144)
 				)
 				(stroke
 					(width 0.254)
@@ -15670,7 +15670,7 @@
 			)
 			(polyline
 				(pts
-					(xy 0.762 3.556) (xy 0.762 1.524) (xy -1.27 2.54) (xy 0.762 3.556)
+					(xy -0.762 3.556) (xy -0.762 1.524) (xy 1.27 2.54) (xy -0.762 3.556)
 				)
 				(stroke
 					(width 0.254)
@@ -15682,7 +15682,7 @@
 			)
 			(polyline
 				(pts
-					(xy 0.762 6.096) (xy 0.762 4.064) (xy -1.27 5.08) (xy 0.762 6.096)
+					(xy -0.762 6.096) (xy -0.762 4.064) (xy 1.27 5.08) (xy -0.762 6.096)
 				)
 				(stroke
 					(width 0.254)
@@ -15694,7 +15694,7 @@
 			)
 			(polyline
 				(pts
-					(xy 0.762 8.636) (xy 0.762 6.604) (xy -1.27 7.62) (xy 0.762 8.636)
+					(xy -0.762 8.636) (xy -0.762 6.604) (xy 1.27 7.62) (xy -0.762 8.636)
 				)
 				(stroke
 					(width 0.254)
@@ -15706,7 +15706,7 @@
 			)
 			(polyline
 				(pts
-					(xy 0.762 11.176) (xy 0.762 9.144) (xy -1.27 10.16) (xy 0.762 11.176)
+					(xy -0.762 11.176) (xy -0.762 9.144) (xy 1.27 10.16) (xy -0.762 11.176)
 				)
 				(stroke
 					(width 0.254)
@@ -15887,7 +15887,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sun3_60:LS2518"
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20361,7 +20361,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20425,7 +20425,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20489,7 +20489,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20553,7 +20553,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_DIP:DIP-14_W7.62mm"
 			(at 0 0 0)
 			(effects
 				(font
@@ -20855,7 +20855,7 @@
 				)
 			)
 		)
-		(property "Footprint" "sun3_60:ALS245"
+		(property "Footprint" "Package_DIP:DIP-20_W7.62mm"
 			(at 0 0 0)
 			(effects
 				(font

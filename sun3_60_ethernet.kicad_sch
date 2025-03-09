@@ -15206,19 +15206,21 @@
 		(fields_autoplaced yes)
 		(uuid "315417b3-72ff-46b7-93a1-f7f67b184449")
 		(property "Reference" "J3"
-			(at 225.425 149.86 0)
+			(at 227.33 163.8299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
-		(property "Value" "Conn_01x09_Pin"
-			(at 225.425 152.4 0)
+		(property "Value" "Ethernet"
+			(at 227.33 166.3699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical"
