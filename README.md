@@ -1,6 +1,14 @@
 # Homebrew Sun 3/60
 This project reproduces the Sun 3/60 computer from available schematics such as https://www.sun3arc.org/schematics/3_60/index.phtml
 # Changelog
+
+## V3
+- Initial routing with standard 4 layers setup
+- Add SIM holder holes
+- Copper to edge clearance 1.0mm
+- Relaxed the layout a little so the autorouter can have results
+- Moved K500 to the ethernet section it belongs to, and changed type. Same for K199
+
 ## V2
 Lay out the PCB to match the original board sans the missing components. No routing yet.
 - Pick standard library footprints instead of custom ones for some components.
