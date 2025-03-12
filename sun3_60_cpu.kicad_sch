@@ -27535,7 +27535,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_Tantal_D6.0mm_P2.50mm"
 			(at 44.45 176.53 0)
 			(effects
 				(font
@@ -27544,7 +27544,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/kyocera-avx/TAP106M035SCS/1471228"
 			(at 44.45 176.53 0)
 			(effects
 				(font
