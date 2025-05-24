@@ -1,6 +1,10 @@
 # For PCBs designed using KiCad: https://www.kicad.org/
 # Format documentation: https://kicad.org/help/file-formats/
 
+# System files
+.DS_Store
+._*
+
 # Temporary files
 *.000
 *.bak
