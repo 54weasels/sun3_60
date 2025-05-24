@@ -1843,7 +1843,7 @@
 				)
 			)
 		)
-		(symbol "Oscillator:CXO_DIP8"
+		(symbol "Oscillator:CXO_DIP14"
 			(pin_names
 				(offset 0.254)
 			)
@@ -1859,7 +1859,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "CXO_DIP8"
+			(property "Value" "CXO_DIP14"
 				(at 1.27 -6.35 0)
 				(effects
 					(font
@@ -1868,7 +1868,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Oscillator:Oscillator_DIP-8"
+			(property "Footprint" "Oscillator:Oscillator_DIP-14"
 				(at 11.43 -8.89 0)
 				(effects
 					(font
@@ -1886,7 +1886,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Crystal Clock Oscillator, DIP8-style metal package"
+			(property "Description" "Crystal Clock Oscillator, DIP14-style metal package"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1904,7 +1904,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Oscillator*DIP*8*"
+			(property "ki_fp_filters" "Oscillator*DIP*14*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1913,7 +1913,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "CXO_DIP8_0_1"
+			(symbol "CXO_DIP14_0_1"
 				(rectangle
 					(start -5.08 5.08)
 					(end 5.08 -5.08)
@@ -1939,7 +1939,7 @@
 					)
 				)
 			)
-			(symbol "CXO_DIP8_1_1"
+			(symbol "CXO_DIP14_1_1"
 				(pin input line
 					(at -7.62 0 0)
 					(length 2.54)
@@ -1959,6 +1959,24 @@
 					)
 				)
 				(pin power_in line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "Vcc"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
 					(at 0 -7.62 90)
 					(length 2.54)
 					(name "GND"
@@ -1968,7 +1986,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "7"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1980,24 +1998,6 @@
 					(at 7.62 0 180)
 					(length 2.54)
 					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 7.62 270)
-					(length 2.54)
-					(name "Vcc"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4708,7 +4708,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 26.67 179.07 0)
 			(effects
 				(font
@@ -5145,6 +5145,80 @@
 		)
 	)
 	(symbol
+		(lib_id "Oscillator:CXO_DIP14")
+		(at 29.21 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5dc08d36-2bc5-4737-93ee-a2f7fa21a9b2")
+		(property "Reference" "U402"
+			(at 40.64 96.5514 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4.9152 Mhz"
+			(at 40.64 99.0914 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Oscillator:Oscillator_DIP-14"
+			(at 40.64 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf"
+			(at 26.67 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Crystal Clock Oscillator, DIP14-style metal package"
+			(at 29.21 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "14"
+			(uuid "82d1a7e8-16dd-4087-89e0-2899b960cad2")
+		)
+		(pin "7"
+			(uuid "3022aa37-16c9-4efe-a086-d158aa8c3e26")
+		)
+		(pin "1"
+			(uuid "e89c0f79-4f1d-4f02-9326-183fd94f7360")
+		)
+		(pin "8"
+			(uuid "f077fc99-e5f2-439e-b0f2-e5239468e4e0")
+		)
+		(instances
+			(project ""
+				(path "/d6b5cf90-8df0-4384-868a-524abed7c432/054c9f34-4c69-4214-aead-9eddc8182f56"
+					(reference "U402")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "74xx:74LS04")
 		(at 269.24 139.7 0)
 		(unit 5)
@@ -5162,7 +5236,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 269.24 133.35 0)
 			(effects
 				(font
@@ -5249,80 +5323,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Oscillator:CXO_DIP8")
-		(at 29.21 102.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7dab0774-c179-4ee5-8181-023b2e01f055")
-		(property "Reference" "U402"
-			(at 41.91 96.5514 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.9152 Mhz"
-			(at 41.91 99.0914 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Oscillator:Oscillator_DIP-8"
-			(at 40.64 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf"
-			(at 26.67 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Crystal Clock Oscillator, DIP8-style metal package"
-			(at 29.21 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "8"
-			(uuid "7bb20572-aeee-450c-b15b-6a1f22d73e35")
-		)
-		(pin "4"
-			(uuid "90cc8cce-6adb-4607-b8b0-583ad3378d8e")
-		)
-		(pin "1"
-			(uuid "76b2d833-0ea8-4a8f-be3d-7738da1ff4ef")
-		)
-		(pin "5"
-			(uuid "3e467305-d73a-4895-844e-1017e818af56")
-		)
-		(instances
-			(project ""
-				(path "/d6b5cf90-8df0-4384-868a-524abed7c432/054c9f34-4c69-4214-aead-9eddc8182f56"
-					(reference "U402")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "74xx:74LS04")
 		(at 121.92 170.18 0)
 		(unit 3)
@@ -5340,7 +5340,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 121.92 163.83 0)
 			(effects
 				(font
@@ -5445,7 +5445,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 270.51 33.0199 0)
 			(effects
 				(font
@@ -5550,7 +5550,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 233.68 99.06 0)
 			(effects
 				(font
@@ -5654,7 +5654,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 80.01 146.05 0)
 			(effects
 				(font
@@ -5836,7 +5836,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 80.01 130.81 0)
 			(effects
 				(font
@@ -5930,7 +5930,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a2e9c4b9-1b3f-418e-89d0-96da5d007941")
 		(property "Reference" "U408"
 			(at 214.63 58.42 0)
@@ -5940,7 +5939,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 214.63 60.96 0)
 			(effects
 				(font
@@ -6186,7 +6185,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ca4c4597-bc91-4607-a7e5-41c8a39384d0")
 		(property "Reference" "U408"
 			(at 214.63 33.02 0)
@@ -6196,7 +6194,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 214.63 35.56 0)
 			(effects
 				(font
@@ -6367,7 +6365,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 29.21 143.5099 0)
 			(effects
 				(font
@@ -6472,7 +6470,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 48.26 179.07 0)
 			(effects
 				(font
@@ -6576,7 +6574,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 233.68 76.2 0)
 			(effects
 				(font
@@ -6680,7 +6678,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 269.24 148.59 0)
 			(effects
 				(font
@@ -7099,7 +7097,7 @@
 				)
 			)
 		)
-		(property "Value" "74LS04"
+		(property "Value" "74ALS04"
 			(at 121.92 147.32 0)
 			(effects
 				(font

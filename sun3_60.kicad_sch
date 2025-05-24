@@ -1126,16 +1126,6 @@
 		)
 		(uuid "8e9310e4-bd79-474b-8cc6-b62bd75fd88b")
 	)
-	(wire
-		(pts
-			(xy 109.22 156.21) (xy 119.38 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8fd6c14c-aadd-4901-9b10-9c422b3c1a98")
-	)
 	(bus
 		(pts
 			(xy 139.7 123.19) (xy 147.32 123.19)
@@ -1555,6 +1545,16 @@
 			(type default)
 		)
 		(uuid "d8db22d9-d94e-4a4a-9bda-6adc5ac3d41a")
+	)
+	(wire
+		(pts
+			(xy 109.22 158.75) (xy 119.38 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da2d5de9-9be6-4a95-ba9a-ff9f4fbca2c9")
 	)
 	(bus
 		(pts
@@ -5201,7 +5201,7 @@
 			)
 		)
 		(pin "C.S3-" input
-			(at 119.38 156.21 180)
+			(at 119.38 158.75 180)
 			(effects
 				(font
 					(size 1.27 1.27)

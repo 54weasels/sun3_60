@@ -15633,21 +15633,19 @@
 		(fields_autoplaced yes)
 		(uuid "44b2199c-0575-4f14-82fa-9783f342128b")
 		(property "Reference" "S502"
-			(at 340.6139 29.21 0)
+			(at 341.884 25.4 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
-		(property "Value" "1K Ohm"
-			(at 343.1539 29.21 0)
+		(property "Value" "1k Ohm"
+			(at 341.884 27.94 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" "Resistor_THT:R_Array_SIP10"

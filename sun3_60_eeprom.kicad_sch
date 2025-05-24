@@ -10117,6 +10117,16 @@
 	)
 	(wire
 		(pts
+			(xy 163.83 119.38) (xy 163.83 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96e1ae7f-5fb8-4918-b48a-b2551aba3868")
+	)
+	(wire
+		(pts
 			(xy 64.77 119.38) (xy 63.5 119.38)
 		)
 		(stroke
@@ -10907,7 +10917,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 120.65) (xy 195.58 120.65)
+			(xy 163.83 119.38) (xy 195.58 119.38)
 		)
 		(stroke
 			(width 0)
@@ -11137,7 +11147,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 120.65) (xy 195.58 152.4)
+			(xy 195.58 119.38) (xy 195.58 152.4)
 		)
 		(stroke
 			(width 0)
@@ -13363,7 +13373,7 @@
 	)
 	(hierarchical_label "RTC-"
 		(shape input)
-		(at 195.58 120.65 0)
+		(at 195.58 119.38 0)
 		(effects
 			(font
 				(size 1.27 1.27)

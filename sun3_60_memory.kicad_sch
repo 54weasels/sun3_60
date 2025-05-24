@@ -5127,16 +5127,6 @@
 		)
 		(uuid "0c42f790-b51d-4d9e-8ef4-c85579ca752b")
 	)
-	(text "TODO: Check VCC"
-		(exclude_from_sim no)
-		(at 203.962 76.454 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "92439950-9745-4cd7-a450-4b02b0fc7ca7")
-	)
 	(text "CAS"
 		(exclude_from_sim no)
 		(at 167.132 94.488 0)
