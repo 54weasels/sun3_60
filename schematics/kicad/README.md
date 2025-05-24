@@ -1,15 +1,26 @@
-# Homebrew Sun 3/60
-This project reproduces the Sun 3/60 computer from available schematics such as https://www.sun3arc.org/schematics/3_60/index.phtml
 # Changelog
 
-## V3
+## V1.1
+- Fix critical errors found in the first version, based on the build
+  - Fix RESET- on CPU not being connected to anything
+  - Root schematic SIMM C.S3- was connected to C.S3 on Memory
+- Bad placement/footprint
+  - U402 oscillator is more common as DIP16
+- Cosmetic fixes
+  - Fix S111 label, X68, C199, X27
+  - Label voltages on the power connector
+  - Label diag position on the diag switch
+  - Tidying up some traces
+
+## V1.0 -- Released
+- Copy values to silkscreen
 - Initial routing with standard 4 layers setup
 - Add SIM holder holes
 - Copper to edge clearance 1.0mm
 - Relaxed the layout a little so the autorouter can have results
 - Moved K500 to the ethernet section it belongs to, and changed type. Same for K199
 
-## V2
+## V0.2
 Lay out the PCB to match the original board sans the missing components. No routing yet.
 - Pick standard library footprints instead of custom ones for some components.
 - Change some ERC errors into warnings - like output pin connected to output pin.
@@ -17,7 +28,7 @@ Lay out the PCB to match the original board sans the missing components. No rout
 - Set Serial keyboard/mouse section to “Do Not Populate” to gain some space, and it wasn’t going to be used with no video possible anyway. However, in knockout testing with 3.0.1 boot PROM self tests pass, then a warning message tests were interrupted is emitted. Tests then re-run, but system hangs before giving a prompt.
 - Fix the LED blocks for the diag register to match the original Dialight 555-4003 part.
 
-## V1
+## V0.1
 Basic schematics for Sun 3/60 with some obvious corrections.
 
 Notes on each section:
