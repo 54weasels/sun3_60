@@ -9,6 +9,9 @@ If you don't, you can find GALs for most of the chips and burn them with commodi
 The PAL8L14A (1589-01) at U312 is very hard to find, see the main page README for alternatives.
 Similarly the GAL20XV10 alternative for the PAL20X10A (1595-01) at U107 is not burnable with mainstream programmers.
 
+## PAL mapping
+Some of the notes are missing as I'm incrementally building and validating. For the first version (without the SCSI and VIDEO), not all the chips listed below are needed. Sadly, the problematic ones above are.
+
 | PAL # | Type  | Position | Section | Notes |
 |-------|------|----------|---------|-------|
 | 1564-2 | PAL16R4B | U313 | EPROM | DCP |
@@ -47,3 +50,27 @@ Similarly the GAL20XV10 alternative for the PAL20X10A (1595-01) at U107 is not b
 | 1599-1 | PAL16R4B |  |  |  |
 | 1683-3 | PAL20L8B | U2001 | EPROM | ? |
 
+## Substitutions
+
+GAL16V8 and GAL20V10 can replace most of the PALs listed. Note that if you have a PAL/GAL-aware programmer such as the BP Micro 1200 I'm using, when you're burning GALs there is an option to select for example "GAL16V8 as PAL16L8B" and use the original PAL image.
+
+| PAL type | Count | GAL alternative |
+|----------|-------|-----------------|
+| PAL16L8B	| 14	| GAL16V8	|
+| PAL16L8D	| 1	| GAL16V8	|
+| PAL16R4B	| 3	| GAL16V8	|
+| PAL16R6B	| 1	| GAL16V8	|
+| PAL16R8B	| 1	| GAL16V8	|
+| PAL20L8B	| 7	| GAL20V10	|
+| PAL20R4B	| 1	| GAL20V10	|
+| PAL20R6B	| 1	| GAL20V10	|
+| PAL20X10A	| 1	| GAL20XV10	|
+| PAL20X8B	| 4	| GAL20XV10	|
+| PAL8L14A	| 1	| N/A	|
+
+Note on speed:
+- There are three PAL speeds usually listed:
+  - A:	20ns
+  - B:	15ns
+  - D:	10ns
+- GAL speed is indicated differently, as sometimes the letter after the main designation (such as GAL16V8**B**) is a version number not a speed number. GALs seem to have a -15 or similar speed designation on the chip. The D version is pretty critical as it's part of memory control and something slower will lead to instability.
