@@ -1,0 +1,23 @@
+$ decode3
+$ JED2CKT -- JEDEC File to OPALsim Circuit/Macro Translator (Version V055)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from decode3.jed. Date: 3-20-92
+$ DEVICE PAL16L8
+$ PERIOD 20
+
+.LIB decode3.mac
+
+* U1 decode3 2 nc a15 a14 a13 nc nc nc nc nc GND nc /o0 /o1 /o2
++ /o3 /o4 /o5 /o6 /o7 VCC
+
+a15 INPUT 0 20 = LLLLHHHHHHHLLLL
+a14 INPUT 0 20 = LLHHLLHHHLLHHLL
+a13 INPUT 0 20 = LHLHLHLHLHLHLHL
+
+.BUS DECODE_IN a15 a14 a13
+
+.PROBE /o0 /o1 /o2 /o3 /o4 /o5 /o6 /o7 DECODE_IN
+
+.TIME 299
+
+.END

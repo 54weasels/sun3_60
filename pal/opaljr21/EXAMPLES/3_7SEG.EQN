@@ -1,0 +1,85 @@
+	OPALjr Example
+	Copyright National Semiconductor Corp, 1993.
+
+	A three-bit up-down counter with 7-segment display
+	output (outputs a-g).
+	It is designed specifically for the GAL22V10.
+	The counter will reset to zero if rst is low.
+	It will count  - upward if up is high,
+		       - downward if down is high,
+		       - upward if both are high,
+		       - hold value if both are low.
+
+CHIP  3b_7seg GAL22V10
+
+	up down rst a b c d e f g
+	statebit~01 statebit~02 statebit~03
+
+	@define state000 "/statebit~01 * /statebit~02 * /statebit~03"
+	@define state00X "/statebit~01 * /statebit~02"
+	@define state011 "/statebit~01 * statebit~02 * statebit~03"
+	@define state01X "/statebit~01 * statebit~02"
+	@define state100 "statebit~01 * /statebit~02 * /statebit~03"
+	@define state101 "statebit~01 * /statebit~02 * statebit~03"
+	@define state10X "statebit~01 * /statebit~02"
+	@define state110 "statebit~01 * statebit~02 * /statebit~03"
+	@define state1X0 "statebit~01 * /statebit~03"
+	@define state1X1 "statebit~01 * statebit~03"
+	@define stateX00 "/statebit~02 * /statebit~03"
+	@define stateX01 "/statebit~02 * statebit~03"
+	@define stateX10 "statebit~02 * /statebit~03"
+	@define stateX11 "statebit~02 * statebit~03"
+@ues ABCD
+
+EQUATIONS
+
+statebit~01 := /up * down * rst * state000
+      + up * rst * state011
+      + /up * rst * state1X1
+      + up * rst * state10X
+      + /down * rst * state1X0
+      + rst * state110
+
+statebit~02 := /up * down * rst * stateX00
+      + up * rst * stateX01
+      + /up * rst * stateX11
+      + /down * rst * stateX10
+      + up * rst * stateX10
+
+statebit~03 := /up * /down * rst * statebit~03
+      + down * rst * /statebit~03
+      + up * rst * /statebit~03
+
+a = state000
+      + state101
+      + stateX11
+      + stateX10
+
+b = state00X
+      + state100
+      + state01X
+      + stateX11
+
+c = state110
+      + state101
+      + stateX00
+      + state100
+      + stateX00
+
+d = state000
+      + state110
+      + state101
+      + state01X
+
+e = state000
+      + stateX10
+
+f = state000
+      + state110
+      + state101
+      + state100
+
+g = state101
+      + state100
+      + state01X
+      + stateX10

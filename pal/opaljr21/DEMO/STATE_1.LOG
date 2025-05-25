@@ -1,0 +1,152 @@
+
+OPL2PLA - OPAL design entry compiler V016
+Copyright (c) National Semiconductor Corporation 1991,1992
+
+
+Input Pins
+==========
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+clk                  1          com      visible              
+reset                2          com      visible              
+/oe                  11         com      visible              
+
+Feedback Pins
+=============
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+reg_hold             14         reg      visible      hold    
+
+set notations
+=============
+in_state        = [sb1,sb2,sb3,sb4]
+
+Statebit Pins
+=============
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+sb1                  15         reg      visible      rst     
+sb2                  16         reg      visible      rst     
+sb3                  17         reg      visible      rst     
+sb4                  18         reg      visible      rst     
+
+Dot extensions
+==============
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+reg_hold.c                      com      visible      rst     
+sb4.c                           com      visible      rst     
+sb3.c                           com      visible      rst     
+sb2.c                           com      visible      rst     
+sb1.c                           com      visible      rst     
+reg_hold.oe                     com      visible      rst     
+sb4.oe                          com      visible      rst     
+sb3.oe                          com      visible      rst     
+sb2.oe                          com      visible      rst     
+sb1.oe                          com      visible      rst     
+
+state definition
+================
+State_name      state assignment                branching
+----------      ----------------                ---------
+ALL                                                if        
+s0                 0000  0000                      goto      
+s1                 0001  0001                      goto      
+s2                 0002  0010                      goto      
+s3                 0003  0011                      goto      
+s4                 0004  0100                      goto      
+s5                 0005  0101                      goto      
+s6                 0006  0110                      goto      
+s7                 0007  0111                      goto      
+s8                 0008  1000                      goto      
+s9                 0009  1001                      goto      
+UNDEFINED                                          goto      
+
+Present State       Possible next state(s)
+-------------       ----------------------
+ALL                 s0  
+s0                  s1  
+s1                  s2  
+s2                  s3  
+s3                  s4  
+s4                  s5  
+s5                  s6  
+s6                  s7  
+s7                  s8  
+s8                  s9  
+s9                  s0  
+UNDEFINED           s0  
+
+
+
+------------------------------------------------------------------------------
+
+PLAMIN -- PLA Minimizer (V002)
+Copyright (c) National Semiconductor Corporation, 1992
+
+
+Device:			GAL16V8
+Architecture:		PAL
+Product Term Polarity:	SELECTABLE
+Minimization Level:	NORMAL
+ESPRESSO Command Line:	espresso -Dso_both  state_1.pla > TMP1.$$$
+
+Minimization Time:	0:03
+Product Terms:		42 / 25  (59.5%)
+
+------------------------------------------------------------------------------
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Document file for state_1.eqn
+Device: 16V8
+
+Pin   Label               Type
+---   -----               ----
+1     clk                 clock pin
+2     reset               pos,com input
+11    /oe                 enable pin
+14    reg_hold            pos,trst,reg feedback
+15    sb1                 pos,trst,reg feedback(bidir)
+16    sb2                 pos,trst,reg feedback(bidir)
+17    sb3                 pos,trst,reg feedback(bidir)
+18    sb4                 pos,trst,reg feedback(bidir)
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Device Utilization:
+
+No of dedicated inputs used               :  1/8  (12.5%)
+No of feedbacks used                      :  5/8  (62.5%)
+
+		------------------------------------------
+		Pin   Label                 Terms Usage
+		------------------------------------------
+		18    sb4                   1/8   (12.5%)
+		17    sb3                   1/8   (12.5%)
+		16    sb2                   2/8   (25.0%)
+		15    sb1                   1/8   (12.5%)
+		14    reg_hold              5/8   (62.5%)
+		------------------------------------------
+		Total Terms                15/64  (23.4%)
+		------------------------------------------
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+                            Chip diagram (DIP)
+
+                             ._____    _____.
+                             |     \__/     |
+                         clk |  1        20 | VCC
+                       reset |  2        19 | 
+                             |  3        18 | sb4
+                             |  4        17 | sb3
+                             |  5        16 | sb2
+                             |  6        15 | sb1
+                             |  7        14 | reg_hold
+                             |  8        13 | 
+                             |  9        12 | 
+                         GND | 10        11 | /oe
+                             |______________|

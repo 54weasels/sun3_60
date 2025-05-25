@@ -1,0 +1,249 @@
+
+Synchronous Bus Control State Machine - Dave Hawley
+Copyright National Semiconductor Corp, 1992.
+An example using MAPL128 ;
+
+
+;Translated from NSC formatted PLA file.
+
+CHIP  sync_bsm MAPL128
+
+ clock=1 cpu_addr_hit=2 local_bus_free=3
+ local_bg=4 cpu_clr=5 cpu_go=6
+ local_addr_oen=7 bus_addr_ien=8 bus_error=9
+ bus_lock=10 bus_end_tr=11 cpu_int=12
+ local_br=13 local_bgack=15 local_as=16
+ load_packet_count=17 bus_br=18 bus_bgack=19
+ bus_as=20 local_addr_ien=21 bus_addr_oen=22
+ dma_error=23 bus_bg=24 bus_addr_hit=25
+ xfer_count_zero=26 packet_count_zero=27
+ stabt~01=29 stabt~04=32 stabt~02=37
+ stabt~03=38 pb2=39
+
+EQUATIONS
+
+stabt~01 := stabt~01 * /stabt~02 * /stabt~03 * /stabt~04 * /pb2
+      + bus_end_tr * bus_lock * stabt~01 * /stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + /bus_end_tr * stabt~01 * /stabt~02 * /stabt~03 * stabt~04 
+        * /pb2
+      + bus_end_tr * bus_lock * stabt~01 * /stabt~02 * stabt~03 
+        * /stabt~04 * /pb2
+      + /bus_end_tr * stabt~01 * /stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + bus_bg * /stabt~01 * stabt~02 * /stabt~03 * stabt~04 * /pb2
+      + cpu_addr_hit * stabt~01 * stabt~02 * /stabt~03 * stabt~04 
+        * /pb2
+      + /cpu_addr_hit * bus_lock * stabt~01 * stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + local_bg * local_bus_free * /stabt~01 * stabt~02 * /stabt~03 
+        * /stabt~04 * /pb2
+      + bus_addr_hit * stabt~01 * stabt~02 * /stabt~03 * /stabt~04 
+        * /pb2
+      + /bus_addr_hit * bus_lock * stabt~01 * stabt~02 * /stabt~03 
+        * /stabt~04 * /pb2
+      + stabt~01 * stabt~02 * stabt~03 * /stabt~04 * /pb2
+      + packet_count_zero * /xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+
+stabt~02 := bus_addr_hit * /stabt~01 * /stabt~02 * /stabt~03 
+        * /stabt~04 * /pb2
+      + cpu_addr_hit * /bus_addr_hit * /stabt~01 * /stabt~02 
+        * /stabt~03 * /stabt~04 * /pb2
+      + bus_end_tr * bus_lock * stabt~01 * /stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + local_bg * local_bus_free * /stabt~01 * /stabt~02 * stabt~03 
+        * stabt~04 * /pb2
+      + bus_end_tr * bus_lock * stabt~01 * /stabt~02 * stabt~03 
+        * /stabt~04 * /pb2
+      + /local_bus_free * /stabt~01 * stabt~02 * /stabt~03 
+        * /stabt~04 * /pb2
+      + bus_bg * /stabt~01 * stabt~02 * /stabt~03 * stabt~04 * /pb2
+      + /cpu_addr_hit * bus_lock * stabt~01 * stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + /bus_bg * /stabt~01 * stabt~02 * /stabt~03 * stabt~04 * /pb2
+      + /bus_addr_hit * bus_lock * stabt~01 * stabt~02 * /stabt~03 
+        * /stabt~04 * /pb2
+      + /local_bg * /stabt~01 * stabt~02 * /stabt~03 * /stabt~04 
+        * /pb2
+      + /bus_end_tr * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /stabt~01 * stabt~02 * stabt~03 * stabt~04 * /pb2
+
+stabt~03 := cpu_go * /cpu_addr_hit * /bus_addr_hit * /stabt~01 
+        * /stabt~02 * /stabt~03 * /stabt~04 * /pb2
+      + stabt~01 * /stabt~02 * /stabt~03 * /stabt~04 * /pb2
+      + cpu_go * cpu_clr * /stabt~01 * /stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + bus_bg * /stabt~01 * /stabt~02 * stabt~03 * /stabt~04 * /pb2
+      + local_bg * local_bus_free * /stabt~01 * /stabt~02 * stabt~03 
+        * stabt~04 * /pb2
+      + 
+        /local_bg * /stabt~01 * /stabt~02 * stabt~03 * stabt~04 * /pb2
+      + /local_bus_free * /stabt~01 * /stabt~02 * stabt~03 
+        * stabt~04 * /pb2
+      + stabt~01 * /stabt~02 * stabt~03 * stabt~04 * /pb2
+      + /bus_end_tr * stabt~01 * /stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /bus_bg * /stabt~01 * /stabt~02 * stabt~03 * /stabt~04 * /pb2
+      + bus_bg * /stabt~01 * stabt~02 * /stabt~03 * stabt~04 * /pb2
+      + /bus_end_tr * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /stabt~01 * stabt~02 * stabt~03 * stabt~04 * /pb2
+      + /packet_count_zero * /xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + packet_count_zero * /xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+
+stabt~04 := /cpu_go * /cpu_clr * /stabt~01 * /stabt~02 
+        * /stabt~03 * stabt~04 * /pb2
+      + cpu_addr_hit * /bus_addr_hit * /stabt~01 * /stabt~02 
+        * /stabt~03 * /stabt~04 * /pb2
+      + bus_end_tr * bus_lock * stabt~01 * /stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + /bus_end_tr * stabt~01 * /stabt~02 * /stabt~03 * stabt~04 
+        * /pb2
+      + cpu_go * /cpu_clr * /stabt~01 * /stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + bus_bg * /stabt~01 * /stabt~02 * stabt~03 * /stabt~04 * /pb2
+      + local_bg * local_bus_free * /stabt~01 * /stabt~02 * stabt~03 
+        * stabt~04 * /pb2
+      + 
+        /local_bg * /stabt~01 * /stabt~02 * stabt~03 * stabt~04 * /pb2
+      + /local_bus_free * /stabt~01 * /stabt~02 * stabt~03 
+        * stabt~04 * /pb2
+      + /bus_bg * /stabt~01 * stabt~02 * /stabt~03 * stabt~04 * /pb2
+      + packet_count_zero * xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /packet_count_zero * xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + bus_end_tr * bus_error * /stabt~01 * stabt~02 * stabt~03 
+        * /stabt~04 * /pb2
+      + stabt~01 * stabt~02 * stabt~03 * /stabt~04 * /pb2
+      + packet_count_zero * /xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+
+cpu_int := /cpu_go * /cpu_clr * /stabt~01 * /stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + cpu_go * /cpu_clr * /stabt~01 * /stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + packet_count_zero * xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /packet_count_zero * xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + bus_end_tr * bus_error * /stabt~01 * stabt~02 * stabt~03 
+        * /stabt~04 * /pb2
+
+local_br := bus_addr_hit * /stabt~01 * /stabt~02 * /stabt~03 
+        * /stabt~04 * /pb2
+      + bus_bg * /stabt~01 * /stabt~02 * stabt~03 * /stabt~04 * /pb2
+      + 
+        /local_bg * /stabt~01 * /stabt~02 * stabt~03 * stabt~04 * /pb2
+      + /local_bus_free * /stabt~01 * /stabt~02 * stabt~03 
+        * stabt~04 * /pb2
+      + /local_bus_free * /stabt~01 * stabt~02 * /stabt~03 
+        * /stabt~04 * /pb2
+      + /local_bg * /stabt~01 * stabt~02 * /stabt~03 * /stabt~04 
+        * /pb2
+
+local_bgack := stabt~01 * /stabt~02 * /stabt~03 * /stabt~04 * /pb2
+      + local_bg * local_bus_free * /stabt~01 * /stabt~02 * stabt~03 
+        * stabt~04 * /pb2
+      + bus_end_tr * bus_lock * stabt~01 * /stabt~02 * stabt~03 
+        * /stabt~04 * /pb2
+      + /bus_end_tr * stabt~01 * /stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + local_bg * local_bus_free * /stabt~01 * stabt~02 * /stabt~03 
+        * /stabt~04 * /pb2
+      + bus_addr_hit * stabt~01 * stabt~02 * /stabt~03 * /stabt~04 
+        * /pb2
+      + /bus_addr_hit * bus_lock * stabt~01 * stabt~02 * /stabt~03 
+        * /stabt~04 * /pb2
+      + /bus_end_tr * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /stabt~01 * stabt~02 * stabt~03 * stabt~04 * /pb2
+
+local_as := stabt~01 * /stabt~02 * /stabt~03 * /stabt~04 * /pb2
+      + /bus_end_tr * stabt~01 * /stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /bus_end_tr * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /stabt~01 * stabt~02 * stabt~03 * stabt~04 * /pb2
+
+bus_addr_ien := 
+        stabt~01 * /stabt~02 * /stabt~03 * /stabt~04 * /pb2
+
+local_addr_oen := 
+        /stabt~01 * stabt~02 * stabt~03 * stabt~04 * /pb2
+
+load_packet_count := packet_count_zero * /xfer_count_zero 
+        * bus_end_tr * /bus_error * /stabt~01 * stabt~02 * stabt~03 
+        * /stabt~04 * /pb2
+
+bus_br := cpu_addr_hit * /bus_addr_hit * /stabt~01 * /stabt~02 
+        * /stabt~03 * /stabt~04 * /pb2
+      + cpu_go * /cpu_addr_hit * /bus_addr_hit * /stabt~01 
+        * /stabt~02 * /stabt~03 * /stabt~04 * /pb2
+      + cpu_go * cpu_clr * /stabt~01 * /stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + stabt~01 * /stabt~02 * stabt~03 * stabt~04 * /pb2
+      + /bus_bg * /stabt~01 * /stabt~02 * stabt~03 * /stabt~04 * /pb2
+      + /bus_bg * /stabt~01 * stabt~02 * /stabt~03 * stabt~04 * /pb2
+      + /packet_count_zero * /xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+
+bus_bgack := bus_end_tr * bus_lock * stabt~01 * /stabt~02 
+        * /stabt~03 * stabt~04 * /pb2
+      + /bus_end_tr * stabt~01 * /stabt~02 * /stabt~03 * stabt~04 
+        * /pb2
+      + bus_bg * /stabt~01 * /stabt~02 * stabt~03 * /stabt~04 * /pb2
+      + local_bg * local_bus_free * /stabt~01 * /stabt~02 * stabt~03 
+        * stabt~04 * /pb2
+      + 
+        /local_bg * /stabt~01 * /stabt~02 * stabt~03 * stabt~04 * /pb2
+      + /local_bus_free * /stabt~01 * /stabt~02 * stabt~03 
+        * stabt~04 * /pb2
+      + bus_bg * /stabt~01 * stabt~02 * /stabt~03 * stabt~04 * /pb2
+      + cpu_addr_hit * stabt~01 * stabt~02 * /stabt~03 * stabt~04 
+        * /pb2
+      + /cpu_addr_hit * bus_lock * stabt~01 * stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + /bus_end_tr * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /stabt~01 * stabt~02 * stabt~03 * stabt~04 * /pb2
+      + stabt~01 * stabt~02 * stabt~03 * /stabt~04 * /pb2
+
+bus_as := /bus_end_tr * stabt~01 * /stabt~02 * /stabt~03 
+        * stabt~04 * /pb2
+      + /bus_end_tr * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + /stabt~01 * stabt~02 * stabt~03 * stabt~04 * /pb2
+      + stabt~01 * stabt~02 * stabt~03 * /stabt~04 * /pb2
+
+local_addr_ien := 
+        stabt~01 * stabt~02 * stabt~03 * /stabt~04 * /pb2
+
+bus_addr_oen := /stabt~01 * stabt~02 * stabt~03 * stabt~04 * /pb2
+
+dma_error := cpu_go * /cpu_clr * /stabt~01 * /stabt~02 
+        * /stabt~03 * stabt~04 * /pb2
+      + /packet_count_zero * xfer_count_zero * bus_end_tr 
+        * /bus_error * /stabt~01 * stabt~02 * stabt~03 * /stabt~04 
+        * /pb2
+      + bus_end_tr * bus_error * /stabt~01 * stabt~02 * stabt~03 
+        * /stabt~04 * /pb2
+
+global.C = clock
+
+pb2 := GND
+
+pb2.C = clock

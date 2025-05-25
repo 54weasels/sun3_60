@@ -1,0 +1,44 @@
+	OPALjr Example
+	Copyright National Semiconductor Corp, 1993.
+
+	Hex Decoder / 7-Segment LED Driver
+
+CHIP hex_7seg pal16l8 
+
+
+/rbi d0 d1  d2 d3 ic lt nc nc gnd
+nc   g  rbo f  e  d  c  b  a  vcc
+
+EQUATIONS
+
+/a = /rbo*/d0*/d2 + /rbo*/d0* d3 + /rbo* d1* d2
+   + /rbo* d1* d2*/d3 + /rbo* d0* d2*/d3 + /rbo*/d1*/d2* d3 +  lt
+ a.oe = ic
+
+/b = /rbo*/d2*/d3 + /rbo*/d0*/d2 + /rbo*/d0*/d1*/d3
+   + /rbo* d0* d1*/d3 + /rbo* d0*/d1*/d3 +  lt
+ b.oe = ic
+
+/c = /rbo* d0*/d1 + /rbo* d0*/d2 + /rbo*/d1*/d2
+   + /rbo* d2*/d3 + /rbo*/d2* d3 +  lt
+ c.oe = ic
+
+/d = /rbo*/d1* d3 + /rbo*/d0*/d2*/d3
+   + /rbo* d0* d1*/d2 + /rbo*/d0* d1* d2 + /rbo* d0*/d1* d2 +  lt
+ d.oe = ic
+
+/e = /rbo*/d0*/d2 + /rbo* d2* d3 + /rbo*/d0* d1
+   + /rbo* d1* d3 +  lt
+ e.oe = ic
+
+/f = /rbo*/d0*/d1 + /rbo*/d2* d3 + /rbo* d1* d3
+   + /rbo*/d0* d2 + /rbo*/d1* d2*/d3 +  lt
+ f.oe = ic
+
+/g = /rbo* d1*/d2 + /rbo* d0* d3 + /rbo*/d2* d3
+   + /rbo*/d0* d1 + /rbo*/d1* d2*/d3 +  lt
+ g.oe = /ic
+
+/rbo = /d0*/d1*/d2*/d3*/rbi
+
+

@@ -1,0 +1,398 @@
+$ sodavend
+$ JED2CKT -- JEDEC File to OPALsim Circuit/Macro Translator (Version V055)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from sodavend.jed. Date: 3-20-92
+$ DEVICE MAPL244
+
+.MACRO sodavend dly p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13
++ p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 p28
++ p29 p30 p31 p32 p33 p34 p35 p36 p37 p38 p39 p40 p41 p42 p43
++ p44
+
+np36 INV 0 p36
+np35 INV 0 p35
+np34 INV 0 p34
+np33 INV 0 p33
+np32 INV 0 p32
+np29 INV 0 p29
+np28 INV 0 p28
+np27 INV 0 p27
+np22 INV 0 p22
+np14 INV 0 p14
+np13 INV 0 p13
+np12 INV 0 p12
+np11 INV 0 p11
+np7 INV 0 p7
+np5 INV 0 p5
+np4 INV 0 p4
+nps0 INV 0 ps0
+nps1 INV 0 ps1
+nps2 INV 0 ps2
+page0 AND 0 nps2 nps1 nps0
+page1 AND 0 nps2 nps1 ps0
+page2 AND 0 nps2 ps1 nps0
+page3 AND 0 nps2 ps1 ps0
+page4 AND 0 ps2 nps1 nps0
+page5 AND 0 ps2 nps1 ps0
+page6 AND 0 ps2 ps1 nps0
+page7 AND 0 ps2 ps1 ps0
+a0 AND 0 np36 p35 np34 p4 page0
+a1 AND 0 np35 np34 np33 np32 np29 np28 np27 page0
+a2 AND 0 np36 np34 np22 np13 np5 page0
+a3 AND 0 np36 np34 np22 np11 np5 page0
+a4 AND 0 np36 np35 np34 page0
+a5 AND 0 np36 p35 np34 np22 p13 p11 np4 page0
+a6 AND 0 np36 p35 np34 p22 np4 page0
+a7 AND 0 p36 np35 np34 np33 np32 p29 np28 np27 page0
+a8 AND 0 p36 np35 np34 p33 np32 np29 np28 np27 page0
+a9 AND 0 np36 p35 np34 np22 p5 np4 page0
+a10 AND 0 p36 np35 np34 p32 np29 np28 np27 page0
+a11 AND 0 p36 np35 np34 p33 p29 page0
+a12 AND 0 p36 np35 np34 p32 p29 page0
+a13 AND 0 p36 np35 np34 p27 page0
+a14 AND 0 p36 np35 np34 p28 page0
+a16 AND 0 np36 p35 np34 page1
+a17 AND 0 p36 np35 np34 np28 np27 page1
+a18 AND 0 p36 np35 np34 np29 np27 page1
+a19 AND 0 p36 np35 np34 p29 p28 p27 page1
+a20 AND 0 p36 np35 np34 page1
+a21 AND 0 p36 np35 np34 np29 p28 page1
+a22 AND 0 p36 np35 np34 p29 np28 page1
+a23 AND 0 p36 np35 np34 np29 page1
+a24 AND 0 p36 np35 np34 p32 page1
+a25 AND 0 p36 np35 np34 p33 page1
+a26 AND 0 np36 np35 np34 np12 p7 page1
+a27 AND 0 np36 np35 np34 p14 page1
+a28 AND 0 np36 np35 np34 np14 p12 page1
+a29 AND 0 np36 np35 np34 np14 np7 p6 page1
+a30 AND 0 np36 np35 np34 np12 page1
+a32 AND 0 np36 np35 np34 np33 np32 np28 np27 page2
+a33 AND 0 np36 np35 np34 p32 p29 p27 page2
+a34 AND 0 np36 np35 np34 np29 np28 np27 page2
+a35 AND 0 np36 np35 np34 p33 p29 p27 page2
+a36 AND 0 np36 np35 np34 p28 p27 page2
+a37 AND 0 np36 np35 np34 page2
+a38 AND 0 np36 np35 np34 p32 p29 p28 page2
+a39 AND 0 np36 np35 np34 p33 p29 p28 page2
+a40 AND 0 np36 np35 np34 np33 np32 np28 page2
+a41 AND 0 np36 np35 np34 np29 np28 page2
+a42 AND 0 np36 np35 np34 p32 np29 page2
+a43 AND 0 np36 np35 np34 np33 np32 p29 page2
+a44 AND 0 np36 np35 np34 p33 np29 page2
+a45 AND 0 np36 np35 np34 p33 p32 page2
+a46 AND 0 np36 np35 np34 np33 np32 page2
+a47 AND 0 np36 np35 np34 np33 page2
+a48 AND 0 np36 np35 np34 page3
+a49 AND 0 np36 np35 np34 p33 p32 p29 p28 np27 page3
+a50 AND 0 np36 np35 np34 np33 p27 page3
+a51 AND 0 np36 np35 np34 np32 p27 page3
+a52 AND 0 np36 np35 np34 np28 p27 page3
+a53 AND 0 np36 np35 np34 np29 p27 page3
+a54 AND 0 np36 np35 np34 p33 p32 p29 np28 page3
+a55 AND 0 np36 np35 np34 np29 p28 page3
+a56 AND 0 np36 np35 np34 np32 p28 page3
+a57 AND 0 np36 np35 np34 np33 p28 page3
+a58 AND 0 np36 np35 np34 p33 p32 np29 page3
+a59 AND 0 np36 np35 np34 np32 p29 page3
+a60 AND 0 np36 np35 np34 np33 p29 page3
+a61 AND 0 np36 np35 np34 np33 p32 page3
+a62 AND 0 np36 np35 np34 p33 np32 page3
+a63 AND 0 np36 np35 np34 np33 page3
+a64 AND 0 np36 np35 p34 page4
+a65 AND 0 np36 p35 np34 page4
+a66 AND 0 p36 np35 np34 page4
+a67 AND 0 p36 np35 np34 np28 p27 page4
+a68 AND 0 p36 np35 np34 np29 p27 page4
+a69 AND 0 p36 np35 np34 p32 p29 p28 np27 page4
+a70 AND 0 p36 np35 np34 np32 p27 page4
+a71 AND 0 np36 np35 np34 p4 page4
+a72 AND 0 p36 np35 np34 np29 p28 page4
+a73 AND 0 p36 np35 np34 np32 p28 page4
+a74 AND 0 p36 np35 np34 p32 p29 np28 page4
+a75 AND 0 p36 np35 np34 np32 p29 page4
+a76 AND 0 p36 np35 np34 p32 np29 page4
+a77 AND 0 p36 np35 np34 np32 page4
+a78 AND 0 p36 np35 np34 p33 page4
+a79 AND 0 np36 np35 np34 np4 page4
+a80 AND 0 np36 np35 np34 np32 np29 np28 np27 page5
+a81 AND 0 np36 np35 np34 p28 p27 page5
+a82 AND 0 np36 np35 np34 p32 p27 page5
+a83 AND 0 np36 np35 np34 p29 p27 page5
+a84 AND 0 np36 np35 np34 page5
+a85 AND 0 np36 np35 np34 np32 np29 np28 page5
+a86 AND 0 np36 np35 np34 p32 p28 page5
+a87 AND 0 np36 np35 np34 p29 p28 page5
+a88 AND 0 np36 np35 np34 p32 p29 page5
+a89 AND 0 np36 np35 np34 np32 np29 page5
+a90 AND 0 np36 np35 np34 np32 page5
+a91 AND 0 np36 np35 np34 p33 page5
+a92 AND 0 p36 np35 np34 np12 np7 p6 page5
+a93 AND 0 p36 np35 np34 np12 p7 page5
+a94 AND 0 p36 np35 np34 p12 page5
+a95 AND 0 p36 np35 np34 np7 page5
+a96 AND 0 np36 np35 np34 page6
+a97 AND 0 np36 np35 np34 p33 p32 p28 np27 page6
+a98 AND 0 np36 np35 np34 p29 p28 np27 page6
+a99 AND 0 np36 np35 np34 np32 np29 p27 page6
+a100 AND 0 np36 np35 np34 np33 np29 p27 page6
+a101 AND 0 np36 np35 np34 np28 p27 page6
+a102 AND 0 np36 np35 np34 np32 np29 p28 page6
+a103 AND 0 np36 np35 np34 p33 p32 np28 page6
+a104 AND 0 np36 np35 np34 np33 np29 p28 page6
+a105 AND 0 np36 np35 np34 p29 np28 page6
+a106 AND 0 np36 np35 np34 p33 p32 p29 page6
+a107 AND 0 np36 np35 np34 np32 np29 page6
+a108 AND 0 np36 np35 np34 np33 np29 page6
+a109 AND 0 np36 np35 np34 np33 p32 page6
+a110 AND 0 np36 np35 np34 p33 np32 page6
+a111 AND 0 np36 np35 np34 np33 page6
+a112 AND 0 np36 np35 np34 np33 np32 np29 np28 np27 page7
+a113 AND 0 np36 np35 np34 p28 p27 page7
+a114 AND 0 np36 np35 np34 p32 p27 page7
+a115 AND 0 np36 np35 np34 p29 p27 page7
+a116 AND 0 np36 np35 np34 p33 p27 page7
+a117 AND 0 np36 np35 np34 page7
+a118 AND 0 np36 np35 np34 np33 np32 np29 np28 page7
+a119 AND 0 np36 np35 np34 p32 p28 page7
+a120 AND 0 np36 np35 np34 p29 p28 page7
+a121 AND 0 np36 np35 np34 p33 p28 page7
+a122 AND 0 np36 np35 np34 np33 np32 np29 page7
+a123 AND 0 np36 np35 np34 p32 p29 page7
+a124 AND 0 np36 np35 np34 p33 p29 page7
+a125 AND 0 np36 np35 np34 p33 p32 page7
+a126 AND 0 np36 np35 np34 np33 np32 page7
+a127 AND 0 np36 np35 np34 np33 page7
+a128 AND 0 GND
+a129 AND 0 GND
+a130 AND 0 GND
+oe11 OR 0 a130 a129 a128
+a131 AND 0 GND
+oe12 OR 0 a131
+a132 AND 0 GND
+a133 AND 0 GND
+a134 AND 0 GND
+oe21 OR 0 a134 a133 a132
+a135 AND 0 GND
+oe22 OR 0 a135
+a136 AND 0 GND
+a137 AND 0 GND
+a138 AND 0 GND
+oe31 OR 0 a138 a137 a136
+a139 AND 0 GND
+oe32 OR 0 a139
+a140 AND 0 GND
+a141 AND 0 GND
+a142 AND 0 GND
+init1 NOR 0 a142 a141 a140
+a143 AND 0 GND
+init2 NOR 0 a143
+a144 AND 0 GND
+init3 NOR 0 a144
+a145 AND 0 GND
+init4 NOR 0 a145
+a146 AND 0 GND
+ilmcinit OR 0 a146
+a147 AND 0 GND
+ilmcclk OR 0 a147
+or771 OR 0 a5 a7 a8 a9 a10 a27 a28 a93
+or772 INV 0 GND
+mux77 MUX 0 nc or772 ps0 or771
+ps0 DFF dly nq77 p10 mux77 /0
+or781 OR 0 a8 a11 a12 a13 a14 a28 a29
+or782 INV 0 GND
+mux78 MUX 0 nc or782 ps1 or781
+ps1 DFF dly nq78 p10 mux78 /0
+or791 OR 0 a7 a8 a10 a27 a30 a79 a94 a95
+or792 INV 0 GND
+mux79 MUX 0 nc or792 ps2 or791
+ps2 DFF dly nq79 p10 mux79 /0
+or31 BUF 0 GND
+or32 BUF 0 GND
+p53 BUF 0 q3
+np10 INV 0 p10
+q3 JKFF dly nq3 np10 or31 or32 /0
+or21 BUF 0 GND
+or22 BUF 0 GND
+p54 BUF 0 q2
+q2 JKFF dly nq2 np10 or21 or22 /0
+or11 BUF 0 GND
+or12 BUF 0 GND
+p55 BUF 0 q1
+q1 JKFF dly nq1 np10 or11 or12 /0
+or441 BUF 0 GND
+or442 BUF 0 GND
+p56 BUF 0 q44
+q44 JKFF dly nq44 np10 or441 or442 /0
+or431 OR 0 a16 a84
+or432 INV 0 GND
+p57 BUF 0 q43
+mux43 MUX 0 nc or432 q43 or431
+q43 DFF dly nq43 p10 mux43 /0
+p43 TBUF 0 VCC q43
+or411 OR 0 a37 a64
+or412 INV 0 GND
+p58 BUF 0 q41
+mux41 MUX 0 nc or412 q41 or411
+q41 DFF dly nq41 p10 mux41 /0
+p41 TBUF 0 VCC q41
+or401 BUF 0 GND
+or402 INV 0 GND
+p59 BUF 0 q40
+mux40 MUX 0 nc or402 q40 or401
+q40 DFF dly nq40 p10 mux40 /0
+p40 TBUF 0 VCC q40
+or361 OR 0 a5 a6 a26 a27 a37 a84 a117
+or362 INV 0 GND
+p60 BUF 0 q36
+mux36 MUX 0 nc or362 q36 or361
+q36 DFF dly nq36 p10 mux36 /0
+p36 TBUF 0 VCC q36
+or351 OR 0 a0 a1 a2 a3 a4 a20 a71 a93 a94
+or352 INV 0 GND
+p61 BUF 0 q35
+mux35 MUX 0 nc or352 q35 or351
+q35 DFF dly nq35 p10 mux35 /0
+p35 TBUF 0 VCC q35
+or341 OR 0 a92
+or342 INV 0 GND
+p62 BUF 0 q34
+mux34 MUX 0 nc or342 q34 or341
+q34 DFF dly nq34 p10 mux34 /0
+p34 TBUF 0 VCC q34
+or331 OR 0 a25 a47 a63 a78 a91 a111 a127
+or332 OR 0 a0 a20 a37 a48 a66 a71 a84 a96 a117
+p63 BUF 0 q33
+mux33 MUX 0 nc or332 q33 or331
+q33 DFF dly nq33 p10 mux33 /0
+p33 TBUF 0 VCC q33
+or321 OR 0 a24 a45 a46 a61 a62 a77 a90 a109 a110 a125 a126
+or322 OR 0 a0 a20 a37 a48 a66 a71 a84 a96 a117
+p64 BUF 0 q32
+mux32 MUX 0 nc or322 q32 or321
+q32 DFF dly nq32 p10 mux32 /0
+p32 TBUF 0 VCC q32
+or291 OR 0 a23 a42 a43 a44 a58 a59 a60 a75 a76 a88 a89 a106 a107
++ a108 a122 a123 a124
+or292 OR 0 a0 a20 a37 a48 a66 a71 a84 a96 a117
+p65 BUF 0 q29
+mux29 MUX 0 nc or292 q29 or291
+q29 DFF dly nq29 p10 mux29 /0
+p29 TBUF 0 VCC q29
+or281 OR 0 a21 a22 a38 a39 a40 a41 a54 a55 a56 a57 a72 a73 a74
++ a85 a86 a87 a102 a103 a104 a105 a118 a119 a120 a121
+or282 OR 0 a0 a20 a37 a48 a66 a71 a84 a96 a117
+p66 BUF 0 q28
+mux28 MUX 0 nc or282 q28 or281
+q28 DFF dly nq28 p10 mux28 /0
+p28 TBUF 0 VCC q28
+or271 OR 0 a17 a18 a19 a32 a33 a34 a35 a36 a49 a50 a51 a52 a53
++ a67 a68 a69 a70 a80 a81 a82 a83 a97 a98 a99 a100 a101 a112 a113
++ a114 a115 a116
+or272 OR 0 a0 a20 a37 a48 a66 a71 a84 a96 a117
+p67 BUF 0 q27
+mux27 MUX 0 nc or272 q27 or271
+q27 DFF dly nq27 p10 mux27 /0
+p27 TBUF 0 VCC q27
+or261 OR 0 a16 a48 a64 a65 a66 a96
+or262 INV 0 GND
+p68 BUF 0 q26
+mux26 MUX 0 nc or262 q26 or261
+q26 DFF dly nq26 p10 mux26 /0
+p26 TBUF 0 VCC q26
+or251 BUF 0 GND
+or252 BUF 0 GND
+p69 BUF 0 q25
+q25 JKFF dly nq25 np10 or251 or252 /0
+or241 BUF 0 GND
+or242 BUF 0 GND
+p70 BUF 0 q24
+q24 JKFF dly nq24 np10 or241 or242 /0
+or231 BUF 0 GND
+or232 BUF 0 GND
+p71 BUF 0 q23
+q23 JKFF dly nq23 np10 or231 or232 /0
+or221 BUF 0 GND
+or222 BUF 0 GND
+p72 BUF 0 q22
+q22 JKFF dly nq22 np10 or221 or222 /0
+or211 BUF 0 GND
+or212 BUF 0 GND
+p73 BUF 0 q21
+q21 JKFF dly nq21 np10 or211 or212 /0
+or201 OR 0 a79
+or202 INV 0 GND
+p74 BUF 0 q20
+mux20 MUX 0 nc or202 q20 or201
+q20 DFF dly nq20 p10 mux20 /0
+p20 TBUF 0 VCC q20
+or191 OR 0 a20
+or192 INV 0 GND
+p75 BUF 0 q19
+mux19 MUX 0 nc or192 q19 or191
+q19 DFF dly nq19 p10 mux19 /0
+p19 TBUF 0 VCC q19
+or181 OR 0 a65 a117
+or182 INV 0 GND
+p76 BUF 0 q18
+mux18 MUX 0 nc or182 q18 or181
+q18 DFF dly nq18 p10 mux18 /0
+p18 TBUF 0 VCC q18
+a148 AND 0 p28 p27
+a152 AND 0 GND
+a153 AND 0 GND
+a154 AND 0 p27
+a155 AND 0 p29 p28
+a158 AND 0 GND
+a159 AND 0 GND
+a160 AND 0 p25
+a161 AND 0 pnp26 p12 pnp4
+a168 AND 0 GND
+a169 AND 0 GND
+a182 AND 0 GND
+a183 AND 0 GND
+a184 AND 0 p23
+a185 AND 0 pnp26 p7 pnp4
+a188 AND 0 GND
+a189 AND 0 GND
+a190 AND 0 p24
+a191 AND 0 pnp26 p6 pnp4
+a194 AND 0 GND
+a195 AND 0 GND
+a196 AND 0 p7
+a197 AND 0 p6
+a198 AND 0 p12
+a204 AND 0 GND
+a205 AND 0 GND
+a218 AND 0 GND
+a219 AND 0 GND
+a220 AND 0 GND
+a221 AND 0 GND
+a222 AND 0 GND
+a223 AND 0 GND
+pnp26 INV 0 p26
+pnp4 INV 0 p4
+palinit NOR 0 a223
+paloe OR 0 a220 a221 a222
+por0 OR 0 a148
+p45 BUF dly por0
+p14 TBUF 0 VCC p45
+por1 OR 0 a154 a155
+p46 BUF dly por1
+p13 TBUF 0 VCC p46
+por2 OR 0 a160 a161
+p47 BUF dly por2
+p12 TBUF 0 VCC p47
+por3 OR 0 GND
+p48 BUF dly por3
+por4 OR 0 a184 a185
+p49 BUF dly por4
+p7 TBUF 0 VCC p49
+por5 OR 0 a190 a191
+p50 BUF dly por5
+p6 TBUF 0 VCC p50
+por6 OR 0 a196 a197 a198
+p51 BUF dly por6
+p5 TBUF 0 VCC p51
+por7 OR 0 GND
+p52 BUF dly por7
+.EOM

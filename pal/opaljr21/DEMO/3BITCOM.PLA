@@ -1,0 +1,37 @@
+#$ TOOL NSC opl2pla V016
+#$ TITLE   A 3-bit comparator design using relational operation.
+#$ TITLE   Copyright National Semiconductor Corp, 1992.
+#$ TITLE   The loop capability for test vector is also illustrated in this example
+#$ TITLE 
+#$ DEVICE gal16v8
+#$ PINS 10 a0:3 a1:2 a2:1 compare:5 b2:7 b1:8 b0:9 lt:13 eq:15 gt:17 
+#$ NODES 0 
+.i 7
+.o 3
+.type f
+.phase 111
+.ilb a0 a1 a2 compare b2 b1 b0 
+.ob  lt eq gt 
+1111111   ~1~
+1101011   ~1~
+1011101   ~1~
+1001001   ~1~
+0111110   ~1~
+0101010   ~1~
+0011100   ~1~
+0001000   ~1~
+1--1000   ~~1
+-1-100-   ~~1
+11-10-0   ~~1
+--110--   ~~1
+1-11-00   ~~1
+-111-0-   ~~1
+1111--0   ~~1
+0001--1   1~~
+-001-1-   1~~
+0-01-11   1~~
+--011--   1~~
+00-11-1   1~~
+-0-111-   1~~
+0--1111   1~~
+.e

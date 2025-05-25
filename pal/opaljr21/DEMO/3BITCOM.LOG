@@ -1,0 +1,145 @@
+
+OPL2PLA - OPAL design entry compiler V016
+Copyright (c) National Semiconductor Corporation 1991,1992
+
+
+Input Pins
+==========
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+a0                   3          com      visible              
+a1                   2          com      visible              
+a2                   1          com      visible              
+compare              5          com      visible              
+b2                   7          com      visible              
+b1                   8          com      visible              
+b0                   9          com      visible              
+
+Output Pins
+===========
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+lt                   13         com      visible      rst     
+eq                   15         com      visible      rst     
+gt                   17         com      visible      rst     
+
+set notations
+=============
+seta            = [a2,a1,a0]
+setb            = [b2,b1,b0]
+
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Document file for 3bitcom.eqn
+Device: 16V8
+
+Pin   Label               Type
+---   -----               ----
+1     a2                  pos,com input
+2     a1                  pos,com input
+3     a0                  pos,com input
+5     compare             pos,com input
+7     b2                  pos,com input
+8     b1                  pos,com input
+9     b0                  pos,com input
+13    lt                  pos,com output
+15    eq                  pos,com output
+17    gt                  pos,com output
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Device Utilization:
+
+No of dedicated inputs used               :  7/10 (70.0%)
+No of dedicated outputs used              :  2/2  (100.0%)
+No of feedbacks used as dedicated outputs :  1/6  (16.7%)
+
+		------------------------------------------
+		Pin   Label                 Terms Usage
+		------------------------------------------
+		17    gt                    7/8   (87.5%)
+		15    eq                    8/8   (100.0%)
+		13    lt                    7/8   (87.5%)
+		------------------------------------------
+		Total Terms                22/64  (34.4%)
+		------------------------------------------
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+                            Chip diagram (DIP)
+
+                             ._____    _____.
+                             |     \__/     |
+                          a2 |  1        20 | VCC
+                          a1 |  2        19 | 
+                          a0 |  3        18 | 
+                             |  4        17 | gt
+                     compare |  5        16 | 
+                             |  6        15 | eq
+                          b2 |  7        14 | 
+                          b1 |  8        13 | lt
+                          b0 |  9        12 | 
+                         GND | 10        11 | 
+                             |______________|
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Document file for 3bitcom.eqn
+Device: 16V8
+
+Pin   Label               Type
+---   -----               ----
+1     a2                  pos,com input
+2     a1                  pos,com input
+3     a0                  pos,com input
+5     compare             pos,com input
+7     b2                  pos,com input
+8     b1                  pos,com input
+9     b0                  pos,com input
+13    lt                  pos,com output
+15    eq                  pos,com output
+17    gt                  pos,com output
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Device Utilization:
+
+No of dedicated inputs used               :  7/10 (70.0%)
+No of dedicated outputs used              :  2/2  (100.0%)
+No of feedbacks used as dedicated outputs :  1/6  (16.7%)
+
+		------------------------------------------
+		Pin   Label                 Terms Usage
+		------------------------------------------
+		17    gt                    7/8   (87.5%)
+		15    eq                    8/8   (100.0%)
+		13    lt                    7/8   (87.5%)
+		------------------------------------------
+		Total Terms                22/64  (34.4%)
+		------------------------------------------
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+                            Chip diagram (DIP)
+
+                             ._____    _____.
+                             |     \__/     |
+                          a2 |  1        20 | VCC
+                          a1 |  2        19 | 
+                          a0 |  3        18 | 
+                             |  4        17 | gt
+                     compare |  5        16 | 
+                             |  6        15 | eq
+                          b2 |  7        14 | 
+                          b1 |  8        13 | lt
+                          b0 |  9        12 | 
+                         GND | 10        11 | 
+                             |______________|
+

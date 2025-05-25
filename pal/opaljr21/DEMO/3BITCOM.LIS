@@ -1,0 +1,50 @@
+begin header
+  A 3-bit comparator design using relational operation.
+  Copyright National Semiconductor Corp, 1992.
+  The loop capability for test vector is also illustrated in this example
+end header
+
+begin definition
+ device gal16v8;          
+ input a[0:2]=[3:1],      
+       compare=5,	  
+       b[2:0]=[7:9];	  
+ output (com) lt=13,              
+              eq=15,	          
+              gt=17;	          
+ set seta=a[2:0],         
+     setb=b[2:0];	  
+end definition
+
+begin equation
+
+ eq = ( seta == setb ) * compare ;
+ gt = ( seta >  setb ) * compare ;
+ lt = ( seta <  setb ) * compare ;
+
+end equation
+
+begin vector
+ 
+compare,seta,setb; 
+ 
+PROBE lt,eq,gt ;           
+
+1 000 000     
+0 000 000     
+
+1 111 110     
+0 111 110     
+
+1 011 100     
+0 011 100     
+
+ 
+
+LOOP 8 ( seta=0 )
+LOOP 8 ( setb=0 )
+1 III III   
+END
+END
+
+end vector

@@ -1,0 +1,246 @@
+	OPALjr Example
+	Copyright National Semiconductor Corp, 1993.
+	
+	15-bit up/down counter
+	This application is a 15-bit UP/DOWN counter with reset and hold.
+	It is designed specifically for the MAPL128;  all of the pins,
+	   including buried registers and page bits, have been assigned.
+	It shows use of the JK type of register, as well as being
+	   a complex design.
+
+CHIP  15b_updn MAPL128
+
+	UP_DOWN=4 HOLD=5 RESET=6 CNT7=7 CNT8=8
+	CNT9=9 CNT10=10 CNT11=11 CNT14=12 CNT13=13
+	CNT12=15 CNT6=17 CNT5=18 CNT4=19 CNT3=20
+	CNT2=21 CNT1=22 CNT0=23
+	BCNT14=29 BCNT13=30 BCNT12=31
+	P0=37 P1=38 P2=39
+
+ 	@ues thx1138
+
+EQUATIONS
+
+CNT14.J = /RESET * /HOLD * /UP_DOWN * BCNT13 * BCNT12 * CNT11 
+        * CNT10 * CNT9 * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 
+        * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /BCNT13 * /BCNT12 * /CNT11 
+        * /CNT10 * /CNT9 * /CNT8 * /CNT7 * /CNT6 * /CNT5 * /CNT4 
+        * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT14.K = /RESET * /HOLD * /UP_DOWN * BCNT13 * BCNT12 * CNT11 
+        * CNT10 * CNT9 * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 
+        * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /BCNT13 * /BCNT12 * /CNT11 
+        * /CNT10 * /CNT9 * /CNT8 * /CNT7 * /CNT6 * /CNT5 * /CNT4 
+        * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT13.J = /RESET * /HOLD * /UP_DOWN * BCNT12 * CNT11 * CNT10 
+        * CNT9 * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 
+        * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /BCNT12 * /CNT11 * /CNT10 * /CNT9 
+        * /CNT8 * /CNT7 * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 
+        * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT13.K = /RESET * /HOLD * /UP_DOWN * BCNT12 * CNT11 * CNT10 
+        * CNT9 * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 
+        * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /BCNT12 * /CNT11 * /CNT10 * /CNT9 
+        * /CNT8 * /CNT7 * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 
+        * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT12.J = /RESET * /HOLD * /UP_DOWN * CNT11 * CNT10 * CNT9 * CNT8 
+        * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 * CNT1 * CNT0 
+        * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT11 * /CNT10 * /CNT9 * /CNT8 
+        * /CNT7 * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 * /CNT1 
+        * /CNT0 * /P2 * /P1 * P0
+
+CNT12.K = /RESET * /HOLD * /UP_DOWN * CNT11 * CNT10 * CNT9 * CNT8 
+        * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 * CNT1 * CNT0 
+        * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT11 * /CNT10 * /CNT9 * /CNT8 
+        * /CNT7 * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 * /CNT1 
+        * /CNT0 * /P2 * /P1 * P0
+
+BCNT14.J = /RESET * /HOLD * /UP_DOWN * BCNT13 * BCNT12 * CNT11 
+        * CNT10 * CNT9 * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 
+        * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /BCNT13 * /BCNT12 * /CNT11 
+        * /CNT10 * /CNT9 * /CNT8 * /CNT7 * /CNT6 * /CNT5 * /CNT4 
+        * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+BCNT14.K = /RESET * /HOLD * /UP_DOWN * BCNT13 * BCNT12 * CNT11 
+        * CNT10 * CNT9 * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 
+        * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /BCNT13 * /BCNT12 * /CNT11 
+        * /CNT10 * /CNT9 * /CNT8 * /CNT7 * /CNT6 * /CNT5 * /CNT4 
+        * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+BCNT13.J = /RESET * /HOLD * /UP_DOWN * BCNT12 * CNT11 * CNT10 
+        * CNT9 * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 
+        * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /BCNT12 * /CNT11 * /CNT10 * /CNT9 
+        * /CNT8 * /CNT7 * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 
+        * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+BCNT13.K = /RESET * /HOLD * /UP_DOWN * BCNT12 * CNT11 * CNT10 
+        * CNT9 * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 
+        * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /BCNT12 * /CNT11 * /CNT10 * /CNT9 
+        * /CNT8 * /CNT7 * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 
+        * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+BCNT12.J = /RESET * /HOLD * /UP_DOWN * CNT11 * CNT10 * CNT9 
+        * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 * CNT1 
+        * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT11 * /CNT10 * /CNT9 * /CNT8 
+        * /CNT7 * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 * /CNT1 
+        * /CNT0 * /P2 * /P1 * P0
+
+BCNT12.K = /RESET * /HOLD * /UP_DOWN * CNT11 * CNT10 * CNT9 
+        * CNT8 * CNT7 * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 * CNT1 
+        * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT11 * /CNT10 * /CNT9 * /CNT8 
+        * /CNT7 * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 * /CNT1 
+        * /CNT0 * /P2 * /P1 * P0
+
+CNT11.J = /RESET * /HOLD * /UP_DOWN * CNT10 * CNT9 * CNT8 * CNT7 
+        * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 * CNT1 * CNT0 * /P2 * /P1 
+        * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT10 * /CNT9 * /CNT8 * /CNT7 
+        * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 * /CNT1 * /CNT0 
+        * /P2 * /P1 * P0
+
+CNT11.K = /RESET * /HOLD * /UP_DOWN * CNT10 * CNT9 * CNT8 * CNT7 
+        * CNT6 * CNT5 * CNT4 * CNT3 * CNT2 * CNT1 * CNT0 * /P2 * /P1 
+        * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT10 * /CNT9 * /CNT8 * /CNT7 
+        * /CNT6 * /CNT5 * /CNT4 * /CNT3 * /CNT2 * /CNT1 * /CNT0 
+        * /P2 * /P1 * P0
+
+CNT10.J = /RESET * /HOLD * /UP_DOWN * CNT9 * CNT8 * CNT7 * CNT6 
+        * CNT5 * CNT4 * CNT3 * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT9 * /CNT8 * /CNT7 * /CNT6 
+        * /CNT5 * /CNT4 * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 
+        * P0
+
+CNT10.K = /RESET * /HOLD * /UP_DOWN * CNT9 * CNT8 * CNT7 * CNT6 
+        * CNT5 * CNT4 * CNT3 * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT9 * /CNT8 * /CNT7 * /CNT6 
+        * /CNT5 * /CNT4 * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 
+        * P0
+
+CNT9.J = /RESET * /HOLD * /UP_DOWN * CNT8 * CNT7 * CNT6 * CNT5 
+        * CNT4 * CNT3 * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT8 * /CNT7 * /CNT6 * /CNT5 
+        * /CNT4 * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT9.K = /RESET * /HOLD * /UP_DOWN * CNT8 * CNT7 * CNT6 * CNT5 
+        * CNT4 * CNT3 * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT8 * /CNT7 * /CNT6 * /CNT5 
+        * /CNT4 * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT8.J = /RESET * /HOLD * /UP_DOWN * CNT7 * CNT6 * CNT5 * CNT4 
+        * CNT3 * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT7 * /CNT6 * /CNT5 * /CNT4 
+        * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT8.K = /RESET * /HOLD * /UP_DOWN * CNT7 * CNT6 * CNT5 * CNT4 
+        * CNT3 * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT7 * /CNT6 * /CNT5 * /CNT4 
+        * /CNT3 * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT7.J = /RESET * /HOLD * /UP_DOWN * CNT6 * CNT5 * CNT4 * CNT3 
+        * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT6 * /CNT5 * /CNT4 * /CNT3 
+        * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT7.K = /RESET * /HOLD * /UP_DOWN * CNT6 * CNT5 * CNT4 * CNT3 
+        * CNT2 * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT6 * /CNT5 * /CNT4 * /CNT3 
+        * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT6.J = /RESET * /HOLD * /UP_DOWN * CNT5 * CNT4 * CNT3 * CNT2 
+        * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT5 * /CNT4 * /CNT3 * /CNT2 
+        * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT6.K = /RESET * /HOLD * /UP_DOWN * CNT5 * CNT4 * CNT3 * CNT2 
+        * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT5 * /CNT4 * /CNT3 * /CNT2 
+        * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT5.J = /RESET * /HOLD * /UP_DOWN * CNT4 * CNT3 * CNT2 * CNT1 
+        * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT4 * /CNT3 * /CNT2 * /CNT1 
+        * /CNT0 * /P2 * /P1 * P0
+
+CNT5.K = /RESET * /HOLD * /UP_DOWN * CNT4 * CNT3 * CNT2 * CNT1 
+        * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT4 * /CNT3 * /CNT2 * /CNT1 
+        * /CNT0 * /P2 * /P1 * P0
+
+CNT4.J = /RESET * /HOLD * /UP_DOWN * CNT3 * CNT2 * CNT1 * CNT0 
+        * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT3 * /CNT2 * /CNT1 * /CNT0 
+        * /P2 * /P1 * P0
+
+CNT4.K = /RESET * /HOLD * /UP_DOWN * CNT3 * CNT2 * CNT1 * CNT0 
+        * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT3 * /CNT2 * /CNT1 * /CNT0 
+        * /P2 * /P1 * P0
+
+CNT3.J = /RESET * /HOLD * /UP_DOWN * CNT2 * CNT1 * CNT0 * /P2 
+        * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 
+        * P0
+
+CNT3.K = /RESET * /HOLD * /UP_DOWN * CNT2 * CNT1 * CNT0 * /P2 
+        * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT2 * /CNT1 * /CNT0 * /P2 * /P1 
+        * P0
+
+CNT2.J = /RESET * /HOLD * /UP_DOWN * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT2.K = /RESET * /HOLD * /UP_DOWN * CNT1 * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT1 * /CNT0 * /P2 * /P1 * P0
+
+CNT1.J = /RESET * /HOLD * /UP_DOWN * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT0 * /P2 * /P1 * P0
+
+CNT1.K = /RESET * /HOLD * /UP_DOWN * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /CNT0 * /P2 * /P1 * P0
+
+/CNT0.J = /RESET * HOLD * /UP_DOWN * /P2 * /P1 * /P0
+      + /RESET * HOLD * UP_DOWN * /P2 * /P1 * P0
+
+/CNT0.K = /RESET * HOLD * /UP_DOWN * /P2 * /P1 * /P0
+      + /RESET * HOLD * UP_DOWN * /P2 * /P1 * P0
+
+P2.J = GND
+
+P2.K = /RESET * HOLD * /UP_DOWN * /P2 * /P1 * /P0
+      + /RESET * /HOLD * /UP_DOWN * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /P2 * /P1 * /P0
+      + /RESET * HOLD * UP_DOWN * /P2 * /P1 * P0
+      + /RESET * /HOLD * UP_DOWN * /CNT0 * /P2 * /P1 * P0
+      + /RESET * /HOLD * /UP_DOWN * /P2 * /P1 * P0
+
+P1.J = GND
+
+P1.K = /RESET * HOLD * /UP_DOWN * /P2 * /P1 * /P0
+      + /RESET * /HOLD * /UP_DOWN * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * UP_DOWN * /P2 * /P1 * /P0
+      + /RESET * HOLD * UP_DOWN * /P2 * /P1 * P0
+      + /RESET * /HOLD * UP_DOWN * /CNT0 * /P2 * /P1 * P0
+      + /RESET * /HOLD * /UP_DOWN * /P2 * /P1 * P0
+
+P0.J = /RESET * /HOLD * UP_DOWN * /P2 * /P1 * /P0
+      + /RESET * HOLD * UP_DOWN * /P2 * /P1 * P0
+      + /RESET * /HOLD * UP_DOWN * /CNT0 * /P2 * /P1 * P0
+
+P0.K = /RESET * HOLD * /UP_DOWN * /P2 * /P1 * /P0
+      + /RESET * /HOLD * /UP_DOWN * CNT0 * /P2 * /P1 * /P0
+      + /RESET * /HOLD * /UP_DOWN * /P2 * /P1 * P0

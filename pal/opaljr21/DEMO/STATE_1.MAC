@@ -1,0 +1,51 @@
+$ state_1
+$ JED2CKT -- JEDEC File to OPALsim Circuit/Macro Translator (Version V055)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from state_1.jed. Date: 3-20-92
+$ DEVICE GAL16V8
+
+.MACRO state_1 dly p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13
++ p14 p15 p16 p17 p18 p19 p20
+
+np2 INV 0 p2
+a8 AND 0 np2 q18 q17 q16
+a9 AND 0 np2 q18 q15
+a16 AND 0 np2 q18 nq17 q15
+a17 AND 0 np2 nq18 q17 q15
+a24 AND 0 np2 nq18 nq17 q16 q15
+a25 AND 0 np2 q18 nq16 q15
+a26 AND 0 np2 q17 nq16 q15
+a32 AND 0 np2 q18 q17 q16 nq15
+a33 AND 0 np2 nq18 nq17 nq16 q15
+a40 AND 0 q17 nq14
+a41 AND 0 nq15 nq14
+a42 AND 0 nq16 nq14
+a43 AND 0 nq18 nq14
+a44 AND 0 np2 nq18 nq17 nq16 q15
+a45 AND 0 p2 nq14
+np11 INV 0 p11
+a0 OR 0 GND
+or19 OR 0 GND
+p19 TINV dly a0 or19
+or18 NOR 0 a8 a9
+q18 DFF dly nq18 p1 or18 /0
+p18 TINV 0 np11 q18
+or17 NOR 0 a16 a17
+q17 DFF dly nq17 p1 or17 /0
+p17 TINV 0 np11 q17
+or16 NOR 0 a24 a25 a26
+q16 DFF dly nq16 p1 or16 /0
+p16 TINV 0 np11 q16
+or15 NOR 0 a32 a33
+q15 DFF dly nq15 p1 or15 /0
+p15 TINV 0 np11 q15
+or14 NOR 0 a40 a41 a42 a43 a44 a45
+q14 DFF dly nq14 p1 or14 /0
+p14 TINV 0 np11 q14
+a48 OR 0 GND
+or13 OR 0 GND
+p13 TINV dly a48 or13
+a56 OR 0 GND
+or12 OR 0 GND
+p12 TINV dly a56 or12
+.EOM

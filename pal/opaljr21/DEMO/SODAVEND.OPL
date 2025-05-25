@@ -1,0 +1,259 @@
+begin header
+
+  A soda vending machine example to illustrate the use of vector notation
+  and the arithmetic operator.
+
+end header
+
+begin definition  
+
+  input 
+	clk,	     { clock for all register }
+	rst,         { reset the whole machine }
+	sel_soda,    { select a can of soda    }
+	ret_coins;   { return the coins        }
+  input 
+	dime_i,	     { a pulse signal for a dime input   }
+	quarter_i,   { a pulse signal for a quarter input }
+	nickel_i;    { a pulse signal for a nickel input }
+  feedback (com) 
+	overflow,    { amount of money is more than $1.20 }
+	enough;	     { amount of money is more than $0.60 }
+  feedback (com) 
+	dime,	     { latched signal for dime input   }
+	quarter,     { latched signal for quarter input }
+	nickel,	     { latched signal for nickel input }
+	coins;	     { latched signal for dime + quarter + nickel } 
+  feedback (reg) 
+	clear;	     { clear the latch for dime, nickel or quarter }
+  statebit sb[3:0];
+  feedback (de, hold) 
+	o[4:0];      { cash register }
+  output 
+	ret_quarter, { return a quarter   }
+	ret_dime,    { return a dime      }
+	ret_nickel,  { return a nickel    }
+	give_soda,   { give a can of soda }
+	errorlight;
+
+  set cnt=o[4:0];
+
+end definition
+
+begin equation
+
+  global.c = clk ;
+  dime = dime_i + dime * /clear * /rst ;
+  nickel = nickel_i + nickel * /clear */rst ;
+  quarter = quarter_i + quarter * /clear */rst ;
+  enough = ( cnt >= 12 );
+  overflow = ( cnt >= 24 );
+  coins = nickel + dime + quarter ;
+
+end equation
+
+begin state_diagram
+
+  state start : if rst then start with cnt := [0,0,0,0,0]; endwith 
+                else if  ( ret_coins ) then return_coins 
+                else if ( sel_soda * enough ) then select_soda
+                else if ( coins ) then add_coins
+                else start ;
+
+  state add_coins : if ( overflow ) then by_pass 
+                    else if ( nickel ) then add1 
+                    else if ( dime ) then add2 
+                    else if ( quarter ) then add5 
+                    else error ;
+
+  state add1 : goto clear_add with cnt := cnt @+ 1; endwith ;
+
+  state add2 : goto clear_add with cnt := cnt @+ 2; endwith ;
+
+  state add5 : goto clear_add with cnt := cnt @+ 5; endwith ;
+
+  state clear_add : clear -> 1;
+                    goto start ;
+
+  state return_coins :  if ( cnt >= 5 ) then return_5 
+                        else if ( cnt >= 2 ) then return_2 
+                        else if ( cnt >= 1 ) then return_1 
+                        else start ;
+
+  state return_5 : goto return_coins  with
+                                        cnt := cnt @- 5 ;
+                                        ret_quarter := 1 ;
+                                      endwith  ;
+
+  state return_2 : goto return_coins  with
+                                        cnt := cnt @- 2 ;
+                                        ret_dime := 1 ;
+                                      endwith ;
+
+  state return_1 : goto return_coins  with
+                                        cnt := cnt @- 1 ;
+                                        ret_nickel := 1 ;
+                                      endwith ;
+
+  state select_soda : goto start with 
+                                    give_soda := 1 ;
+                                    cnt := cnt @- 12 ;
+                                   endwith;
+ 
+  state by_pass : if ( nickel ) then pass1 
+                   else if ( dime ) then pass2 
+                   else if ( quarter ) then pass5 
+                   else error ;
+
+  state pass1 : goto clear_add with ret_nickel := 1 ; endwith ;
+
+  state pass2 : goto clear_add with ret_dime := 1 ; endwith ;
+
+  state pass5 : goto clear_add with ret_quarter := 1 ; endwith ;
+
+  state error : if rst then start with cnt := [0,0,0,0,0]; endwith 
+                else error with errorlight := 1; endwith ;
+
+end state_diagram
+
+begin vector
+clk, rst, nickel_i, nickel, dime_i, dime, quarter_i, quarter, coins, cnt,
+ret_coins, sel_soda, overflow, enough, clear, ret_quarter, ret_dime,
+ret_nickel, give_soda, errorlight;
+
+C1 0L 0L 0L L LLLLL 00LLL LLL LL
+C0 0L 0L 0L L LLLLL 00LLL LLL LL
+
+C0 0L 1H 0L H LLLLL 00LLL LLL LL
+C0 0L 0H 0L H LLLLL 00LLL LLL LL
+C0 0L 0L 0L L LLLHL 00LLH LLL LL
+C0 0L 0L 0L L LLLHL 00LLL LLL LL
+
+C0 1H 0L 0L H LLLHL 00LLL LLL LL
+C0 0H 0L 0L H LLLHL 00LLL LLL LL
+C0 0L 0L 0L L LLLHH 00LLH LLL LL
+C0 0L 0L 0L L LLLHH 00LLL LLL LL
+
+C0 0L 0L 1H H LLLHH 00LLL LLL LL
+C0 0L 0L 0H H LLLHH 00LLL LLL LL
+C0 0L 0L 0L L LHLLL 00LLH LLL LL
+C0 0L 0L 0L L LHLLL 00LLL LLL LL
+
+C0 0L 0L 0L L LHLLL 00LLL LLL LL
+C0 0L 0L 0L L LHLLL 00LLL LLL LL
+
+C0 0L 0L 0L L LHLLL 10LLL LLL LL
+C0 0L 0L 0L L LHLLL 00LLL LLL LL
+C0 0L 0L 0L L LLLHH 00LLL HLL LL
+C0 0L 0L 0L L LLLHH 00LLL LLL LL
+C0 0L 0L 0L L LLLLH 00LLL LHL LL
+C0 0L 0L 0L L LLLLH 00LLL LLL LL
+C0 0L 0L 0L L LLLLL 00LLL LLH LL
+C0 0L 0L 0L L LLLLL 00LLL LLL LL
+
+C0 0L 1H 0L H LLLLL 00LLL LLL LL
+C0 0L 0H 0L H LLLLL 00LLL LLL LL
+C0 0L 0L 0L L LLLHL 00LLH LLL LL
+C0 0L 0L 0L L LLLHL 00LLL LLL LL
+
+C0 0L 0L 1H H LLLHL 00LLL LLL LL
+C0 0L 0L 0H H LLLHL 00LLL LLL LL
+C0 0L 0L 0L L LLHHH 00LLH LLL LL
+C0 0L 0L 0L L LLHHH 00LLL LLL LL
+
+C0 1H 0L 0L H LLHHH 00LLL LLL LL
+C0 0H 0L 0L H LLHHH 00LLL LLL LL
+C0 0L 0L 0L L LHLLL 00LLH LLL LL
+C0 0L 0L 0L L LHLLL 00LLL LLL LL
+
+C0 0L 0L 1H H LHLLL 00LLL LLL LL
+C0 0L 0L 0H H LHLLL 00LLL LLL LL
+C0 0L 0L 0L L LHHLH 00LHH LLL LL
+C0 0L 0L 0L L LHHLH 00LHL LLL LL
+
+C0 0L 0L 0L L LHHLH 01LHL LLL LL
+C0 0L 0L 0L L LLLLH 00LLL LLL HL
+
+C0 0L 0L 0L L LLLLH 00LLL LLL LL
+
+C0 0L 0L 1H H LLLLH 00LLL LLL LL
+C0 0L 0L 0H H LLLLH 00LLL LLL LL
+C0 0L 0L 0L L LLHHL 00LLH LLL LL
+C0 0L 0L 0L L LLHHL 00LLL LLL LL
+
+C0 0L 0L 0L L LLHHL 01LLL LLL LL
+C0 0L 0L 0L L LLHHL 00LLL LLL LL
+
+C0 0L 0L 1H H LLHHL 00LLL LLL LL
+C0 0L 0L 0H H LLHHL 00LLL LLL LL
+C0 0L 0L 0L L LHLHH 00LLH LLL LL
+C0 0L 0L 0L L LHLHH 00LLL LLL LL
+
+C0 0L 0L 1H H LHLHH 00LLL LLL LL
+C0 0L 0L 0H H LHLHH 00LLL LLL LL
+C0 0L 0L 0L L HLLLL 00LHH LLL LL
+C0 0L 0L 0L L HLLLL 00LHL LLL LL 
+
+C0 1H 0L 0L H HLLLL 00LHL LLL LL
+C0 0H 0L 0L H HLLLL 00LHL LLL LL
+C0 0L 0L 0L L HLLLH 00LHH LLL LL
+C0 0L 0L 0L L HLLLH 00LHL LLL LL
+
+C0 0L 0L 0L L HLLLH 01LHL LLL LL
+C0 0L 0L 0L L LLHLH 00LLL LLL HL
+C0 0L 0L 0L L LLHLH 00LLL LLL LL
+
+C0 0L 1H 0L H LLHLH 00LLL LLL LL
+C0 0L 0H 0L H LLHLH 00LLL LLL LL
+C0 0L 0L 0L L LLHHH 00LLH LLL LL
+C0 0L 0L 0L L LLHHH 00LLL LLL LL
+
+C0 0L 0L 1H H LLHHH 00LLL LLL LL
+C0 0L 0L 0H H LLHHH 00LLL LLL LL
+C0 0L 0L 0L L LHHLL 00LHH LLL LL
+C0 0L 0L 0L L LHHLL 00LHL LLL LL
+
+C0 0L 0L 1H H LHHLL 00LHL LLL LL
+C0 0L 0L 0H H LHHLL 00LHL LLL LL
+C0 0L 0L 0L L HLLLH 00LHH LLL LL
+C0 0L 0L 0L L HLLLH 00LHL LLL LL
+
+C0 0L 0L 1H H HLLLH 00LHL LLL LL
+C0 0L 0L 0H H HLLLH 00LHL LLL LL
+C0 0L 0L 0L L HLHHL 00LHH LLL LL
+C0 0L 0L 0L L HLHHL 00LHL LLL LL
+
+C0 0L 0L 1H H HLHHL 00LHL LLL LL
+C0 0L 0L 0H H HLHHL 00LHL LLL LL
+C0 0L 0L 0L L HHLHH 00HHH LLL LL
+C0 0L 0L 0L L HHLHH 00HHL LLL LL
+
+C0 0L 1H 0L H HHLHH 00HHL LLL LL
+C0 0L 0H 0L H HHLHH 00HHL LLL LL
+C0 0L 0H 0L H HHLHH 00HHL LLL LL
+C0 0L 0L 0L L HHLHH 00HHH LHL LL
+C0 0L 0L 0L L HHLHH 00HHL LLL LL
+
+C0 1H 0L 0L H HHLHH 00HHL LLL LL
+C0 0H 0L 0L H HHLHH 00HHL LLL LL
+C0 0H 0L 0L H HHLHH 00HHL LLL LL
+C0 0L 0L 0L L HHLHH 00HHH LLH LL
+C0 0L 0L 0L L HHLHH 00HHL LLL LL
+
+C0 0L 0L 1H H HHLHH 00HHL LLL LL
+C0 0L 0L 0H H HHLHH 00HHL LLL LL
+C0 0L 0L 0H H HHLHH 00HHL LLL LL
+C0 0L 0L 0L L HHLHH 00HHH HLL LL
+C0 0L 0L 0L L HHLHH 00HHL LLL LL
+
+end vector
+
+
+ 
+
+
+
+
+
+                     
+

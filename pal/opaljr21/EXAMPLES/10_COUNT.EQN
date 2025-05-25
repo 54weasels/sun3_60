@@ -1,0 +1,53 @@
+	OPALjr Example
+	Copyright National Semiconductor Corp, 1993.
+
+	10-BIT SYNCHRONOUS UP/DOWN COUNTER
+
+
+CHIP 10_COUNT PAL20X10
+
+CLK  D0   D1   D2D7 /LD  /CNT  UP  SET  D8   /CIN D9   GND
+/OE  Q9   Q8   Q7   Q6   Q5   Q4   Q3   Q2   Q1   Q0   VCC
+
+EQUATIONS
+
+/Q0 :=  /Q0*LD*/SET + /LD*/SET*/D0
+    :+: LD*/CIN*/SET*/CNT*/UP
+      + LD*/CIN*/SET*/CNT* UP
+ 
+/Q1 :=  /Q1*LD*/SET + /LD*/SET*/D1
+    :+: LD*/CIN*/SET*/CNT*/UP*/Q0
+      + LD*/CIN*/SET*/CNT* UP* Q0
+ 
+/Q2 :=  /Q2*LD*/SET + /LD*/SET*/D2D7
+    :+: LD*/CIN*/SET*/CNT*/UP*/Q1*/Q0
+      + LD*/CIN*/SET*/CNT* UP* Q1* Q0
+ 
+/Q3 :=  /Q3*LD*/SET + /LD*/SET*/D2D7
+    :+: LD*/CIN*/SET*/CNT*/UP*/Q2*/Q1*/Q0
+      + LD*/CIN*/SET*/CNT* UP* Q2* Q1* Q0
+ 
+/Q4 :=  /Q4*LD*/SET + /LD*/SET*/D2D7
+    :+: LD*/CIN*/SET*/CNT*/UP*/Q3*/Q2*/Q1*/Q0
+      + LD*/CIN*/SET*/CNT* UP* Q3* Q2* Q1* Q0
+ 
+/Q5 :=  /Q5*LD*/SET + /LD*/SET*/D2D7
+    :+: LD*/CIN*/SET*/CNT*/UP*/Q4*/Q3*/Q2*/Q1*/Q0
+      + LD*/CIN*/SET*/CNT* UP* Q4* Q3* Q2* Q1* Q0
+ 
+/Q6 :=  /Q6*LD*/SET + /LD*/SET*/D2D7
+    :+: LD*/CIN*/SET*/CNT*/UP*/Q5*/Q4*/Q3*/Q2*/Q1*/Q0
+      + LD*/CIN*/SET*/CNT* UP* Q5* Q4* Q3* Q2* Q1* Q0
+ 
+/Q7 :=  /Q7*LD*/SET + /LD*/SET*/D2D7
+    :+: LD*/CIN*/SET*/CNT*/UP*/Q6*/Q5*/Q4*/Q3*/Q2*/Q1*/Q0
+      + LD*/CIN*/SET*/CNT* UP* Q6* Q5* Q4* Q3* Q2* Q1* Q0
+ 
+/Q8 :=  /Q8*LD*/SET + /LD*/SET*/D8
+    :+: LD*/CIN*/SET*/CNT*/UP*/Q7*/Q6*/Q5*/Q4*/Q3*/Q2*/Q1*/Q0
+      + LD*/CIN*/SET*/CNT* UP* Q7* Q6* Q5* Q4* Q3* Q2* Q1* Q0
+
+/Q9 :=  /Q9*LD*/SET + /LD*/SET*/D9
+    :+: LD*/CIN*/SET*/CNT*/UP*/Q8*/Q7*/Q6*/Q5*/Q4*/Q3*/Q2*/Q1*/Q0
+      + LD*/CIN*/SET*/CNT* UP* Q8* Q7* Q6* Q5* Q4* Q3* Q2* Q1* Q0
+

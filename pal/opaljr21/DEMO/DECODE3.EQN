@@ -1,0 +1,76 @@
+A 3-bit decoder design using Truth Table entry. Test vector
+block is included for simulation.
+Copyright National Semiconductor Corp, 1992.
+
+;Translated from NSC formatted PLA file.
+
+CHIP  decode3 p16l8
+
+ a15=2 a14=3 a13=4 /o0=12 /o1=13 /o2=14
+ /o3=15 /o4=16 /o5=17 /o6=18 /o7=19
+
+EQUATIONS
+
+o0 = /a15 * /a14 * a13
+      + /a15 * a14 * /a13
+      + /a15 * a14 * a13
+      + a15 * /a14 * /a13
+      + a15 * /a14 * a13
+      + a15 * a14 * /a13
+      + a15 * a14 * a13
+
+o1 = /a15 * /a14 * /a13
+      + /a15 * a14 * /a13
+      + /a15 * a14 * a13
+      + a15 * /a14 * /a13
+      + a15 * /a14 * a13
+      + a15 * a14 * /a13
+      + a15 * a14 * a13
+
+o2 = /a15 * /a14 * /a13
+      + /a15 * /a14 * a13
+      + /a15 * a14 * a13
+      + a15 * /a14 * /a13
+      + a15 * /a14 * a13
+      + a15 * a14 * /a13
+      + a15 * a14 * a13
+
+o3 = /a15 * /a14 * /a13
+      + /a15 * /a14 * a13
+      + /a15 * a14 * /a13
+      + a15 * /a14 * /a13
+      + a15 * /a14 * a13
+      + a15 * a14 * /a13
+      + a15 * a14 * a13
+
+o4 = /a15 * /a14 * /a13
+      + /a15 * /a14 * a13
+      + /a15 * a14 * /a13
+      + /a15 * a14 * a13
+      + a15 * /a14 * a13
+      + a15 * a14 * /a13
+      + a15 * a14 * a13
+
+o5 = /a15 * /a14 * /a13
+      + /a15 * /a14 * a13
+      + /a15 * a14 * /a13
+      + /a15 * a14 * a13
+      + a15 * /a14 * /a13
+      + a15 * a14 * /a13
+      + a15 * a14 * a13
+
+o6 = /a15 * /a14 * /a13
+      + /a15 * /a14 * a13
+      + /a15 * a14 * /a13
+      + /a15 * a14 * a13
+      + a15 * /a14 * /a13
+      + a15 * /a14 * a13
+      + a15 * a14 * a13
+
+o7 = /a15 * /a14 * /a13
+      + /a15 * /a14 * a13
+      + /a15 * a14 * /a13
+      + /a15 * a14 * a13
+      + a15 * /a14 * /a13
+      + a15 * /a14 * a13
+      + a15 * a14 * /a13

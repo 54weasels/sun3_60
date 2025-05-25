@@ -1,0 +1,84 @@
+BEGIN HEADER
+  A state machine design using G16V8 with register default set to HOLD.
+  Copyright National Semiconductor Corp, 1992.
+END HEADER
+
+
+BEGIN DEFINITION
+  DEVICE G16V8;
+  INPUT clk=1,reset=2,/oe=11;
+  FEEDBACK (REG,HOLD) reg_hold=14;  
+  STATEBIT sb[1:4]=[15:18];
+  STATE_NAMES s[0:9]=[0:9];
+  SET in_state = sb[1:4];
+END DEFINITION
+
+		
+BEGIN EQUATION
+[sb[1:4],reg_hold].c=clk;
+[sb[1:4],reg_hold].oe=oe;
+END EQUATION
+
+
+BEGIN STATE_DIAGRAM
+  STATE ALL : IF reset THEN s0;
+  STATE s0  : GOTO s1 ;
+  STATE s1  : GOTO s2 ;
+  STATE s2  : GOTO s3 WITH reg_hold := 0; ENDWITH ;
+  STATE s3  : GOTO s4 ;
+  STATE s4  : GOTO s5 ;
+  STATE s5  : GOTO s6 ;
+  STATE s6  : GOTO s7 ;
+  STATE s7  : GOTO s8 WITH reg_hold := 1; ENDWITH ;
+  STATE s8  : GOTO s9 ;
+  STATE s9  : GOTO s0 ;
+  STATE UNDEFINED : GOTO s0;
+END STATE_DIAGRAM
+
+ 
+BEGIN VECTOR
+clk, reset, /oe, sb1, sb2, sb3, sb4, reg_hold;
+PROBE in_state ;  
+c 0 1 ZZZZ X
+c 1 0 LLLL X
+c 0 0 LLLH X
+c 0 0 LLHL X
+c 0 0 LLHH L
+c 0 0 LHLL L
+c 0 0 LHLH L
+c 0 0 LHHL L
+c 0 0 LHHH L
+c 0 0 HLLL H
+c 0 0 HLLH H
+c 0 0 LLLL H
+c 0 0 LLLH H
+c 0 0 LLHL H
+c 0 0 LLHH L
+c 1 0 LLLL L
+c 0 0 LLLH L
+c 0 0 LLHL L
+c 0 0 LLHH L
+c 0 0 LHLL L
+c 0 0 LHLH L
+c 0 0 LHHL L
+c 0 0 LHHH L
+c 0 0 HLLL H
+c 0 0 HLLH H
+c 0 0 LLLL H
+c 0 0 LLLH H
+c 0 0 LLHL H
+c 0 0 LLHH L
+c 0 0 LHLL L
+c 0 0 LHLH L
+c 0 0 LHHL L
+c 0 0 LHHH L
+c 0 0 HLLL H
+c 0 0 HLLH H
+c 0 0 LLLL H
+c 0 0 LLLH H
+c 0 0 LLHL H
+c 0 0 LLHH L
+END VECTOR
+
+
+W1156: 'reg_hold' declared as feedback/node but not used as input

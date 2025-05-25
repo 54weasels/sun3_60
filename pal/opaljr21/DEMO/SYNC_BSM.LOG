@@ -1,0 +1,336 @@
+
+OPL2PLA - OPAL design entry compiler V017
+Copyright (c) National Semiconductor Corporation 1991,1992
+
+
+Input Pins
+==========
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+clock                           com      visible              
+cpu_go                          com      visible              
+cpu_clr                         com      visible              
+local_bg                        com      visible              
+local_bus_free                  com      visible              
+cpu_addr_hit                    com      visible              
+packet_count_zero               com      visible              
+xfer_count_zero                 com      visible              
+bus_addr_hit                    com      visible              
+bus_bg                          com      visible              
+bus_end_tr                      com      visible              
+bus_lock                        com      visible              
+bus_error                       com      visible              
+
+Output Pins
+===========
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+cpu_int                         reg      visible      rst     
+local_br                        reg      visible      rst     
+local_bgack                     reg      visible      rst     
+local_as                        reg      visible      rst     
+bus_addr_ien                    reg      visible      rst     
+local_addr_oen                  reg      visible      rst     
+load_packet_count               reg      visible      rst     
+bus_br                          reg      visible      rst     
+bus_bgack                       reg      visible      rst     
+bus_as                          reg      visible      rst     
+local_addr_ien                  reg      visible      rst     
+bus_addr_oen                    reg      visible      rst     
+dma_error                       reg      visible      rst     
+
+Statebit Pins
+=============
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+stabt~01                        reg      buried       rst     
+stabt~02                        reg      buried       rst     
+stabt~03                        reg      buried       rst     
+stabt~04                        reg      buried       rst     
+
+Dot extensions
+==============
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+global.c                        com      visible      rst     
+
+state definition
+================
+State_name      state assignment                branching
+----------      ----------------                ---------
+idle               0000  0000                      if        
+s_request          0004  0100                      if        
+m_request          0005  0101                      if        
+d_bus_req          0002  0010                      if        
+s_access           0008  1000                      goto      
+s_transfer         000A  1010                      case      
+s_locked           000C  1100                      case      
+m_access           000E  1110                      goto      
+m_transfer         0009  1001                      case      
+m_locked           000D  1101                      case      
+d_local_req        0003  0011                      if        
+d_access           0007  0111                      goto      
+d_transfer         0006  0110                      case      
+d_next_packet      000B  1011                      goto      
+d_end_dma          0001  0001                      case      
+
+Present State       Possible next state(s)
+-------------       ----------------------
+idle                s_request  m_request  d_bus_req  idle  
+s_request           s_access  s_request  
+m_request           m_access  m_request  
+d_bus_req           d_local_req  d_bus_req  
+s_access            s_transfer  
+s_transfer          idle  s_locked  s_transfer  
+s_locked            s_access  idle  s_locked  
+m_access            m_transfer  
+m_transfer          idle  m_locked  m_transfer  
+m_locked            s_access  idle  s_locked  
+d_local_req         d_access  d_local_req  
+d_access            d_transfer  
+d_transfer          d_bus_req  d_next_packet  d_end_dma  d_end_dma  
+                    d_end_dma  d_transfer  
+d_next_packet       d_bus_req  
+d_end_dma           idle  d_bus_req  d_end_dma  d_end_dma  
+
+
+
+FITMAPL1 -- MAPL Device Fitter (Version V068)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Label               Label Type       Pin/Node  Assign Status
+-----               ----------       --------  -------------
+clock               clock pin           1      Assigned
+cpu_go              input pin           6      Assigned
+cpu_clr             input pin           5      Assigned
+local_bg            input pin           4      Assigned
+local_bus_free      input pin           3      Assigned
+cpu_addr_hit        input pin           2      Assigned
+packet_count_zero   input pin           27     Assigned
+xfer_count_zero     input pin           26     Assigned
+bus_addr_hit        input pin           25     Assigned
+bus_bg              input pin           24     Assigned
+bus_end_tr          input pin           11     Assigned
+bus_lock            input pin           10     Assigned
+bus_error           input pin           9      Assigned
+cpu_int             output pin          12     Assigned
+local_br            output pin          13     Assigned
+local_bgack         output pin          15     Assigned
+local_as            output pin          16     Assigned
+bus_addr_ien        output pin          8      Assigned
+local_addr_oen      output pin          7      Assigned
+load_packet_count   output pin          17     Assigned
+bus_br              output pin          18     Assigned
+bus_bgack           output pin          19     Assigned
+bus_as              output pin          20     Assigned
+local_addr_ien      output pin          21     Assigned
+bus_addr_oen        output pin          22     Assigned
+dma_error           output pin          23     Assigned
+stabt~01            feedback node       29     Assigned
+stabt~02            feedback node       30     Assigned
+stabt~03            feedback node       31     Assigned
+stabt~04            feedback node       32     Assigned
+
+Target state bit selected: stabt~02
+State bit stabt~02 collapsed into page bit 0.
+Split PageXXX into Page0XX (21 terms) and Page1XX (19 terms)
+Target state bit selected: stabt~03
+State bit stabt~03 collapsed into page bit 1.
+Split Page0XX into Page00X (12 terms) and Page01X (9 terms)
+Split Page1XX into Page10X (11 terms) and Page11X (8 terms)
+
+Terms used on page00 = 12/16 (75.0%)
+Status: fit
+-00----------0001 00011~~~~~~~~~~~~~
+--------1----0000 0100~1~~~~~~~~~~~~
+-----1--0----0000 0101~~~~~~~1~~~~~~
+-1---0--0----0000 0010~~~~~~~1~~~~~~
+-0---0--0----0000 0000~~~~~~~~~~~~~~
+-------------1000 1010~~111~~~~~~~~~
+----------10-1001 0000~~~~~~~~~~~~~~
+----------11-1001 1101~~~~~~~~1~~~~~
+----------0--1001 1001~~~~~~~~110~~~
+-01----------0001 0000~~~~~~~~~~~~~~
+-11----------0001 0010~~~~~~~1~~~~~~
+-10----------0001 00011~~~~~~~~~~~1~
+
+Terms used on page10 = 11/16 (68.8%)
+Status: fit
+----0--------0100 0100~1~~~~~~~~~~~~
+---------1---0101 1110~~~~~~~01~~~~~
+-----1-------1101 1000~~~~~~~~1~~~~~
+-----0-----0-1101 0000~~~~~~~~~~~~~~
+-----0-----1-1101 1100~~~~~~~~1~~~~~
+---------0---0101 0101~~~~~~~1~~~~~~
+---11--------0100 1000~01~~~~~~~~~~~
+--------1----1100 1000~~1~~~~~~~~~~~
+--------0--0-1100 0000~~~~~~~~~~~~~~
+--------0--1-1100 1100~~1~~~~~~~~~~~
+---0---------0100 0100~1~~~~~~~~~~~~
+
+Terms used on page01 = 9/16 (56.2%)
+Status: fit
+---------1---0010 0011~1~~~~~01~~~~~
+----------10-1010 0000~~~~~~~~~~~~~~
+---11--------0011 0111~01~~~~~1~~~~~
+---0---------0011 0011~1~~~~~~1~~~~~
+----0--------0011 0011~1~~~~~~1~~~~~
+-------------1011 0010~~~~~~01~~~~~~
+----------11-1010 1100~~1~~~~~~~~~~~
+----------0--1010 1010~~110~~~~~~~~~
+---------0---0010 0010~~~~~~~1~~~~~~
+
+Terms used on page11 = 8/16 (50.0%)
+Status: fit
+------11--1-00110 00011~~~~~~~~~~~~~
+------01--1-00110 00011~~~~~~~~~~~1~
+----------1-10110 00011~~~~~~~~~~~1~
+----------0--0110 0110~~11~0~~11~0~~
+-------------0111 0110~~11~1~~11~1~~
+------00--1-00110 0010~~~~~~~1~~~~~~
+-------------1110 1001~~~~~~~~111~~~
+------10--1-00110 1011~~~~~~1~~~~~~~
+
+Total terms used = 40/128 (31.2%)
+
+$DEVICE MAPL128 fit
+$PIN 31 clock:1 cpu_go:6 cpu_clr:5 local_bg:4 local_bus_free:3
+     cpu_addr_hit:2 packet_count_zero:27 xfer_count_zero:26 bus_addr_hit:25
+     bus_bg:24 bus_end_tr:11 bus_lock:10 bus_error:9 cpu_int:12
+     local_br:13 local_bgack:15 local_as:16 bus_addr_ien:8 local_addr_oen:7
+     load_packet_count:17 bus_br:18 bus_bgack:19 bus_as:20 local_addr_ien:21
+     bus_addr_oen:22 dma_error:23 stabt~01:29 stabt~02:37 stabt~03:38
+     stabt~04:32 pb2:39
+
+--------------------------------------------------------------
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Document file for sync_bsm.eqn
+Device: MAPL128
+
+Pin   Label               Type
+---   -----               ----
+1     clock               clock pin
+2     cpu_addr_hit        pos,com input
+3     local_bus_free      pos,com input
+4     local_bg            pos,com input
+5     cpu_clr             pos,com input
+6     cpu_go              pos,com input
+7     local_addr_oen      pos,trst,reg output
+8     bus_addr_ien        pos,trst,reg output
+9     bus_error           pos,com input
+10    bus_lock            pos,com input
+11    bus_end_tr          pos,com input
+12    cpu_int             pos,trst,reg output
+13    local_br            pos,trst,reg output
+15    local_bgack         pos,trst,reg output
+16    local_as            pos,trst,reg output
+17    load_packet_count   pos,trst,reg output
+18    bus_br              pos,trst,reg output
+19    bus_bgack           pos,trst,reg output
+20    bus_as              pos,trst,reg output
+21    local_addr_ien      pos,trst,reg output
+22    bus_addr_oen        pos,trst,reg output
+23    dma_error           pos,trst,reg output
+24    bus_bg              pos,com input
+25    bus_addr_hit        pos,com input
+26    xfer_count_zero     pos,com input
+27    packet_count_zero   pos,com input
+29    stabt~01            buried,pos,reg feedback
+32    stabt~04            buried,pos,reg feedback
+37    stabt~02            buried,pos,reg feedback
+38    stabt~03            buried,pos,reg feedback
+39    pb2                 buried,pos,reg feedback
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Device Utilization:
+
+No of dedicated inputs used               :  9/9  (100.0%)
+No of feedbacks used as dedicated inputs  :  3/12 (25.0%)
+No of dedicated outputs used              :  4/4  (100.0%)
+No of feedbacks used as dedicated outputs :  9/12 (75.0%)
+No of buried feedbacks used               :  2/8  (25.0%)
+No of page bits used                      :  3/3  (100.0%)
+
+		------------------------------------------
+		Pin   Label                 Terms Usage
+		------------------------------------------
+		23    dma_error             4/128 (3.1%)
+		22    bus_addr_oen          2/128 (1.6%)
+		21    local_addr_ien        2/128 (1.6%)
+		20    bus_as                5/128 (3.9%)
+		19    bus_bgack            13/128 (10.2%)
+		18    bus_br                8/128 (6.2%)
+		17    load_packet_count     2/128 (1.6%)
+		7     local_addr_oen        2/128 (1.6%)
+		8     bus_addr_ien          2/128 (1.6%)
+		12    cpu_int               6/128 (4.7%)
+		13    local_br              7/128 (5.5%)
+		15    local_bgack          10/128 (7.8%)
+		16    local_as              5/128 (3.9%)
+		29    stabt~01             13/128 (10.2%)
+		32    stabt~04             15/128 (11.7%)
+		37    stabt~02             13/128 (10.2%)
+		38    stabt~03             15/128 (11.7%)
+		39    pb2                   1/128 (0.8%)
+		------------------------------------------
+		Total Shared Terms         34/128 (26.6%)
+		------------------------------------------
+
+
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+                             Chip Diagram (PLCC)
+
+                                         p   
+                                         a   
+                                         c  x
+                             l           k  f
+                             o           e  e
+                             c  c        t  r
+                             a  p        _  _
+                             l  u        c  c
+                             _  _        o  o
+                          l  b  a        u  u
+                          o  u  d        n  n
+                          c  s  d        t  t
+                          a  _  r  c     _  _
+                          l  f  _  l     z  z
+                          _  r  h  o  V  e  e
+                          b  e  i  c  C  r  r
+                          g  e  t  k  C  o  o
+                        .------------------------.
+                       /              2  2  2    |
+                      /   4  3  2  1  8  7  6    |
+             cpu_clr |  5                     25 | bus_addr_hit
+              cpu_go |  6                     24 | bus_bg
+      local_addr_oen |  7                     23 | dma_error
+        bus_addr_ien |  8                     22 | bus_addr_oen
+           bus_error |  9                     21 | local_addr_ien
+            bus_lock | 10                     20 | bus_as
+          bus_end_tr | 11                     19 | bus_bgack
+                     |    1  1  1  1  1  1  1    |
+                     |    2  3  4  5  6  7  8    |
+                     `---------------------------'
+                          c  l  G  l  l  l  b
+                          p  o  N  o  o  o  u
+                          u  c  D  c  c  a  s
+                          _  a     a  a  d  _
+                          i  l     l  l  _  b
+                          n  _     _  _  p  r
+                          t  b     b  a  a   
+                             r     g  s  c   
+                                   a     k   
+                                   c     e   
+                                   k     t   
+                                         _   
+                                         c   
+                                         o   
+                                         u   
+                                         n   
+                                         t   

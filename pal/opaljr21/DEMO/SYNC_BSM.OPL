@@ -1,0 +1,342 @@
+begin header
+
+  Synchronous Bus Control State Machine - Dave Hawley
+  Copyright National Semiconductor Corp, 1992.
+  An example using MAPL128 ;
+
+end header
+
+
+begin definition
+
+{
+Inputs:
+
+CPU_GO              Signal from the CPU to begin DMA transfers
+CPU_CLR             Signal from the CPU to clear DMA interrupt
+LOCAL_BG            Bus grant from local arbiter
+LOCAL_BUS_FREE      Bus free status on local bus
+CPU_ADDR_HIT        Local decoder recognizes CPU access to system bus
+PACKET_COUNT_ZERO   Packet data transfer size counter equals zero
+XFER_COUNT_ZERO     DMA data transfer counter equals zero
+BUS_ADDR_HIT        Bus decoder recognizes system access to DRAM
+BUS_BG              System bus grant
+BUS_END_TR          System bus end of data transfer
+BUS_LOCK            System bus lock
+BUS_ERROR           System bus transfer error
+
+Outputs:
+
+CPU_INT             DMA complete interrupt signal to CPU
+LOCAL_BR            Local bus request from DMA
+LOCAL_BGACK         Local bus grant acknowledge
+LOCAL_AS            Local bus address strobe
+BUS_ADDR_IEN        Latch enable for system bus address to local bus
+LOCAL_ADDR_OEN      Latch enable for DMA address to local bus
+LOAD_PACKET_COUNT   Load packet transfer size counter
+BUS_BR              System bus request
+BUS_BGACK           System bus grant acknowledge
+BUS_AS              System bus address strobe
+LOCAL_ADDR_IEN      Latch enable for CPU address to system bus
+BUS_ADDR_OEN        Latch enable for DMA address to system bus
+DMA_ERROR           DMA transfer error
+}
+
+device  mapl128 ;
+inputs
+	clock,cpu_go, cpu_clr, local_bg, local_bus_free, cpu_addr_hit,
+	packet_count_zero, xfer_count_zero, bus_addr_hit,
+        bus_bg, bus_end_tr, bus_lock, bus_error;
+
+outputs
+        cpu_int, local_br, local_bgack, local_as,
+        bus_addr_ien, local_addr_oen, load_packet_count,
+        bus_br, bus_bgack, bus_as,
+        local_addr_ien, bus_addr_oen, dma_error;
+
+end definition
+
+
+begin equation
+global.c = clock;
+end equation
+
+
+begin state_diagram
+{
+| When system bus address hit, request local bus
+| When CPU address hit, request System Bus
+| When CPU says go, start DMA transfer (request System Bus, then local bus)
+}
+state idle :
+  if bus_addr_hit then s_request
+    with local_br := 1;
+    endwith
+  else
+    if cpu_addr_hit then m_request
+      with bus_br := 1;
+      endwith
+    else
+      if cpu_go then d_bus_req
+        with bus_br := 1;
+        endwith
+      else idle;
+{
+*** Slave State Machine ***
+}
+{
+| Wait for local bus free (bus grant, all other signals released)
+| (assert BGACK before release of BR)
+}
+state s_request :
+  if local_bg * local_bus_free then s_access
+    with local_bgack := 1;
+         local_br := 0;
+    endwith
+  else s_request
+    with local_br := 1;
+    endwith;
+{
+| Begin bus transaction
+| (assert address enable before AS)
+}
+state s_access :
+  goto s_transfer
+    with local_bgack := 1;
+         bus_addr_ien := 1;
+         local_as := 1;
+    endwith;
+{
+| Can release the address enable immediately (latched by DRAM controller)
+| When transaction complete, release AS
+| If no lock, release local bus, otherwise enter locked state
+}
+state s_transfer :
+  case bus_end_tr * /bus_lock : idle;
+       bus_end_tr * bus_lock : s_locked
+         with local_bgack := 1;
+         endwith;
+       /bus_end_tr : s_transfer
+         with local_bgack := 1;
+              bus_addr_ien := 0;
+              local_as := 1;
+         endwith;
+  endcase;
+{
+| In locked state, wait for new address hit or lock release
+}
+state s_locked :
+  case bus_addr_hit : s_access
+         with local_bgack := 1;
+         endwith;
+       /bus_addr_hit * /bus_lock : idle;
+       /bus_addr_hit * bus_lock : s_locked
+         with local_bgack := 1;
+         endwith;
+  endcase;
+{
+*** Master State Machine ***
+}
+{
+| Wait for system bus grant
+| (assert BGACK before release of BR)
+}
+state m_request :
+  if bus_bg then m_access
+    with bus_bgack := 1;
+         bus_br := 0;
+    endwith
+  else m_request
+    with bus_br := 1;
+    endwith;
+{
+| Begin bus transaction
+| (assert address enable before AS)
+}
+state m_access :
+  goto m_transfer
+    with bus_bgack := 1;
+         local_addr_ien := 1;
+         bus_as := 1;
+    endwith;
+{
+| Can release the address enable immediately
+| When transaction complete, release AS
+| If no lock, release System Bus, otherwise enter locked state
+}
+state m_transfer :
+  case bus_end_tr * /bus_lock : idle;
+       bus_end_tr * bus_lock : m_locked
+         with bus_bgack := 1;
+         endwith;
+       /bus_end_tr : m_transfer
+         with bus_bgack := 1;
+              local_addr_ien := 0;
+              bus_as := 1;
+         endwith;
+  endcase;
+{
+| In locked state, wait for new address hit or lock release
+}
+state m_locked :
+  case cpu_addr_hit : s_access
+         with bus_bgack := 1;
+         endwith;
+       /cpu_addr_hit * /bus_lock : idle;
+       /cpu_addr_hit * bus_lock : s_locked
+         with bus_bgack := 1;
+         endwith;
+  endcase;
+{
+*** DMA State Machine ***
+}
+{
+| Wait for System Bus grant, then request local bus
+| (assert BGACK before release of BR)
+}
+state d_bus_req :
+  if bus_bg then d_local_req
+    with bus_bgack := 1;
+         bus_br := 0;
+         local_br := 1;
+    endwith
+  else d_bus_req
+    with bus_br := 1;
+    endwith;
+{
+| Wait for local bus free (bus grant, all other signals released)
+| (assert BGACK before release of BR)
+}
+state d_local_req :
+  if local_bg * local_bus_free then d_access
+    with bus_bgack := 1;
+         local_bgack := 1;
+         local_br := 0;
+    endwith
+  else d_local_req
+    with bus_bgack := 1;
+         local_br := 1;
+    endwith;
+{
+| Begin DMA transaction
+| (assert address enables before AS)
+}
+state d_access :
+  goto d_transfer
+    with bus_bgack := 1;
+         local_bgack := 1;
+         bus_addr_oen := 1;
+         local_addr_oen := 1;
+         bus_as := 1;
+         local_as := 1;
+    endwith;
+{
+| Can release the address enables immediately
+| When transaction complete, release AS
+| Interrupt CPU, reload packet counter, or re-request bus,
+|   depending on packet and transfer counter states
+}
+state d_transfer :
+  case bus_end_tr * /bus_error * /packet_count_zero * /xfer_count_zero :
+       d_bus_req
+         with bus_br := 1;
+         endwith;
+       bus_end_tr * /bus_error * packet_count_zero * /xfer_count_zero :
+       d_next_packet
+         with load_packet_count := 1;
+         endwith;
+       bus_end_tr * /bus_error * packet_count_zero * xfer_count_zero :
+       d_end_dma
+         with cpu_int := 1;
+         endwith;
+       bus_end_tr * /bus_error * /packet_count_zero * xfer_count_zero :
+       d_end_dma
+         with cpu_int := 1;
+              dma_error := 1;
+         endwith;
+       bus_end_tr * bus_error : d_end_dma
+         with cpu_int := 1;
+              dma_error := 1;
+         endwith;
+       /bus_end_tr : d_transfer
+         with bus_bgack := 1;
+              local_bgack := 1;
+              bus_addr_oen := 0;
+              local_addr_oen := 0;
+              bus_as := 1;
+              local_as := 1;
+         endwith;
+  endcase;
+{
+| Transfer count <> 0, so reload packet counter and continue
+}
+state d_next_packet :
+  goto d_bus_req
+    with load_packet_count := 0;
+         bus_br := 1;
+    endwith;
+{
+| Error or transfer count = 0 so interrupt CPU and wait for clear interrupt
+}
+state d_end_dma :
+  case cpu_clr * /cpu_go : idle;
+       cpu_clr * cpu_go : d_bus_req
+         with bus_br := 1;
+         endwith;
+       /cpu_clr * cpu_go : d_end_dma
+         with cpu_int := 1;
+              dma_error := 1;
+         endwith;
+       /cpu_clr * /cpu_go : d_end_dma
+         with cpu_int := 1;
+         endwith;
+  endcase;
+  
+end state_diagram
+
+
+begin vector
+clock,cpu_addr_hit,local_bus_free,local_bg,cpu_clr,cpu_go,bus_error,bus_lock,
+bus_end_tr,bus_bg,bus_addr_hit,xfer_count_zero,packet_count_zero,
+cpu_int,local_br,local_bgack,local_as,bus_addr_ien,local_addr_oen,
+load_packet_count,bus_br,bus_bgack,bus_as,local_addr_ien,bus_addr_oen,
+dma_error;
+
+c000000000000  LLLLLLLLLLLLL  {idle state}
+cxxxxxxxxx1xx  LHLLLLLLLLLLL  {go to s_request state}
+cx0xxxxxxxxxx  LHLLLLLLLLLLL  {no change of state}
+cx11xxxxxxxxx  LLHLLLLLLLLLL  {go to s_access state}
+cxxxxxxxxxxxx  LLHHHLLLLLLLL  {go to s_transfer state}
+cxxxxxx11xxxx  LLHLLLLLLLLLL  {go to s_locked state}
+cxxxxxx1xx0xx  LLHLLLLLLLLLL  {no change of state}
+cxxxxxx0xx0xx  LLLLLLLLLLLLL  {go to idle state}
+
+c1xxxxxxxxxxx  LLLLLLLHLLLLL  {go to m_request state}
+cxxxxxxxx0xxx  LLLLLLLHLLLLL  {no change of state}
+cxxxxxxxx1xxx  LLLLLLLLHLLLL  {go to m_access state}
+cxxxxxxxxxxxx  LLLLLLLLHHHLL  {go to m_transfer state}
+cxxxxxx00xxxx  LLLLLLLLHHLLL  {no change of state}
+cxxxxxx11xxxx  LLLLLLLLHLLLL  {go to m_locked state}
+c0xxxxx0xxxxx  LLLLLLLLLLLLL  {go to idle state}
+
+cxxxx1xxxxxxx  LLLLLLLHLLLLL  {go to d_bus_req state}
+cxxxxxxxx1xxx  LHLLLLLLHLLLL  {go to d_local_req state}
+cx11xxxxxxxxx  LLHLLLLLHLLLL  {go to d_access state}
+cxxxxxxxxxxxx  LLHHLHLLHHLHL  {go to d_transfer state}
+cxxxxx0x1xx01  LLLLLLHLLLLLL  {go to d_next_packet state}
+cxxxxxxxxxxxx  LLLLLLLHLLLLL  {go to d_bus_req state}
+cxxxxxxxx1xxx  LHLLLLLLHLLLL  {go to d_local_req state}
+cx11xxxxxxxxx  LLHLLLLLHLLLL  {go to d_access state}
+cxxxxxxxxxxxx  LLHHLHLLHHLHL  {go to d_transfer state}
+cxxxxx0x1xx11  HLLLLLLLLLLLL  {go to d_end_dma state}
+cxxx11xxxxxxx  LLLLLLLHLLLLL  {go to d_bus_req state}
+
+cxxxxxxxx1xxx  LHLLLLLLHLLLL  {go to d_local_req state}
+cx11xxxxxxxxx  LLHLLLLLHLLLL  {go to d_access state}
+cxxxxxxxxxxxx  LLHHLHLLHHLHL  {go to d_transfer state}
+cxxxxx1x1xxxx  HLLLLLLLLLLLH  {go to d_end_dma state}
+cxxx10xxxxxxx  LLLLLLLLLLLLL  {go to idle state}
+
+end vector
+
+

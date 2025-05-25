@@ -1,0 +1,23 @@
+#$ TOOL NSC opl2pla V016
+#$ TITLE   A 3-bit decoder design using Truth Table entry. Test vector
+#$ TITLE   block is included for simulation.
+#$ TITLE   Copyright National Semiconductor Corp, 1992.
+#$ TITLE 
+#$ DEVICE p16l8
+#$ PINS 11 a15:2 a14:3 a13:4 o0-:12 o1-:13 o2-:14 o3-:15 o4-:16 o5-:17 o6-:18 o7-:19 
+#$ NODES 0 
+.i 3
+.o 8
+.type f
+.phase 11111111
+.ilb a15 a14 a13 
+.ob  o0 o1 o2 o3 o4 o5 o6 o7 
+000   01111111
+001   10111111
+010   11011111
+011   11101111
+100   11110111
+101   11111011
+110   11111101
+111   11111110
+.e

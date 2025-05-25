@@ -1,0 +1,147 @@
+			OPALjr PLD Development Package
+				 Version 2.01
+				September  1993
+
+This file contains important information regarding technical help and also 
+notes about OPALjr that is not in the Manual.
+
+OPALjr Copyright Note
+---------------------
+
+OPALjr is not copy protected, so you may make working copies for all of your
+personal computer systems.  For additional copies of the software and manual,
+or to request information regarding the full OPAL package, contact your local
+National Semiconductor representative.
+
+Technical Assistance
+--------------------
+
+If you have any problems, need technical assistance, or want to report
+software bugs, please contact your local NSC representative or call one of the
+numbers listed below.
+
+
+		Region                  Telephone Number
+		------                  ----------------
+		U.S. and Canada         800-272-9959
+		Europe                  (+49) 8141 103 260 (Germany)
+		Asia                    +852-737-1869      (Hong Kong)
+		Japan                   03-3299-7001
+		BBS                     (408) 721-7418 (8-n-1, 2400-19.2K bps)
+		Internet Address        PPGBBS@TEVM2.NSC.COM
+
+They will need to know a variety of information about your system, such as:
+
+	 Computer system type
+	 Operating system type and version
+	 Monitor type
+       * Largest executable program size / Free memory
+
+* You can get the largest executable program size by typing "mem" or "chkdsk"
+	on the command line.
+
+In addition, they will need to know exactly which version of the software you
+are running.  The version number of the complete OPAL package can be found at
+the top of this README file.  The version number of each module can be found
+on the first line of the help screen when the program name alone is typed on
+the command line, for example "pla2eqn".  To find the version number of the
+OPAL graphic shell, type "opaljr -v".
+
+They will also want to know the EXACT command line that you typed when the
+problem occurred.
+
+----------------------------------------------------------------------------
+OPALjr Installation
+-------------------
+Installation of the OPALjr software is accomplished by running the "install"
+program located on this disk.  This program will copy all of the necessary
+files into the specified directory on your hard disk.  It will also create a
+batch file called "new_auto.bat" to use as an example for configuring your
+system so that it can later find the OPALjr executable files.  OPALjr fully
+supports paths so that project separation can be maintained on your disk.
+
+This disk should contain:
+	README
+	OPALjr  .EXE
+	OPAL    .HLP
+	OPALdemo.EXE
+	OPALwjr .EXE
+	OPALwjr .HLP
+	GETRVAL .EXE            ; Required for OPALwjr.exe
+	GETRVAL .PIF
+	EQN2JED .EXE
+	JED2EQN .EXE
+	PAL2GAL .EXE
+	OPALVIEW.EXE
+	OPALVIEW.HLP
+	DEVICE  .LIB
+	DEVICE  .SEL
+	DEMO\*.*
+	EXAMPLES\*.*
+
+To work with OPALjr on a floppy disk system with only a single low-density
+floppy disk drive, you will have to forgo the use of the OPAL graphic shell.
+Copy the following files and directories onto the floppy disk:
+
+	EQN2JED.EXE
+	JED2EQN.EXE
+	PAL2GAL.EXE
+	DEVICE .LIB
+	DEVICE .SEL
+	\EXAMPLES\*.*
+
+To work with OPALjr on a floppy disk system with a high-density floppy disk
+system, simply make an exact copy of the OPALjr release diskette.
+
+NOTE: The OPALjr graphical shells will each need about 300K of scratch
+disk space on any available drive. This means that if you are working off
+of a single floppy disk in A:, you may need to put an empty floppy disk
+in B: if you do not have a hard disk.
+
+
+Release Notes:
+--------------
+
+This section contains information that is not in the manual or correction to 
+the manual.
+
+   1.   In the manual it is discussed that one can specify the term global 
+	with a dot extension to control an input to all macro cells in the 
+	device.  This is not a correct usage of dot extensions.  "Global" is 
+	not supported by OPALjr it is only supported by the full OPAL package.
+
+   2.   In the GAL16V8 and GAL20V8 devices there is two ways to disable the             
+	unused product terms; one is to use the product term disable(ptd) 
+	architecture bits (see Data Sheet for detail on ptd) or to program all 
+	fuses in the product term.  Previously OPALjr always used the ptd bits
+	to disable the unused product terms in the devices.  We have added 
+	a new option to eqn2jed.exe that will allow you to use either of the
+	two options.
+	The default of the software is to use the ptd to disable the unused             
+	product terms.  You can use the -p option with eqn2jed from the 
+	command line to not use the ptd bits this option( as with other 
+	options) will be listed if you type eqn2jed at the command line.  We
+	also added the directive @ptd to be used in the equation file to
+	select either option.  (See the OPALjr 2.01 Manual on the use of the
+	directives).  This particular directive has two forms:
+
+	@ptd unused { do not allow the use of ptd}
+	@ptd used   { use the ptd bits to disable unused product terms}
+
+    3.  The pin numbers outputted by OPALjr in the JEDEC map and the LOG file
+	will always default to DIP package pin numbers, but you can also output
+	the PLCC pin numbers and PLCC chip diagram by selecting the option 
+	" -j Select JEDEC PLCC chip diagram" for eqn2jed.  If you are, on
+	the other hand translating a JEDEC file outputted from ABEL or any 
+	other third party software and the file was generated for PLCC package
+	you may have a problem using JED2EQN.
+
+	The JEDEC map portion of the JEDEC file for both the PIN and PLCC are
+	exactly the same.  The difference is in the pin numbers in the header.     
+	This difference will not affect the programming of the device.
+
+	We have supplied OPALjr with capabilities to output a JEDEC file and 
+	read a JEDEC file made especially for the PLCC packages.  This can be 
+	done by adding a V to the device name.  Thus a GAL20V8V is the PLCC 
+	device, G20V8AV is also the PLCC device name.  Therefore, now you can 
+	use those devices when working with the PLCC JEDEC file.

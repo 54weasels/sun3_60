@@ -1,0 +1,144 @@
+This file contains more detailed descriptions of the examples included with
+the OPALjr package Version 2.01.  To compile the examples from command line 
+is shown for each example.  Options from the DOS or Windows shell can be
+easily selected based on the discussion here.  
+
+
+=============================================================================
+1)  6-Bit Cascadable Shift Register
+
+This is the best EQN format example provided with the package and should be 
+understood before examining the more complex examples or designing your own 
+files. This example uses both the = (combinatorial) and := (registered) 
+assignments, as well as the output enable signal.This example does not have a 
+device or pin numbers declared. Therefore, at the time of compilation both a 
+device and automatic pin assignment should be specified.  An appropriate 
+device for this design is the gal16v8. 
+
+To create a JEDEC map, type:    eqn2jed -f -d gal16v8 6_shift 
+
+==============================================================================
+2)  8-Bit Synchronous Cascadable Counter 
+
+This design is an eight bit up-down counter design which can be cascaded with 
+similar devices. This example illustrates combinatorial and registered 
+signals, mixed signal polarities, and the XOR operator. Pin assignments have 
+already been provided, but can be overridden with the -f option. Note that if 
+the pin assignments are overridden, the pin polarity information will be kept 
+in tact.
+
+The device name is also specified. Specifying a device in the equation file, 
+avoids having to specify it during compilation.  Notice that specifying the 
+device during compilation overrides the device specified in the file.  You can 
+specify the device by using the -d option with the command line or by 
+selecting one of the devices from the dialog box.
+
+This example is designed for the PAL20X8. The compiler EQN2JED can be run 
+without any flags:  eqn2jed 8_count 
+
+To force the design to be placed on another device, simply specify the -d 
+option, which will override any device name in the source file:
+eqn2jed -f -d pal20r8 8_count 
+
+Executing this command will cause an error declaring that the design will not 
+fit in the selected device. This is due to the fact that the design utilizes 
+nine outputs, and the PAL20R8 only has eight.
+
+==============================================================================
+3)  10-Bit Synchronous Up/Down Counter 
+
+This design is a more complex version of the 8-bit counter. It has more 
+functionality, but lacks a carry out signal due to the limits of the device. 
+The designer also used the mixed polarities slightly differently than the 
+designer of the 8-bit counter.Since both the device and pin list have been 
+specified, this design can be compiled with: eqn2jed 10_count 
+
+==============================================================================
+4)  16-Bit to 4-Bit Priority Encoder
+
+This is a straightforward design. An encoder is a circuit that has a number of 
+inputs, and encodes whichever line is high into its binary representation. A 
+priority encoder also handles the case where multiple signals may be high 
+simultaneously; it encodes the highest one.
+
+The only trick in this design is the equation for Y3, the highest bit. The 
+desired equation would be:
+
+Y3 = D15 + D14 + D13 + D12 + D11 + D10 + D9 + D8 
+
+but this would take eight product terms if programmed in that manner, so 
+DeMorganís Law was applied to the equation so that it would fit into smaller 
+devices. A similar decision was made with the ANY signal.
+
+This design is compiled by:  eqn2jed 16_4_pri 
+
+==============================================================================
+5) 16-Bit to 1-Bit Multiplexer
+
+This is the simplest design example included, implementing a 16-bit to 1-bit 
+multiplexer via combinatorial logic.
+
+To compile this design, type:  eqn2jed 16_1_mux 
+
+==============================================================================
+6)  Hexadecimal Decoder for a 7-Segment Display 
+
+No set of examples is complete without this design for a 7-segment LED driver 
+for hexadecimal inputs. This is a combinatorial design, utilizing mixed 
+polarities and output enable equations.
+
+To run this example, type: eqn2jed hex_7seg 
+
+=============================================================================
+7)  3-Bit Counter With 7-Segment Display Output
+
+This design is a three bit up-down counter which has a set of outputs for a 
+7-segment LED. This example illustrates additional complexity, combinatorial 
+and registered signals, and the use of @define for common subexpressions. By 
+specifying a specific device in the equation file, we also avoid having to 
+type -d device_name for every compilation.
+
+This example is designed for the GAL22V10. The compiler EQN2JED should be run 
+with the -f flag to assign the pins, since the pins were left unassigned: 
+eqn2jed -f 3_7seg 
+
+To force the design to be placed on another device, simply specify the -d 
+option, which will override any device name in the source file: eqn2jed -f -d 
+pal20r8 3_7seg 
+
+Executing this command will cause an error declaring that the design will not 
+fit in the selected device. This is due to the fact that the design utilizes 
+ten outputs, and the PAL20R8 only has eight.
+
+==============================================================================
+8)  15-Bit Up-Down Counter
+
+This design is a 15-bit up-down counter design which uses four state bits for 
+a state-machine-like design. It shows the use of JK type registers and the 
+@ues directive. Since it is such a large design, the MAPL128 device, which is 
+an ideal part for large state machines, was selected. Note that the pins have 
+been assigned within the file, and that both the state bits and the page bits 
+have been assigned to buried registers. The advantage of buried registers is 
+that external pins are not wasted for unneeded signals.This example was 
+compiled into the EQN file format from an original design using a state 
+machine in the OPAL file format.
+
+Since this design has been specifically written for the MAPL128, neither a 
+device nor automatic pin assignment need to be specified on the command line. 
+In general, if you are using a PLCC packaged device, it may be useful to 
+specify the -j option to get a PLCC instead of a DIP diagram. For devices such 
+as the MAPL128, which are available only in the PLCC package, the default is 
+to use the PLCC diagram.
+
+eqn2jed 15_count 
+
+After this command has been executed, examine the log file, which will be 
+named 15_COUNT.LOG in the same directory. From the information presented in 
+the log file, one can see that the design utilized the deviceís external pins 
+reasonably well, using seven out a possible twenty-six. However, the file also 
+shows that the internal product terms were not utilized nearly as well, making 
+use of only twenty-five percent of the available terms. A designer will often 
+try to fit the final design to many devices, and choose the cheapest or 
+fastest of those available.
+
+==============================================================================

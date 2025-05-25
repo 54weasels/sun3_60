@@ -1,0 +1,38 @@
+; JED2EQN -- JEDEC file to Boolean Equations disassembler (Version V063)
+; Copyright (c) National Semiconductor Corporation 1990-1993
+; Disassembled from 1564-02.jed. Date: 3-25-120
+
+chip 1564-02 PAL16R4
+
+CLK=1 i2=2 i3=3 i4=4 i5=5 i6=6 i7=7 i8=8 i9=9 GND=10 /OE=11 f12=12 
+rf14=14 rf15=15 rf16=16 rf17=17 f18=18 f19=19 VCC=20 
+
+equations
+
+/f19 = /f19 * rf14
+    + /i2 * i3 * /i4 * rf17 * i5 * rf16 * i6 * rf15 * i7 * rf14 * /i8
+f19.oe = vcc
+/f18 = /f18 * rf14
+    + /i2 * /i3 * /i4 * rf17 * i5 * rf16 * i6 * rf15 * i7 * rf14 * /i8
+f18.oe = vcc
+/rf17 := /rf17 * /rf16 * rf15
+    + /rf17 * rf16 * rf15
+    + rf17 * rf16 * rf15
+rf17.oe = OE
+/rf16 := /rf17 * /rf16 * /rf15
+    + /rf17 * /rf16 * rf15
+    + /rf17 * rf16 * rf15
+rf16.oe = OE
+/rf15 := /rf17 * /rf16 * /rf15
+    + /rf17 * /rf16 * rf15
+    + rf17 * /rf16 * /rf15
+rf15.oe = OE
+/rf14 := /rf14 * /f12
+    + /f19 * rf17 * rf16 * /rf15
+    + /f18 * rf17 * rf16 * /rf15
+rf14.oe = OE
+/f12 = /i8 * /f12
+    + /f19 * rf17 * rf16 * /rf15
+    + /f18 * /rf17 * /rf16 * /rf15 * i9
+    + /f18 * rf17 * rf16 * /rf15 * /i9
+f12.oe = /i2 * /i4 * i5 * i6 * i7 * /i8

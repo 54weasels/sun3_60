@@ -1,0 +1,1 @@
+ C:\SOFTWARE\OPAL\JR201\eqn2jed 10_COUNT.eqn -o10_COUNT.jed -l10_COUNT.lis -g10_COUNT.log -dG22CV10

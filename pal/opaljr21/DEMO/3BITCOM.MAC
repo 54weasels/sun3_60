@@ -1,0 +1,44 @@
+$ 3bitcom
+$ JED2CKT -- JEDEC File to OPALsim Circuit/Macro Translator (Version V055)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from 3bitcom.jed. Date: 3-20-92
+$ DEVICE GAL16V8
+
+.MACRO 3bitcom dly p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13
++ p14 p15 p16 p17 p18 p19 p20
+
+np2 INV 0 p2
+np1 INV 0 p1
+np3 INV 0 p3
+np7 INV 0 p7
+np8 INV 0 p8
+np9 INV 0 p9
+a16 AND 0 p3 p5 np7 np8 np9
+a17 AND 0 p2 p5 np7 np8
+a18 AND 0 p2 p3 p5 np7 np9
+a19 AND 0 p1 p5 np7
+a20 AND 0 p1 p3 p5 np8 np9
+a21 AND 0 p2 p1 p5 np8
+a22 AND 0 p2 p1 p3 p5 np9
+a32 AND 0 p2 p1 p3 p5 p7 p8 p9
+a33 AND 0 p2 np1 p3 p5 np7 p8 p9
+a34 AND 0 np2 p1 p3 p5 p7 np8 p9
+a35 AND 0 np2 np1 p3 p5 np7 np8 p9
+a36 AND 0 p2 p1 np3 p5 p7 p8 np9
+a37 AND 0 p2 np1 np3 p5 np7 p8 np9
+a38 AND 0 np2 p1 np3 p5 p7 np8 np9
+a39 AND 0 np2 np1 np3 p5 np7 np8 np9
+a48 AND 0 np2 np1 np3 p5 p9
+a49 AND 0 np2 np1 p5 p8
+a50 AND 0 np1 np3 p5 p8 p9
+a51 AND 0 np1 p5 p7
+a52 AND 0 np2 np3 p5 p7 p9
+a53 AND 0 np2 p5 p7 p8
+a54 AND 0 np3 p5 p7 p8 p9
+or17 OR 0 a16 a17 a18 a19 a20 a21 a22
+p17 BUF dly or17
+or15 OR 0 a32 a33 a34 a35 a36 a37 a38 a39
+p15 BUF dly or15
+or13 OR 0 a48 a49 a50 a51 a52 a53 a54
+p13 BUF dly or13
+.EOM

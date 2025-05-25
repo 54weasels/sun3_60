@@ -1,0 +1,95 @@
+  OPALVIEW (digital logic viewer) Help File         ESC will Exit
+
+
+          The Viewer Shows the Following States
+
+          3 Logic Levels -- 1,0 and Unknown (three lines)
+
+          Each Logic Level can have one of Three Strengths
+
+          Driving    Strength  -   SOLID  GREEN
+          Resistive  Strength  -   DOTTED BLUE
+          Tri-State  Strength  -   DOTTED RED
+
+          Buses are Shown in Red with the Hex Value Centered
+          between the Transitions.
+
+
+
+                                                       <CR> <more>
+
+Mouse functions:
+----------------
+Move Mouse Up    :  Move cursor up one position.
+                 :  If cursor is at top move traces down.
+Move Mouse Down  :  Move cursor up down position.
+                 :  If cursor is at bottom move traces up.
+Move Mouse Left  :  Move cursor left one position.
+                 :  If cursor is at side move traces right.
+Move Mouse Right :  Move cursor right one position.
+                 :  If cursor is at side move traces left.
+
+Left Button      :  If highlighted and held, drag signal.
+                 :  If not highlighted, zoom in.
+Middle Button    :  If highlighted, copy signal.
+                 :  If not highlighted, toggle reference marker.
+Right Button     :  If highlighted, delete signal.
+                 :  If not highlighted, zoom out.
+                                                       <CR> <more>
+Keypad functions:
+-----------------
+Up arrow          :  Move cursor up one position.
+                  :  If cursor is at top, move traces down.
+Down arrow        :  Move cursor down one position.
+                  :  If cursor is at bottom, move traces up.
+Left arrow        :  Move cursor left one position.
+                  :  If cursor is at side, move traces right.
+Right arrow       :  Move cursor right one position.
+                  :  If cursor is at side, move traces left.
+^ Left arrow      :  Move cursor left half screen.
+                  :  If cursor is at side, move traces right.
+^ Right arrow     :  Move cursor right half screen.
+                  :  If cursor is at side, move traces left.
+Shift Left arrow  :  Move screen left one position.
+Shift Right arrow :  Move screen right one position.
+Shift F10         :  Print screen.
+
+                                                       <CR> <more>
+Home        :  Move cursor to left side of screen.
+End         :  Move cursor to right side of screen.
+^ Home      :  Move cursor to beginning of file.
+^ End       :  Move cursor to end of file.
+PgUp        :  Drag trace up one position, if highlighted.
+PgUp        :  Move cursor up ten positions, if not highlighted.
+            :  If at top, move traces down.
+PgDn        :  Drag trace down one position, if highlighted.
+PgDn        :  Move cursor down ten positions, if not highlighted.
+            :  If at bottom, move traces up.
+ +          :  Zoom in.
+ -          :  Zoom out.
+ *          :  Toggle reference marker.
+ r          :  Reset program to starting conditions.
+ ?          :  Display this file.
+INS         :  Copy trace, if highlighted.
+DEL         :  Delete trace, if highlighted.
+ESC or ^C   :  Exit program.
+                                                       <CR> <more>
+
+NOTES:
+
+At the top left of the screen is the current cursor position.
+The top right of the screen is for the delta readout,
+i.e., the cursor position minus the reference marker position.
+
+The reference marker is toggled on/off by the middle mouse button.
+Both of these readouts change to red when zoomed out past one bit
+of information per pixel.
+
+NOTE:  Information can be missed while zoomed out.
+
+The help screen can be exited at any time by pressing the ESC key
+instead of paging through the whole file.
+
+Page Up and Page Down can move though the help file.
+
+                                                       <CR> <end>

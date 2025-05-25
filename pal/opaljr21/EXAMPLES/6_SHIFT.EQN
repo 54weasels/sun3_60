@@ -1,0 +1,30 @@
+	OPALjr Example
+	Copyright National Semiconductor Corp, 1993.
+
+	6-Bit Cascadable Shift Register
+
+CHIP 6_shift unknown		; Device not selected
+
+sr   sl d5 d4 d3 d2 d1 d0	; Declare order of inputs
+rilo q5 q4 q3 q2 q1 q0 liro	; Declare order of outputs
+
+	@define Hold   "/sr * /sl"
+	@define Right  " sr * /sl"
+	@define Left   "/sr *  sl"
+        @define Load   " sr *  sl"
+
+EQUATIONS
+
+/q0 := /q0 * Hold  +  /q1   * Right  +  /liro * Left  +  /d0 * Load
+/q1 := /q1 * Hold  +  /q2   * Right  +  /q0   * Left  +  /d1 * Load
+/q2 := /q2 * Hold  +  /q3   * Right  +  /q1   * Left  +  /d2 * Load
+/q3 := /q3 * Hold  +  /q4   * Right  +  /q2   * Left  +  /d3 * Load
+/q4 := /q4 * Hold  +  /q5   * Right  +  /q3   * Left  +  /d4 * Load
+/q5 := /q5 * Hold  +  /rilo * Right  +  /q4   * Left  +  /d5 * Load
+
+/liro = /q0
+liro.oe = Right
+
+/rilo = /q5
+rilo.oe = Left
+

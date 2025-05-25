@@ -1,0 +1,38 @@
+	OPALjr Example
+	Copyright National Semiconductor Corp, 1993.
+
+	8-Bit Synchronous Counter
+	
+CHIP 8_count pal20x8
+
+ clk   a0   x0  x1  x2  x3  x4  x5  x6  x7  a1  gnd
+/en  /cout /y7 /y6 /y5 /y4 /y3 /y2 /y1 /y0 /cin vcc
+
+EQUATIONS
+
+y0 := /a1*/a0*/y0 +  a0*/y0
+   :+:  a1*/a0* x0 +  a0*/cin
+
+y1 := /a1*/a0*/y1 +  a0*/y1
+  :+:  a1*/a0* x1 +  a0*/cin*/y0
+
+y2 := /a1*/a0*/y2 +  a0*/y2
+   :+:  a1*/a0* x2 +  a0*/cin*/y0*/y1
+
+y3 := /a1*/a0*/y3 +  a0*/y3
+   :+:  a1*/a0* x3 +  a0*/cin*/y0*/y1*/y2
+
+y4 := /a1*/a0*/y4 +  a0*/y4
+   :+:  a1*/a0* x4 +  a0*/cin*/y0*/y1*/y2*/y3
+
+y5 := /a1*/a0*/y5 +  a0*/y5
+   :+:  a1*/a0* x5 +  a0*/cin*/y0*/y1*/y2*/y3*/y4
+
+y6 := /a1*/a0*/y6 +  a0*/y6
+   :+:  a1*/a0* x6 +  a0*/cin*/y0*/y1*/y2*/y3*/y4*/y5
+
+y7 := /a1*/a0*/y7 +  a0*/y7
+   :+:  a1*/a0* x7 +  a0*/cin*/y0*/y1*/y2*/y3*/y4*/y5*/y6
+
+cout =/cin*/y0*/y1*/y2*/y3*/y4*/y5*/y6*/y7
+

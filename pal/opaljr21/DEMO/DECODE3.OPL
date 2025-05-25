@@ -1,0 +1,50 @@
+BEGIN HEADER
+  A 3-bit decoder design using Truth Table entry. Test vector
+  block is included for simulation.
+  Copyright National Semiconductor Corp, 1992.
+END HEADER
+
+
+BEGIN DEFINITION
+  DEVICE p16l8;
+  INPUTS  a[15:13]=[2:4];
+  OUTPUTS (COM) /o[0:7]=[12:19]; 
+  SET DECODE_IN = a[15:13];
+END DEFINITION
+
+
+BEGIN TRUTH_TABLE
+  TTIN  a15,a14,a13;
+  TTOUT  /o0, /o1, /o2, /o3, /o4, /o5, /o6, /o7;
+  000 10000000
+  001 01000000
+  010 00100000
+  011 00010000
+  100 00001000
+  101 00000100
+  110 00000010
+  111 00000001
+END TRUTH_TABLE
+
+
+begin vector
+a15,a14,a13,/o0,/o1,/o2,/o3,/o4,/o5,/o6,/o7;
+PROBE DECODE_IN ;  { Observe a15,14,13 as a bus signal }
+000 HLLLLLLL
+001 LHLLLLLL
+010 LLHLLLLL
+011 LLLHLLLL
+100 LLLLHLLL
+101 LLLLLHLL
+110 LLLLLLHL
+111 LLLLLLLH
+110 LLLLLLHL
+101 LLLLLHLL
+100 LLLLHLLL
+011 LLLHLLLL
+010 LLHLLLLL
+001 LHLLLLLL
+000 HLLLLLLL
+end vector
+
+

@@ -1,0 +1,185 @@
+$ sync_bsm
+$ JED2CKT -- JEDEC File to OPALsim Circuit/Macro Translator (Version V055)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from sync_bsm.jed. Date: 3-24-92
+$ DEVICE MAPL128
+
+.MACRO sync_bsm dly p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13
++ p14 p15 p16 p17 p18 p19 p20 p21 p22 p23 p24 p25 p26 p27 p28
+
+np6 INV 0 p6
+np5 INV 0 p5
+np4 INV 0 p4
+np3 INV 0 p3
+np2 INV 0 p2
+np27 INV 0 p27
+np26 INV 0 p26
+np25 INV 0 p25
+np24 INV 0 p24
+np11 INV 0 p11
+np9 INV 0 p9
+np29 INV 0 p29
+np32 INV 0 p32
+nps0 INV 0 ps0
+nps1 INV 0 ps1
+nps2 INV 0 ps2
+page0 AND 0 nps2 nps1 nps0
+page1 AND 0 nps2 nps1 ps0
+page2 AND 0 nps2 ps1 nps0
+page3 AND 0 nps2 ps1 ps0
+a0 AND 0 p29 np32 page0
+a1 AND 0 p11 p10 p29 p32 page0
+a2 AND 0 np11 p29 p32 page0
+a3 AND 0 p25 np29 np32 page0
+a4 AND 0 p2 np25 np29 np32 page0
+a5 AND 0 p6 np2 np25 np29 np32 page0
+a6 AND 0 p6 p5 np29 p32 page0
+a7 AND 0 np6 np5 np29 p32 page0
+a8 AND 0 p6 np5 np29 p32 page0
+a16 AND 0 p24 np29 p32 page1
+a17 AND 0 p2 p29 p32 page1
+a18 AND 0 np2 p10 p29 p32 page1
+a19 AND 0 p4 p3 np29 np32 page1
+a20 AND 0 p25 p29 np32 page1
+a21 AND 0 np25 p10 p29 np32 page1
+a22 AND 0 np3 np29 np32 page1
+a23 AND 0 np24 np29 p32 page1
+a24 AND 0 np4 np29 np32 page1
+a32 AND 0 p11 p10 p29 np32 page2
+a33 AND 0 np11 p29 np32 page2
+a34 AND 0 p4 p3 np29 p32 page2
+a35 AND 0 p24 np29 np32 page2
+a36 AND 0 np4 np29 p32 page2
+a37 AND 0 np3 np29 p32 page2
+a38 AND 0 p29 p32 page2
+a39 AND 0 np24 np29 np32 page2
+a48 AND 0 p29 np32 page3
+a49 AND 0 p27 np26 p11 np9 np29 np32 page3
+a50 AND 0 np11 np29 np32 page3
+a51 AND 0 np29 p32 page3
+a52 AND 0 np27 np26 p11 np9 np29 np32 page3
+a53 AND 0 p27 p26 p11 np9 np29 np32 page3
+a54 AND 0 np27 p26 p11 np9 np29 np32 page3
+a55 AND 0 p11 p9 np29 np32 page3
+a129 AND 0 VCC
+re NAND 0 rs
+rs INPUT = 0
+or371 OR 0 a1 a3 a4 a16 a18 a21 a22 a23 a24 a32 a34 a50 a51
+or372 INV 0 GND
+mux37 MUX 0 nc or372 ps0 or371
+ps0 DFF dly nq37 p1 mux37 nc re /0
+or381 OR 0 a0 a5 a6 a16 a33 a34 a35 a36 a37 a38 a39 a49 a50 a51
++ a52
+or382 INV 0 GND
+mux38 MUX 0 nc or382 ps1 or381
+ps1 DFF dly nq38 p1 mux38 nc re /0
+or391 BUF 0 GND
+or392 INV 0 GND
+mux39 MUX 0 nc or392 ps2 or391
+ps2 DFF dly nq39 p1 mux39 nc re /0
+or291 OR 0 a0 a1 a2 a16 a17 a18 a19 a20 a21 a32 a33 a48 a49
+or292 INV 0 GND
+mux29 MUX 0 nc or292 p29 or291
+p29 DFF dly nq29 p1 mux29 nc re /0
+or301 BUF 0 GND
+or302 BUF 0 GND
+np1 INV 0 p1
+p30 JKFF dly nq30 np1 or301 or302 nc re /0
+or311 BUF 0 GND
+or312 BUF 0 GND
+p31 JKFF dly nq31 np1 or311 or312 nc re /0
+or321 OR 0 a1 a2 a4 a7 a8 a23 a34 a35 a36 a37 a48 a49 a53 a54
++ a55
+or322 INV 0 GND
+mux32 MUX 0 nc or322 p32 or321
+p32 DFF dly nq32 p1 mux32 nc re /0
+or331 BUF 0 GND
+or332 BUF 0 GND
+p33 JKFF dly nq33 np1 or331 or332 nc re /0
+or341 BUF 0 GND
+or342 BUF 0 GND
+p34 JKFF dly nq34 np1 or341 or342 nc re /0
+or351 BUF 0 GND
+or352 BUF 0 GND
+p35 JKFF dly nq35 np1 or351 or352 nc re /0
+or361 BUF 0 GND
+or362 BUF 0 GND
+p36 JKFF dly nq36 np1 or361 or362 nc re /0
+or231 OR 0 a8 a54 a55
+or232 INV 0 GND
+mux23 MUX 0 nc or232 q23 or231
+q23 DFF dly nq23 p1 mux23 nc re /0
+p23 TBUF 0 a129 q23
+or221 OR 0 a51
+or222 INV 0 GND
+mux22 MUX 0 nc or222 q22 or221
+q22 DFF dly nq22 p1 mux22 nc re /0
+p22 TBUF 0 a129 q22
+or211 OR 0 a48
+or212 INV 0 GND
+mux21 MUX 0 nc or212 q21 or211
+q21 DFF dly nq21 p1 mux21 nc re /0
+p21 TBUF 0 a129 q21
+or201 OR 0 a2 a48 a50 a51
+or202 INV 0 GND
+mux20 MUX 0 nc or202 q20 or201
+q20 DFF dly nq20 p1 mux20 nc re /0
+p20 TBUF 0 a129 q20
+or191 OR 0 a1 a2 a16 a17 a18 a34 a35 a36 a37 a48 a50 a51
+or192 INV 0 GND
+mux19 MUX 0 nc or192 q19 or191
+q19 DFF dly nq19 p1 mux19 nc re /0
+p19 TBUF 0 a129 q19
+or181 OR 0 a4 a5 a6 a23 a38 a39 a52
+or182 INV 0 GND
+mux18 MUX 0 nc or182 q18 or181
+q18 DFF dly nq18 p1 mux18 nc re /0
+p18 TBUF 0 a129 q18
+or171 OR 0 a49
+or172 INV 0 GND
+mux17 MUX 0 nc or172 q17 or171
+q17 DFF dly nq17 p1 mux17 nc re /0
+p17 TBUF 0 a129 q17
+or71 OR 0 a51
+or72 INV 0 GND
+mux7 MUX 0 nc or72 q7 or71
+q7 DFF dly nq7 p1 mux7 nc re /0
+p7 TBUF 0 a129 q7
+or81 OR 0 a0
+or82 INV 0 GND
+mux8 MUX 0 nc or82 q8 or81
+q8 DFF dly nq8 p1 mux8 nc re /0
+p8 TBUF 0 a129 q8
+or91 BUF 0 GND
+or92 BUF 0 GND
+q9 JKFF dly nq9 np1 or91 or92 nc re /0
+p9 TBUF 0 GND q9
+or101 BUF 0 GND
+or102 BUF 0 GND
+q10 JKFF dly nq10 np1 or101 or102 nc re /0
+p10 TBUF 0 GND q10
+or111 BUF 0 GND
+or112 BUF 0 GND
+q11 JKFF dly nq11 np1 or111 or112 nc re /0
+p11 TBUF 0 GND q11
+or121 OR 0 a7 a8 a53 a54 a55
+or122 INV 0 GND
+mux12 MUX 0 nc or122 q12 or121
+q12 DFF dly nq12 p1 mux12 nc re /0
+p12 TBUF 0 a129 q12
+or131 OR 0 a3 a22 a24 a35 a36 a37
+or132 INV 0 GND
+mux13 MUX 0 nc or132 q13 or131
+q13 DFF dly nq13 p1 mux13 nc re /0
+p13 TBUF 0 a129 q13
+or151 OR 0 a0 a19 a20 a21 a32 a33 a34 a50 a51
+or152 INV 0 GND
+mux15 MUX 0 nc or152 q15 or151
+q15 DFF dly nq15 p1 mux15 nc re /0
+p15 TBUF 0 a129 q15
+or161 OR 0 a0 a33 a50 a51
+or162 INV 0 GND
+mux16 MUX 0 nc or162 q16 or161
+q16 DFF dly nq16 p1 mux16 nc re /0
+p16 TBUF 0 a129 q16
+.EOM

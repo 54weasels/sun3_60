@@ -1,0 +1,4114 @@
+Help file version 2.00 (Alpha-Site)
+%%
+2,0:1
+2,2:2
+2,3:3
+2,4:4
+2,5:45
+2,6:13
+2,7:6
+2,8:93
+2,9:94
+2,10:95
+2,11:96
+2,12:7
+3,0:8
+3,2:9
+3,3:3
+3,4:10
+3,5:13
+3,6:92
+3,7:14
+3,8:28
+4,0:16
+4,2:17
+4,3:18
+4,4:13
+4,5:33
+5,0:19
+5,2:20
+5,3:4
+5,4:22
+5,5:3
+5,6:18
+5,7:23
+5,8:13
+5,9:24
+5,10:25
+5,11:26
+5,12:27
+5,13:28
+5,14:77
+5,15:79
+6,0:29
+6,2:30
+6,3:32
+6,4:13
+6,5:33
+7,0:34
+7,2:35
+7,3:4
+7,4:37
+7,5:13
+7,6:110
+8,0:38
+8,2:39
+8,3:40
+8,4:23
+8,5:103
+8,6:13
+8,7:41
+9,0:66
+9,2:20
+9,3:3
+9,4:18
+9,5:78
+9,6:113
+9,7:114
+9,8:13
+10,0:44
+10,2:20
+10,3:3
+10,4:45
+10,5:46
+10,6:18
+10,7:105
+10,8:78
+10,9:13
+10,10:24
+10,11:47
+10,12:60
+10,13:112
+10,14:79
+11,0:43
+12,0:70
+12,2:71
+12,3:73
+12,4:74
+12,5:75
+12,6:18
+12,7:108
+12,8:13
+12,9:76
+12,10:12
+12,11:109
+13,0:54
+14,0:69
+15,0:115
+16,0:90
+16,2:9
+16,3:3
+16,4:97
+16,5:45
+16,6:10
+16,7:98
+16,8:13
+16,9:106
+16,10:79
+16,11:14
+16,12:92
+16,13:28
+16,14:77
+16,15:107
+17,0:99
+17,2:100
+17,3:101
+17,4:73
+17,5:75
+17,6:13
+18,0:102
+18,2:39
+18,3:40
+18,4:23
+18,5:103
+18,6:13
+18,7:41
+19,0:5
+19,2:104
+19,3:72
+19,4:13
+20,0:91
+20,2:71
+20,3:74
+20,4:73
+20,5:75
+20,6:108
+20,7:13
+20,8:109
+20,9:76
+20,10:12
+31,1:49
+31,2:50
+31,3:51
+31,4:52
+31,5:53
+31,6:54
+31,7:111
+31,8:55
+31,9:56
+31,10:83
+31,11:57
+32,1:44
+33,1:58
+33,2:59
+33,3:62
+33,4:63
+33,5:64
+33,6:80
+33,7:81
+33,8:82
+33,9:65
+34,1:1
+34,2:66
+34,3:8
+34,4:90
+34,5:16
+34,6:19
+35,1:91
+35,2:70
+35,3:60
+35,4:99
+35,5:61
+36,1:67
+36,2:68
+37,1:69
+38,1:84
+38,2:85
+38,3:86
+38,4:87
+38,5:88
+38,6:89
+39,1:38
+39,2:102
+39,3:29
+39,4:34
+39,5:5
+40,116:116
+40,117:117
+40,118:118
+40,119:119
+40,120:120
+40,121:121
+40,122:122
+40,123:123
+40,124:124
+40,125:125
+40,126:126
+40,127:127
+40,128:128
+40,129:129
+40,130:130
+40,131:131
+40,132:132
+40,133:133
+40,134:134
+40,135:135
+40,136:136
+40,137:137
+40,138:138
+40,139:139
+40,140:140
+40,141:141
+40,142:142
+40,143:143
+40,144:144
+40,145:145
+40,146:146
+40,147:147
+40,148:148
+40,149:149
+40,150:150
+40,151:151
+40,152:152
+40,153:153
+40,154:154
+40,155:155
+40,156:156
+40,157:157
+40,158:158
+40,159:159
+40,160:160
+40,161:161
+40,162:162
+40,163:163
+40,164:164
+40,165:165
+40,166:166
+40,167:167
+40,168:168
+40,169:169
+40,170:170
+40,171:171
+40,172:172
+40,173:173
+40,174:174
+40,175:175
+40,176:176
+40,177:177
+40,178:178
+40,179:179
+40,180:180
+40,181:181
+40,182:182
+40,183:183
+40,184:184
+40,185:185
+40,186:186
+40,187:187
+40,188:188
+40,189:189
+40,190:190
+40,191:191
+40,192:192
+40,193:193
+40,194:194
+40,195:195
+40,196:196
+40,197:197
+40,198:198
+40,199:199
+40,200:200
+40,201:201
+40,202:202
+40,203:203
+40,204:204
+40,205:205
+40,206:206
+40,207:207
+40,208:208
+40,209:209
+40,210:210
+40,211:211
+40,212:212
+40,213:213
+40,214:214
+40,215:215
+40,216:216
+40,217:217
+40,218:218
+40,219:219
+40,220:220
+40,221:221
+40,222:222
+40,223:223
+40,224:224
+40,225:225
+40,226:226
+40,227:227
+40,228:228
+40,229:229
+40,230:230
+40,231:231
+40,232:232
+40,233:233
+40,234:234
+40,235:235
+40,236:236
+40,237:237
+40,238:238
+40,239:239
+40,240:240
+40,241:241
+40,242:242
+40,243:243
+40,244:244
+40,245:245
+40,246:246
+40,247:247
+40,248:248
+40,249:249
+40,250:250
+40,251:251
+40,252:252
+40,253:253
+40,254:254
+40,255:255
+40,256:256
+40,257:257
+40,258:258
+40,259:259
+40,260:260
+40,261:261
+40,262:262
+40,263:263
+40,264:264
+40,265:265
+40,266:266
+40,267:267
+40,268:268
+40,269:269
+40,270:270
+40,271:271
+40,272:272
+40,273:273
+40,274:274
+40,275:275
+40,276:276
+40,277:277
+40,278:278
+40,279:279
+40,280:280
+40,281:281
+40,282:282
+40,283:283
+40,284:284
+40,285:285
+40,286:286
+40,287:287
+40,288:288
+40,289:289
+40,290:290
+40,291:291
+40,292:292
+40,293:293
+40,294:294
+40,295:295
+40,296:296
+40,297:297
+40,298:298
+40,299:299
+40,300:300
+40,301:301
+40,302:302
+40,303:303
+40,304:304
+40,305:305
+40,306:306
+40,307:307
+40,308:308
+40,309:309
+40,310:310
+40,311:311
+40,312:312
+40,313:313
+40,314:314
+40,315:315
+40,316:316
+40,317:317
+40,318:318
+40,319:319
+40,320:320
+40,321:321
+40,322:322
+40,323:323
+40,324:324
+40,325:325
+40,326:326
+40,327:327
+40,328:328
+40,329:329
+40,330:330
+40,331:331
+40,332:332
+40,333:333
+40,334:334
+40,335:335
+40,336:336
+40,337:337
+40,338:338
+40,339:339
+40,340:340
+40,341:341
+40,342:342
+40,343:343
+40,344:344
+40,345:345
+40,346:346
+40,347:347
+40,348:348
+40,349:349
+40,350:350
+40,351:351
+40,352:352
+40,353:353
+40,354:354
+40,355:355
+40,356:356
+40,357:357
+40,358:358
+40,359:359
+40,360:360
+40,361:361
+40,362:362
+40,363:363
+40,364:364
+40,365:365
+40,366:366
+40,367:367
+40,368:368
+40,369:369
+40,370:370
+40,371:371
+40,372:372
+40,373:373
+40,374:374
+40,375:375
+40,376:376
+40,377:377
+40,378:378
+40,379:379
+40,380:380
+40,381:381
+40,382:382
+40,383:383
+40,384:384
+40,385:385
+40,386:386
+40,387:387
+40,388:388
+40,389:389
+40,390:390
+40,391:391
+40,392:392
+40,393:393
+40,394:394
+40,395:395
+40,396:396
+40,397:397
+40,398:398
+40,399:399
+40,400:400
+40,401:401
+40,402:402
+40,403:403
+40,404:404
+40,405:405
+40,406:406
+40,407:407
+40,408:408
+40,409:409
+40,410:410
+40,411:411
+40,412:412
+40,413:413
+40,414:414
+40,415:415
+40,416:416
+40,417:417
+40,418:418
+40,419:419
+40,420:420
+40,421:421
+40,422:422
+40,423:423
+40,424:424
+40,425:425
+40,426:426
+40,427:427
+40,428:428
+40,429:429
+40,430:430
+40,431:431
+40,432:432
+40,433:433
+40,434:434
+40,435:435
+40,436:436
+40,437:437
+40,438:438
+40,439:439
+40,440:440
+40,441:441
+40,442:442
+40,443:443
+40,444:444
+40,445:445
+40,446:446
+40,447:447
+40,448:448
+40,449:449
+40,450:450
+40,451:451
+40,452:452
+40,453:453
+40,454:454
+40,455:455
+40,456:456
+40,457:457
+40,458:458
+40,459:459
+40,460:460
+40,461:461
+40,462:462
+40,463:463
+40,464:464
+40,465:465
+40,466:466
+40,467:467
+40,468:468
+40,469:469
+40,470:470
+40,471:471
+40,472:472
+40,473:473
+40,474:474
+40,475:475
+40,476:476
+40,477:477
+40,478:478
+40,479:479
+40,480:480
+40,481:481
+40,482:482
+40,483:483
+40,484:484
+40,485:485
+40,486:486
+40,487:487
+40,488:488
+40,489:489
+40,490:490
+40,491:491
+40,492:492
+40,493:493
+40,494:494
+40,495:495
+40,496:496
+40,497:497
+40,498:498
+40,499:499
+40,500:500
+40,501:501
+40,502:502
+40,503:503
+40,504:504
+40,505:505
+40,506:506
+40,507:507
+40,508:508
+40,509:509
+40,510:510
+40,511:511
+40,512:512
+40,513:513
+40,514:514
+40,515:515
+40,516:516
+40,517:517
+40,518:518
+40,519:519
+40,520:520
+40,521:521
+40,522:522
+40,523:523
+40,524:524
+40,525:525
+40,526:526
+40,527:527
+40,528:528
+40,529:529
+40,530:530
+40,531:531
+40,532:532
+40,533:533
+40,534:534
+40,535:535
+40,536:536
+40,537:537
+40,538:538
+40,539:539
+40,540:540
+40,541:541
+40,542:542
+40,543:543
+40,544:544
+40,545:545
+40,546:546
+40,547:547
+40,548:548
+40,549:549
+40,550:550
+40,551:551
+40,552:552
+40,553:553
+40,554:554
+40,555:555
+40,556:556
+40,557:557
+40,558:558
+40,559:559
+40,560:560
+40,561:561
+40,562:562
+40,563:563
+40,564:564
+40,565:565
+40,566:566
+40,567:567
+40,568:568
+40,569:569
+40,570:570
+40,571:571
+40,572:572
+40,573:573
+40,574:574
+40,575:575
+40,576:576
+40,577:577
+40,578:578
+40,579:579
+40,580:580
+40,581:581
+40,582:582
+40,583:583
+40,584:584
+40,585:585
+40,586:586
+40,587:587
+40,588:588
+40,589:589
+40,590:590
+40,591:591
+40,592:592
+40,593:593
+40,594:594
+40,595:595
+40,596:596
+40,597:597
+40,598:598
+40,599:599
+40,600:600
+40,601:601
+40,602:602
+40,603:603
+40,604:604
+40,605:605
+40,606:606
+40,607:607
+40,608:608
+40,609:609
+40,610:610
+40,611:611
+40,612:612
+40,613:613
+40,614:614
+40,615:615
+40,616:616
+40,617:617
+40,618:618
+40,619:619
+40,620:620
+40,621:621
+40,622:622
+40,623:623
+41,0:111
+41,1:111
+41,2:111
+%%
+.1
+  OPL2PLA
+
+  OPL2PLA  compiles an OPAL source file and produces an OPEN-PLA
+  file  as  output.  The OPAL source file is comprised  of logic
+  specified  in terms  of state machines,  truth tables,  and/or
+  Boolean equations.
+
+  The result of compiling an OPAL file, with a default extension
+  ".opl", is an OPEN-PLA file format, with the default extension
+  ".pla".
+
+  The following options may be used with this module:
+
+	 @2[Output File]            @93[SEQUENTIAL]
+	 @3[Log File]               @94[MAPL]
+	 @4[List File]              @95[PAL/GAL]
+	 @45[Vector File]            @96[ONE HOT]
+	 @13[Silent]                 @7[VERIFY]
+	 @6[MINIMIZE]
+.2
+  Output Filename
+
+  This option is   used  to  specify  a different  PLA  filename
+  other than the default filename.  If no filename is specified,
+  then the input filename is used with the extension ".pla".
+.3
+  Log Filename
+
+  This option will create a documentation file.  If  no filename
+  is  specified,  the input  filename is used with the extension
+  ".log".  This file  contains  a listing of all pins and  nodes
+  with their  types, as well as, statebits with their values and
+  symbols and their branching states.
+.4
+  List Filename
+
+  This  option is used  to  specify a different listing filename
+  other than the default filename. If no filename is  specified,
+  then the input filename  is used  with the  extension  ".lis".
+  This file contains a listing of the OPAL source file excluding
+  comments. It also includes all  warning and error  messages at
+  the corresponding lines.
+.5
+  Device Selection
+
+  Device Selection will read each device specified from a device
+  file,  which can be created on any editor, and tests to see if
+  your design can be fitted onto the device.
+
+  This module requires a device file as input, with the default
+  extension of ".sel",  and  outputs the results to a Log file,
+  with a default extension of ".log".
+
+  The following can be used with this module:
+
+	 @104[Output file]
+	 @72[Device Selection file]
+	 @13[Silent]
+.6
+  MINIMIZE (PLA)
+
+  This option turns on the minimization or simplification of all
+  expressions.
+.7
+  VERIFY
+
+  This option  turns  on the verification of  all expressions. A
+  warning message will be generated if an  expression  is always
+  true/false.
+.8
+  FITMAPL1
+
+  FITMAPL1  fits  a PLA  file  into  any  of the multipage  logic
+  devices. The process  is  accomplished  by  assigning pin/node
+  labels.  Two  products  are  supported  by this module, namely
+  MAPL128 and MAPL144.
+
+  This module  requires  a PLA  file as input, where the default
+  extension is ".pla".  It then creates an output PLA file which
+  has the default extension of ".pl1". If the input file has the
+  extension of ".tt(n)"  then the output default extension  will
+  be ".tt(n+1)".
+
+  The following options can be used with this module:
+
+	   @9[Output file]             @92[PHASE]
+	   @3[Log File]                @14[MINIMIZE]
+	   @10[Device]                  @28[LOG]
+	   @13[Silent]
+.9
+  Output Filename
+
+  This  option is used  to specify a different output  PLA file-
+  name than the default  filename.   If no filename is specified,
+  then the input filename is used with the appropriate extension,
+  ".pl1",  unless  the  input file has the  extension of
+  ".tt(n)" then it will create an output PLA file  which has  the
+  default extension of ".tt(n+1)".
+.10
+  Device
+
+  This  option  is used to specify the MAPL device name,  either
+  MAPL128 or MAPL144 for the FITMAPL1 and MAPL244 or MAPL268 for
+  FITMAPL2.  For the device list press the '+' on your numeric
+  keypad or click the mouse  over the device field where you would
+  enter the device name.
+
+.13
+  Silent
+
+  This option shuts off the diagnostic window which displays the
+  DOS output.
+.14
+  MINIMIZE
+
+  This option controls minimization before page splits. Espresso
+  is called to minimize the page before splitting it.
+.16
+  PLA2EQN
+
+  The  PLA2EQN module translates an  OPEN-PLA format file to  a
+  standard Sum-of-Product (SOP) boolean equation file.  The PLA
+  file, used as input to this module, can be:
+
+	 1 - The output of the @1[OPL2PLA] module
+	 2 - The output of the @66[PLAMIN] minimization program
+	 3 - The output of the @8[FITTER]
+	 4 - The output of a third party vendor
+	 5 - A text file that matches the PLA file format
+
+  The output  of this module is a  standard SOP boolean equation
+  file, which has the default extension ".eqn".
+
+  The following options may be used with this module:
+
+	 @17[Output file]
+	 @18[Device]
+	 @13[Silent]
+	 @33[SELECT]
+.17
+  Output Filename
+
+  This option  is  used to  specify a  different  output equation
+  filename.  If no filename is specified, then the input filename
+  is used with the extension ".eqn".
+.18
+  Device
+
+  This option allows  the user to choose a different device name
+  than already specified in the input file. This new device name
+  will override the old one.
+  Press the '+' on the numerical pad or click the left mouse
+  button over the device field to attain the device list. Once a
+  device has been found, either hit ENTER or double click the
+  left mouse button to pick the device name.
+.19
+  EQN2JED
+
+  EQN2JED is a  standard SOP (Sum Of Products) Boolean equations
+  to JEDEC file assembler for programmable logic devices (PLDs).
+
+  The JEDEC  file  contains  all  the  necessary  design details
+  which may be downloaded to a device programmer for programming
+  the target PLD.  The JEDEC file is fully compatible with JEDEC
+  standard  3A  which  is  supported  by  most  of the industry-
+  standard device programmers.
+
+  The following options may be used with this module:
+
+	 @20[Output file]       @24[AUTO-PIN]
+	 @4[List file]         @25[JEDEC PLCC]
+	 @22[Vector file]       @26[NON-JEDEC PLCC]
+	 @3[Log File]          @27[RETAIN]
+	 @18[Device]            @28[LOG]
+	 @23[UES]               @77[FULL]
+	 @13[Silent]            @79[SECURITY]
+
+.20
+  Output Filename
+
+  This option  is  used  to  specify  a different  output  JEDEC
+  filename.  If no  filename is  specified,   then  the  default
+  input  filename is used with the extension ".jed".
+.22
+  Vector Filename
+
+  This  option is used to specify a vector filename.  The vector
+  file must conform to the JEDEC standard for  defining vectors.
+  The vector file is appended to the JEDEC file. Each individual
+  file is  appended to the  JEDEC  file.  Each individual vector
+  is  tested  to ensure  that vector  characters  are  valid for
+  the  pins  they are  assigned to.  This feature  ensures  that
+  vectors  are defined correctly, however,  it  does not perform
+  any  simulation  to ensure the  vector has  the correct output
+  response for the given inputs.
+.23
+  UES
+
+  This option allows the user to specify a User Electronic Signature.
+
+.24
+  AUTO_PIN
+
+  This  option is used  to  turn on an automatic  pin assignment
+  switch. The JEDEC  file  created  reflects the  pin assignment
+  if it is successful.  The pin list in the  original  EQN  file
+  (if any) is no longer valid.  However, the correct pin assign-
+  ment can be seen in the pin out  diagram  in the document file
+  that is  created  by EQN2JED.   If this option fails to assign
+  the pins,  it does not mean that there is no solution. In such
+  cases, the designer will have to verify if the design will fit
+  into  the  PLD  and  then  manually  assign  the  pins  before
+  compiling with EQN2JED again.
+.25
+  JEDEC PLCC
+
+  This option is used to specify a JEDEC PLCC package for the chip
+  diagram  in the document file.  For  ECL  part,  a 24-pin  Quad
+  Cerpak is selected.
+.26
+  NON-JEDEC PLCC
+
+  This  option  is  used   to  select  a non-JEDEC  PLCC  package
+  for  the  chip diagram in the document file.   For ECL part, a
+  24-pin Quad Cerpak is selected.
+.27
+  RETAIN
+
+  This option is used to keep any redundant product terms for
+  PALs (not PLAs).
+.28
+  Overwrite LOG File
+
+  This option,  when enabled,  will delete the  existing log file and
+  create a new one. This is often desirable since the program appends
+  to the  existing log file and can become quite large after a number
+  of calls to the module.
+.29
+  JED2EQN
+
+  The  JED2EQN  module will  disassemble a JEDEC  file into  the
+  corresponding  boolean  equations.   The labels  used  in  the
+  boolean  equations  created by JED2EQN  contain the pin number
+  preceded by the type of signal.  Observing the labels makes it
+  easy to determine if the pin  is used  as a  dedicated  input,
+  combinatorial  or  registered  output,  and whether or not the
+  output is used as feedback into the device.
+
+  This module requires  a JEDEC  file as input, with the default
+  extension of ".jed",  and  outputs an EQN file, with a default
+  extension of ".eqn".
+
+  The following can be used with this module:
+
+	 @30[Output file]
+	 @32[Device]
+	 @13[Silent]
+	 @33[SELECT]
+.30
+  Output Filename
+
+  This  option is used to  specify another output  filename  for
+  the output  Boolean equations  file.  If the filename  is  not
+  specified, then the jed filename  is  used  with  the  default
+  extension  of ".eqn".
+.32
+  Device
+
+  This option is used to specify a device name that will override
+  the  device  name specified in the  JEDEC  file.  There  is  no
+  standard defined for placing the device name in the JEDEC file.
+  For the device list press the '+' on your numeric keypad or click
+  the mouse over the device field where you would enter the device
+  name. Once a device name is found in the list, double click the
+  left mouse button over the device name or hit ENTER.
+.33
+  SELECT
+
+  This option allows the  user to  select an alternate operator set,
+  (i.e., ! = NOT,  & = AND,  # = OR,  and  $ = XOR).
+.34
+  EQN2OPL
+
+  EQN2OPL converts  Boolean  equations specified  in  EQN format
+  to Boolean equations in OPAL format.
+
+  The utility program file preserves all the  comments available
+  in the equation file. The pin  declarations  will be preserved
+  but  commented  out  in  the  output  OPAL file  for reference
+  only, then replaced by a definition block.
+
+  The following can be used with this module:
+
+	 @35[Output file]
+	 @4[List file]
+	 @37[Device]
+	 @13[Silent]
+	 @110[XOR]
+.35
+  Output Filename
+
+  This option  is  used to  specify  the output  OPAL  filename.
+  If no  filename  is  used,  then the  input  filename is used
+  with the extension ".opl".
+.37
+  Device
+
+  This option is used to specify a device name that  will override
+  the device name specified in the EQN  file.  For the device list
+  press the '+' on your numeric keypad or click the mouse over the
+  device field where you would enter the device name.
+
+.38
+  PAL2GAL
+
+  PAL2GAL converts a PAL JEDEC file into a GAL JEDEC file. It first
+  checks to ensure that the PAL  is replaceable by a GAL before it
+  proceeds to do the conversion.
+
+  The following can be used with this module:
+
+	 @39[Output file]        @13[Silent]
+	 @40[Device]             @41[Vectors]
+	 @23[UES]
+	 @103[GAL device]
+.39
+  Output Filename
+
+  This option enables the user to specify the GAL JEDEC filename.
+  If the filename is  not specified,  then the  PAL JEDEC  file-
+  name is used with the extension ".gjd".
+.40
+  Device
+
+  This  option  is used to specify a device name that will over-
+  ride the device name specified in the PAL JEDEC file.  For the
+  device list press the '+' on your numeric keypad or click  the
+  mouse over  the device field where you  would enter the device
+  name.
+.41
+  Vectors
+
+  This option will not include vectors  in the  GAL JEDEC  file.
+  If this option is not used, then any vectors in the  PAL JEDEC
+  file are copied into the  GAL file.  The vectors  must conform
+  to the JEDEC  standard for  defining  vectors. The vector file
+  is appended to the GAL JEDEC file.  NOTE that no check is done
+  to ensure the correctness of the vector.
+.43
+  CURSOR MOVEMENT COMMANDS                   BLOCK COMMANDS
+
+
+  Ctrl-PgUp    Go to beginning               Alt-L    String search
+  Ctrl-PgDn    Go to end                     Alt-R    Search and replace
+  Ctrl-Home    Go to beginning of file       	      string
+  Ctrl-End     Go to end of file             Shift-Arrow  Mark block by rows
+  PgUp         Page up                       Alt-C    Mark block by columns
+  PgDn         Page down                     Gray-    Cut block
+  Home         Move to beginning of line     Gray+    Copy block
+  End          Move to end of line           Ins      Paste block
+  Up Arrow     Move up one character         Del      Delete block
+  Down Arrow   Move down one character       Ctrl-Y   Delete line
+  Right Arrow  Move right one character      Tab      Insert tab
+  Left Arrow   Move left one character       F9	      Overwrite
+  Ctrl-B       Move backward one word
+  Ctrl-F       Move forward one word
+.44
+  OPAL > JEDEC
+
+  This procedure will translate an OPAL source file into a JEDEC
+  map file. The OPAL source file is comprised of logic specified
+  in terms of state machines, truth tables, and/or Boolean equa-
+  tions.
+
+  The JEDEC  file  contains  all  the  necessary  design details
+  which may be downloaded to a device programmer for programming
+  the target PLD.  The JEDEC file is fully compatible with JEDEC
+  standard  3A  which  is  supported  by  most  of the industry-
+  standard device programmers.
+
+  The default output extension is ".jed".
+
+  The following options may be used with this module:
+
+	 @20[Output File]     @105[State Assignment]      @60[SIMULATE]
+	 @3[Log File]        @78[Minimization Speed]    @112[Check Sim]
+	 @45[Vector File]     @13[Silent]                @79[SECURITY]
+	 @46[FITTER]          @24[AUTO-PIN]
+	 @18[Device]          @47[CIRCUIT FILE]
+
+.45
+  Vector Filename
+
+  This option is used to specify the vector filename.  The vectors in
+  the vector definition block of the OPAL file will be stored in this
+  file.
+
+  Default extension is ".vec".
+.46
+  Fitters
+
+  Specify which fitter you would like to use by clicking the left
+  mouse button or pressing the plus key from the numeric pad. You
+  have two fitters to choose from, @8[FITMAPL1] and @90[FITMAPL2].
+.47
+  Circuit Filename
+
+  This option is used for the creation of a circuit file,  which
+  contains the circuit design and miscellaneous commands for the
+  simulator, @60[OPALsim]. The  default extension is ".ckt".
+
+  Note:   A circuit file  template will be created if the vector
+	  file is unspecified or no vectors are present in the
+	  JEDEC map.
+.48
+  Simulate
+
+  This option will invoke the logic viewer, @61[OPALview]. While in
+  the viewer typing '?' or hitting the F1 key will bring up a help
+  menu.
+.49
+  File - New
+
+  New will open a new edit window with the file name "newfile".
+  When exiting, OPAL will prompt you for a new filename.
+.50
+  File - Open
+
+  Open will prompt you for a file name and then open an edit
+  window containing the specified file.
+.51
+  File - Save (F2)
+
+  Save will automatically save the contents of the edit window
+  to a  file.  If  the default file  name is newfile then Save
+  will prompt for a new file name.
+.52
+  File - Save As..
+
+  Save As will prompt you for a filename. The edit window will be
+  saved under this new filename. If you specified an existing filename,
+  OPAL will prompt you if you wish to overwrite the existing file or not.
+.53
+  File - Close (F3)
+
+  Close will close the edit window. If changes have been made to the
+  file, OPAL will prompt if you wish to save changes to file or
+  not.
+.54
+  File - My Editor...
+
+  Instead of using OPAL's editor, you can use your favorite editor
+  within the shell by entering the editor's name and hitting <RETURN>.
+  If you hit <ESC>, you will default back to OPAL's editor.
+
+  Warning: Some editors may experience color change.
+.55
+  File - Print...
+
+  Print will print the entire file without interruption.
+.56
+  File - DOS Shell
+
+  DOS shell  will take you  temporarily out of the OPAL shell and
+  into the DOS environment to perform DOS commands and to execute
+  other programs. By typing EXIT and hitting RETURN, you can then
+  enter back into the OPAL shell.
+
+  Note: When exiting to DOS you may see a large file with a random
+	name such as " 4F50414C ". DO NOT DELETE, EDIT, LIST, BEND,
+	SPINDLE, or MUTILATE this file or it will spite you.
+.57
+  File - Quit
+
+  Quit will exit you from the OPAL shell and return you to the DOS
+  environment.
+.58
+  View - OPAL file
+
+  This option will automatically pop up the most current OPAL  file
+  created. If none has been created then a directory listing of all
+  the existing OPAL files to choose from in the current  directory
+  will be displayed.
+.59
+  View - PLA Map
+
+  This option will automatically pop up the most  current PLA  file
+  created. If none has been created then a directory listing of all
+  the  existing PLA  files to choose from  in the current directory
+  will be displayed.
+.60
+  Simulate - OPALsim...
+
+  This option will invoke the logic simulator OPALsim.  It may  prompt
+  you for a circuit file, which you can either create  on your own  or
+  by using the module JED2CKT. OPALsim  will then use this entry  file
+  to generate a list file, which contains all the waveform timing data
+  for the logic viewer @61[OPALview].
+
+  The default extension for the circuit file is .CKT
+.61
+  Simulate - OPALview...
+
+  This option will invoke the logic viewer OPALview. It will  prompt
+  you for a list file, if none is given. The list file can be created
+  by using the simulator OPALsim.
+
+  A help menu can be called within the logic viewer by typing in '?'
+  or by hitting F1.
+
+  The default extension for the list file is .LST
+
+  NOTE: OPALview will not run on a CGA based-system. If invoked, a
+	blank screen will appear. Just hit <ESC> twice to exit. If
+	possible put your monitor in VGA or EGA mode.
+.62
+  View - EQN File
+
+  This option will automatically pop up the most  current EQN  file
+  created. If none has been created then a directory listing of all
+  the existing  EQN  files  to choose from in the current directory
+  will be displayed.
+.63
+  View - JEDEC Map
+
+  This option will automatically pop up the most current JEDEC file
+  created. If none has been created then a directory listing of all
+  the existing JEDEC files to choose from in the current  directory
+  will be displayed.
+.64
+  View - LOG File
+
+  This option will automatically pop up the most  current LOG  file
+  created. If none has been created then a directory listing of all
+  the  existing PLA  files to choose from  in the current directory
+  will be displayed.
+.65
+  View - CHKSIM File
+
+  This option will automatically pop up the most current CHKSIM file
+  created.  If none has been created then a directory listing of all
+  the existing CHKSIM files  to choose from in the current directory
+  will be displayed.
+.66
+  PLAMIN
+
+  PLAMIN minimizes the logic in a PLA file and produces an equivalent,
+  though probably smaller, PLA file as output. This module provides an
+  easier and consistent interface to ESPRESSO, and attempts to select
+  default minimization options based upon the device selected.
+  The input PLA file has the default extension of ".pla" and the output
+  minimized file has the default extension of ".pl1".
+
+  If no architecture or device information is supplied in the input file
+  PLAMIN will default to a generic device of PAL architecture and FIXED
+  product term polarity.
+
+  The MAPL devices are not supported by this program; the appropriate
+  @46[fitter] should be used for minimization.
+
+  The following options can be used with this module:
+
+	 @20[Output File]     		@113[Architecture]
+	 @3[Log File]				@114[Polarity]
+	 @18[Device]				    @13[Silent]
+	 @78[Minimization Speed]
+
+
+
+Begin here
+
+.67
+  Help - Demo...
+  This is a demonstration  of the complete OPAL PLD development software
+  package.  From five different demos to choose from you will learn some
+  of the different design entry techniques and how to run the entry file
+  down through to a JEDEC map and through simulation.
+
+  If you need further information please refer to the manual.
+.68
+  Help - Errors...
+  Just enter the Error/Warning/Info number and you will receive further
+  information on that particular Error/Warning/Info message or refer to
+  "Error Messages" in the manual.
+.69
+  Info - About...
+  Description of software package and version.
+.70
+  JED2CKT
+
+  The JED2CKT module will translate a JEDEC file into the corresponding
+  macro file and circuit file that are required for simulation.
+
+  JED2CKT attempts to supply  meaningful label names for the  pins.  It
+  does  this by examining  a label file,  which can either  be supplied
+  in the 'specify label file' option or it will examine the ".log" file
+  by default.  If it cannot assign user-supplied labels, it will assign
+  pin names  in the format  <type><number>.  <type> is the  type of pin
+  being used, such as "I" for input. <number> is the pin number.
+
+  The default extension is ".jed".
+  The following can be used with this module:
+
+	 @71[Output File]              @13[Silent]
+	 @73[Vector File]              @76[CIRCUIT]
+	 @74[Macro File]               @12[MACRO]
+	 @75[Vector Time Period]       @109[Expand Bus]
+	 @18[Specify Device]
+	 @108[Power-Up value]
+.71
+  Output Filename
+
+  This option  is  used to  specify a  different  output circuit
+  filename.  If no filename is specified, then the input filename
+  is used with the extension ".ckt".
+.72
+  Device Selection Filename
+
+  This option is used to specify the device selection filename.
+  If no filename is specified, then the input filename is used
+  with the extension ".sel".
+.73
+  Vector Filename
+
+  Specify the vector filename. The default extension is ".vec".
+
+  This file can be created by OPL2PLA if a vector block was included
+  in the OPAL entry file.
+.74
+  Macro Filename
+
+  Specify the output macro file.  If the output filename is not given,
+  then the input filename is used with the extension of ".mac".
+.75
+  Vector Time Period
+
+  Specify the period for each vector.  Default is 50ns.
+.76
+  CIRCUIT
+
+  This option will create the @47[circuit] file only. If one already
+  exists with the same filename it will be overwritten. Default
+  extension is ".ckt".
+
+.77
+  Full JEDEC map
+
+  With this option enabled, the complete JEDEC map will be created, ie.,
+  all fuses will be shown.
+.78
+  Minimization Speed
+
+  This option is used to specify the minimization speed. Three speeds are
+  available. If no speed is specified then a default speed of "quick" will
+  be used.
+
+  QUICK:  This will apply the fastest minimization applicable to the device.
+		  This option also uses the least amount of memory. Minimization
+		  typically takes 1 second.
+
+  NORMAL: This usually provides the best results for the time spent.
+		  Minimization typically takes 20 seconds.
+
+  LONG:   In some cases, more minimization can be done (on the order of 10%
+		  fewer product terms) at the expense of a great deal of time. This
+		  will apply those minimizations if possible. Minimization time
+		  varies from a few seconds to a few days, typically taking a few
+		  minutes for a PAL architectures and a few hours for a PLA
+		  architectures.
+.79
+  Program Security Fuse
+
+  This option will enable the security fuse programming by sending a one
+  to the G field in the JEDEC map.
+
+			Example:    G1*     Enables security fuse programming.
+.12
+  MACRO
+
+  This option will create the macro file only. If a macro file already
+  exists with the same filename it will be overwritten.
+.115
+  Errors/Warnings/Info
+  This allows you to receive more detailed information on the current error,
+  warning or information message.
+
+  Just type in the Error/Warning/Info number presented before the given
+  message.
+.80
+  View - GAL JEDEC Map
+
+  This option will automatically pop up the most  current GAL JEDEC
+  map  created from the  PAL2GAL module.  If none  has been created
+  then a directory listing of  all  the  existing GAL JEDEC maps to
+  choose from in the current directory will be displayed.
+.81
+  View - CKT File
+
+  This option will automatically pop up the most  current circuit
+  file created from the JED2CKT module.  If none has been created
+  then a directory listing of all the  existing circuit  files to
+  choose from in the current directory will be displayed.
+.82
+  View - LIS File
+
+  This option will automatically pop up the  most current list file
+  map  created from the  OPL2PLA module.  If  none has been created
+  then a directory listing of all the existing list files to choose
+  from in the current directory will be displayed.
+.83
+  File - Change Directory
+
+  This command allows you to choose a directory on any drive as the
+  current directory. Files that are created and  saved will  reside
+  in this new location.
+.84
+  Edit - Undo
+
+  This command will undo the previous cut or paste command. For example,
+  if you use the copy command after  cutting a section of text you will
+  not be able to restore the cut text.
+.85
+  Edit - Copy
+
+  The Edit - Copy command copies the selected text into a buffer and can
+  be pasted anywhere in the file by choosing the Edit - Paste command.
+.86
+  Edit - Cut
+
+  The Edit - Cut command removes the selected text from your file and
+  puts it into the text buffer. It then can be pasted anywhere in the
+  file by choosing the Edit - Paste command.
+.87
+  Edit - Paste
+
+  The Edit - Paste command inserts the text from the text buffer, that
+  has been either cut or copied, to the currently opened file.
+.88
+  Edit - Search
+
+  The Edit - Search command will pop up a small dialog box in which
+  you can enter the desired text to be searched for.
+.89
+  Edit - Search and Replace
+
+  The Edit - Search and Replace command will pop up a small dialog box
+  in which you can enter the desired text to be replaced. You can do a
+  GLOBAL replace by hitting 'G' or replace each one by hitting 'Y'  at
+  the prompt.
+.90
+  FITMAPL2
+
+  FITMAPL2  fits  a PLA  file  into  any  of the multipage  logic
+  devices.  The process  is  accomplished  by  assigning pin/node
+  labels.  Two  products  are  supported  by this module,  namely
+  MAPL244 and MAPL268.
+
+  This module  requires  a PLA  file as input, where the default
+  extension is ".pla".  It then creates an output PLA file which
+  has the default extension of ".pl1". If the input file has the
+  extension of ".tt(n)"  then the output default extension  will
+  be ".tt(n+1)".
+
+  The following options can be used with this module:
+
+	   @9[Output filename]            @13[Silent]          @28[LOG]
+	   @3[Log filename]               @106[DELAY]           @77[FULL]
+	   @97[PLA filename]               @79[SECURITY]        @107[X-Plot]
+	   @45[Vector filename]            @14[MINIMIZE]
+	   @10[Device]                     @92[PHASE]
+	   @98[X-Plot filename]
+.91
+  PLA2CKT
+
+  The PLA2CKT module will translate a PLA file into the corresponding
+  macro file and circuit file that are required for simulation.
+
+  PLA2CKT attempts to supply  meaningful label names for the  pins by
+  examining the ".log" file.  If it cannot assign user-supplied labels,
+  it will assign pin names  in the format  <type><number>.  <type> is
+  the  type of pin being used, such as "I" for input. <number> is the
+  pin number.
+
+  The default extension is ".pla".
+  The following can be used with this module:
+
+	 @71[Output File]               @13[Silent]
+	 @74[Macro File]                @109[Expand Bus]
+	 @73[Vector File]               @76[CIRCUIT]
+	 @75[Vector Time Period]	       @12[MACRO]
+	 @108[Power-Up value]
+
+.92
+  Output Phase Minimization
+
+  This option will perform minimization by determining which functions
+  to complement to reduce the number of terms needed to  implement the
+  function.
+.93
+  SEQUENTIAL State Assignment
+
+  This option will assign states sequentially from 0 to number of states
+  defined minus one.
+.94
+  MAPL State Assignment
+
+  This option will assign state numbers assuming the target device has
+  the MAPL architecture.
+.95
+  PAL/GAL State Assignment
+
+  This option will assign state numbers assuming the target device has
+  the PAL/GAL architecture.
+.96
+  One Hot Encoding State Assignment
+
+  This option will assign one register per state to implement the state
+  machine.
+  Note: This is not suitable for PAL/PLA architecture due to the limited
+		number of registers.
+.97
+  PLA Filename
+
+  This  option is used  to specify a different output  PLA file-
+  name than the default  filename.   If no filename is specified,
+  then the input filename is used with the appropriate extension,
+  ".pl1",  unless  the  input file has the  extension of
+  ".tt(n)" then it will create an output PLA file  which has  the
+  default extension of ".tt(n+1)".
+.98
+  X-Plot Filename
+
+  Specify the output X-Plot filename. If the filename is not given,
+  then the input filename is used with the extension of ".xpt".
+.99
+  Checksim
+
+  Checksim will compare the expected output vectors created by the
+  user to the actual output generated by OPALsim.
+
+  Checksim can be used to automatically create a vector file with
+  the expected output, thereby saving the user from having to create
+  their own.
+
+  The following can be used with this module:
+
+	 @100[Output File]
+	 @101[Circuit File]
+	 @73[Vector File]
+	 @75[Vector Time Period]
+	 @13[Silent]
+.100
+  Output Filename
+
+  This option is used to specify a different Device filename other
+  than the default filename. If no filename is specified, then the
+  input filename is used with the extension ".sim".
+.101
+  Circuit Filename
+
+  This option is used to specify a different circuit filename other
+  than the default filename. If no filename is specified, then the
+  input filename is used with the extension ".ckt".
+.102
+  XOR2GAL
+
+  XOR2GAL converts a XOR-PAL JEDEC file into a GAL JEDEC file.
+  XOR2GAL firsts checks to ensure that the PAL is replaceable
+  by a GAL before it proceeds to do the conversion.
+
+  The following can be used with this module:
+
+	 @39[Output file]        @13[Silent]
+	 @40[Device]             @41[Vectors]
+	 @23[UES]
+	 @103[GAL device]
+.103
+  GAL Device
+
+  This option is used to specify a GAL device name that will over-
+  ride the device name specified in the PAL JEDEC file.
+.104
+  Output Filename
+
+  This option is used to specify a different output filename other
+  than the default filename. If no filename is specified, then the
+  input filename is used with the extension ".log".
+.105
+  State Assignment
+
+  You can choose between four different ways to assign states. A list
+  will pop up if you click the left mouse button or hit the plus key
+  from the numeric key pad. Your choices are:
+
+  @93[SEQUENTIAL State Assignment]
+  @94[MAPL State Assignment]
+  @95[PAL/GAL State Assignment]
+  @96[One Hot Encoding State Assignment]
+.106
+  2ns Clock Delay
+
+  This option will incorporate a 2ns clock delay to the CLK pin.
+.107
+  X-Plot
+
+  This option will cause FITMAPL2 to automatically create an x-plot,
+  which is basically a JEDEC file rearranged for easier reading. The
+  AND product terms are grouped together and the OR terms are grouped
+  together. These are then followed by the architecture bits.
+.108
+  Power-Up Register Value
+
+  Specify the value at what you would like the registers to be set at
+  at power-up. The default value is zero.
+.109
+  Expand Bus Statements
+
+  The option will cause the expansion of the bus statements given in the
+  probe statement in the circuit file.
+.110
+  XOR Extensions
+
+  This option will prohibit XOR terms to have .x1 and .x2 as extensions
+  in the OPAL file.
+.111
+  File | Printer Setup...
+
+  The Printer Setup will pop up a dialog box which can be used to set up
+  your printer. Choose between the standard HP-family or the EPSON-family
+  for the type or make of your printer.  Choose one of the three ports
+  which your printer is connected to. Default, if none is specified, is
+  printer port 1 (LPT1) and HP-Family.
+.112
+  Check Sim
+
+  This option, if checked, is used to verify the vectors simulated by the
+  simulator, OPALsim.
+.113
+  Architecture Type
+
+  Specify the architecture of the device type if the device itself is
+  unknown. If device is known, then there is no need to specify architecture
+  type.
+
+  Valid architectures include: PAL, PLA, and MAPL.
+.114
+  Product Term Polarity
+
+  Specify whether the product terms within the device have selectable
+  polarity. For registered devices, selectable polarity is indicated by
+  polarity fuses on the product term inputs to the macrocells. For
+  combinatorial devices, selectable polarity is indicated by polarity
+  fuses on the outputs.
+
+  Valid product term polarities are FIXED, SELECTABLE, and AUTOMATIC.
+.116
+E0001
+E0001: Cannot open file `XXX'.
+	The indicated file "XXX" could not be opened.  If "XXX" is an input
+	file to read from, check to see if it exists.  If it exists, you should
+	check the file protection settings which allow you to access it.
+	If "XXX" is an output file to write to, possible problems could be a
+	full disk drive, invalid directory path or file protection that will
+	not allow file to be written to. On DOS, you should also check your
+	"FILES" value in the system file "config.sys".
+.117
+E0002
+E0002: Unable to allocate memory.
+	The program tried to allocate memory dynamically but was unable to
+	do so.  This indicates either not enough memory or an internal error.
+	If you are compiling a small to moderate design or are on a machine
+	with ample memory, please contact your representative listed at the
+	front of this manual. Otherwise, attempt the design on a machine with
+	more memory.
+.118
+E0003
+E0003: Unable to write to disk.
+	An internal program file could not be written to.  The disk drive being
+	written to could be full or there may be problems in closing the file.
+	It is possible that you do not have write permission to the file or
+	directory.  On a floppy disk, check the write protect tab.
+.119
+E0004
+E0004: Invalid/unsupported device name `XXX'.
+	"XXX" could be a misspelled device name or one that is not supported.
+	Another possible reason is a missing library file for "XXX."  You
+	should check that "XXX" is a supported device.
+.120
+E0006
+E0006: Wrong library version number #.## for device `XXX'.
+	The version number in the library file for the device "XXX" is wrong.
+	See I0007 for the expected version number.  Try recopying the library
+	files from your original release diskette, particularly if the
+	expected version number is higher than the incorrect library number.
+	If this does not correct the problem, contact your representative.
+.121
+I0007
+I0007: Expected library version number is #.## for device `XXX'.
+	The version number in the library file for the device "XXX" is wrong.
+	The wrong version number is printed by message E0006.
+.122
+E0010
+E0010: Unexpected EOF encountered in file `XXX'.
+	An unexpected EOF is encountered while reading the file "XXX."  This
+	could be caused by a syntax error.  Specify the source listing option
+	on the next recompilation, and examine it for more information.
+.123
+E0012
+E0012: Unknown option -`X' on command line.
+	The option -`X' on the command line is not recognized by the program.
+	Check the list of command line options for this program.
+.124
+E0013
+E0013: Expect an argument after -`X' option on command line.
+	An argument is expected after the - `X' option on the command line.
+	Check the list of command line options to see what type of argument
+	this option requires.
+.125
+E0014
+E0014: Input file name missing in command line.
+	Every program requires the input file to be specified on the command
+	line.  Although the extension will default to a certain extension if
+	not specified, the base file name must be given.  If you did supply it,
+	check the syntax of your command line against the list of command line
+	options.
+.126
+E0015
+E0015: Input file already defined - `XXX'.
+	You already specified a different input file name.  The programs cannot
+	process more than one source file at a time.  If you did supply only
+	one file name, check the syntax of your command line against the list
+	of command line options.
+.127
+E0016
+E0016: All switches must be separated by a space.
+	Although some programs allow you to specify a number of options with
+	only a single dash ("-"), this program does not.  Please give each
+	option its own dash and separate all options and arguments by a space.
+.128
+E0018
+E0018: Path name is too long.
+	The complete file name (including the path) for OPL2PLA exceeds 80
+	characters.
+.129
+E0020
+E0020: The subprogram `XXX' did not complete execution.
+	The subprogram "XXX" could not be completely executed. Either there is
+	not enough memory to execute the module "XXX" or error(s) occurred
+	during the execution of the module.  If the problem cannot be solved
+	by examining the messages produced by "XXX," please contact your
+	representative.
+.130
+E0021
+E0021: Invalid/Unsupported "OPTION" "XXX" on command line.
+	The command line specified the option OPTION with an illegal argument
+	of XXX.  The argument is either invalid or unsupported within the
+	module.  You should also check the spelling of the argument.
+.131
+E0100
+E0100: Unknown internal error.
+	An unknown internal error has occurred.  Do not continue to use this
+	program and report the problem to your representative listed at the
+	front of this document.  Please save the input files that you were
+	using so that we may more accurately find your problem.
+.132
+E0101
+E0101: (Line ##): Chip keyword previously declared.
+	The chip keyword is declared more than once.  Either delete or comment
+	out the undesired line.
+.133
+E0102
+E0102: (Line ##): Invalid device name `XXX'.
+	"XXX" could be a misspelled device name or one that is not supported.
+	Check the list of supported devices, and contact your representative
+	if you suspect a problem.
+.134
+E0103
+E0103: (Line ##): @@define keyword found before chip keyword.
+	All "@@" directives must be declared in the declaration section.
+	The declaration section is defined as the area following the "chip"
+	keyword and before the "equation" keyword.
+.135
+E0104
+E0104: (Line ##): @@define keyword found after equations keyword.
+	All "@@" directives must be declared in the declaration section.
+	The declaration section is defined as the area following the
+	"chip" keyword and before the "equation" keyword.
+.136
+E0105
+E0105: (Line ##): Missing chip keyword.
+	The "chip" keyword is missing.  The "chip" and "equation" keyword are
+	the only keywords that must be present in an EQN file. You may have
+	attempted to use the wrong type of file as input.
+.137
+E0106
+E0106: (Line ##): Missing equations keyword.
+	The "equation" keyword is missing.  The "chip" and "equation" keyword
+	are the only keywords that must be present in an EQN file.
+.138
+E0107
+E0107: (Line ##): Too many labels in the pin list or missing equations
+				  keyword.
+	The number of labels is more than the number of device pins.  Another
+	possible reason could be a missing "equation" keyword.  Check your
+	source file and the pin-out diagram for the device in question.
+.139
+E0108
+E0108: (Line ##): Invalid character `X' in identifier `YYY'.
+	An valid identifier consists of one or more alphanumeric, underscore
+	"_" or tilde "~" characters.  Remove the offending character.
+.140
+W0109
+W0109: (Line ##): `0' is an identifier, NOT logic zero (gnd).
+	The keyword "gnd" is used to represent logic zero.  The character
+	"0" will be treated like any other identifier.  If this is not the
+	desired behavior, replace the "0" with "gnd."
+.141
+W0110
+W0110: (Line ##): `1' is an identifier, NOT logic one (vcc).
+	The keyword "vcc" is used to represent logic one.  The character
+	"1" will be treated like any other identifier.  If this is not the
+	desired behavior, replace the "1" with "vcc."
+.142
+E0111
+E0111: (Line ##): Invalid dot extension `XXX'.
+	The dot extension "XXX" is either not supported or misspelled.
+	Consult the list of valid dot extensions.
+.143
+E0112
+E0112: (Line ##): Invalid assigned pin ## for label `XXX'.
+	The assigned pin ## for label "XXX" is invalid.  The label attributes
+	do not match those of the assigned pin.  For example, an active-high
+	output is assigned to an active-low output.
+.144
+E0113
+E0113: (Line ##): Incomplete or missing pin list.
+	The number of labels in the pin list is less than the number of device
+	pins or the pin list is completely missing.  Specify the automatic pin
+	fitting option if you do not wish to assign the pins yourself.
+.145
+E0114
+E0114: (Line ##): Keyword `XXX' used as identifier.
+	The keyword "XXX" is used as an identifier.  Either rename the symbol,
+	or check the syntax of your source file.
+.146
+E0115
+E0115: (Line ##): @@define definition must be enclosed in `"'s.
+	The @@define statement begins with the keyword "@@define" followed by
+	a label and a string enclosed in """s.  It must also be on a single
+	line.
+.147
+W0116
+W0116: (Line ##): Empty @@define string for label `XXX'.
+	An empty string is defined for the label "XXX."  Recheck your design
+	to see if this is what you intended.
+.148
+E0117
+E0117: (Line ##): @@define statement must end with a `"'.
+	There is a missing """ at the end of the defined string.  The
+	statement must be on a single line.
+.149
+E0118
+E0118: (Line ##): Previous equation ends with `XXX'.  `XXX' is ignored.
+	An unexpected end of equation was found.  Check your source file
+	with the EQN file format.
+.150
+E0119
+E0119: (Line ##): Unexpected character `X' ignored.
+	An unexpected character "X" is encountered while reading the EQN file.
+	The character is ignored in an attempt to continue reading the EQN
+	file and catch as many errors as possible.  If this character is
+	in error, remove it from the source file, otherwise check your
+	source file with the EQN file format.
+.151
+E0120
+E0120: (Line ##): Identifier `XXX' is undefined.
+	The identifier "XXX" is not defined in the declaration section.
+	Either you misspelled the identifier or forgot to declare it.
+.152
+W0121
+W0121: (Line ##): Only first label in "@@define XXX" is inverted.
+	The @@define string is directly substituted for the @@define label
+	"XXX." A NOT operator in front of a @@define label inverts the first
+	label in the @@define string.  It does not perform the inversion of
+	the entire @@define string.  This is probably not the desired behavior.
+.153
+E0122
+E0122: (Line ##): Expecting `:' after `:+'.  `:+' is ignored.
+	A semicolon is expected after the string ":+" is encountered.
+	The ":+:" is the exclusive-OR operator in the EQN format.  If
+	you did not intend to use the XOR operator, check your syntax
+	against the EQN file format.
+.154
+E0123
+E0123: (Line ##): Expecting `=' or `+' after `:'.  `:' is ignored.
+	An "=" or "+" character is expected after a semicolon ":" is found.
+	":=" is the registered assignment operator.  ":+:" is the exclusive-OR
+	operator.  If you did not intend either of these operators, check your
+	syntax against the EQN file format.
+.155
+E0124
+E0124: (Line ##): Mismatched braces for comments.
+	A comment begins with a "{" and end with a "}."  The ending brace
+	"}" is missing.  Edit the source file to correct the problem.
+.156
+E0125
+E0125: (Line ##): Invalid character `X' for start of comment.
+	Internal error.  A ";" or "{" character is expected for the start
+	of a comment.  If there is not an obvious error with your source
+	file, please contact your representative.
+.157
+E0126
+E0126: (Line ##): UES exceeds MM ASCII (NN HEX) characters for device `XXX'.
+	The UES string for the device "XXX" cannot be more than MM ASCII
+	characters or more than NN HEX characters.  An ASCII character
+	takes up 8 UES bits while a HEX character takes up 4 UES bits.
+	This limitation is device dependent.
+.158
+E0127
+E0127: (Line ##): Unexpected EOF encountered.
+	An unexpected EOF is encountered while reading the EQN file.  This
+	could be caused by a syntax error.  Please check your source file
+	against the EQN file format.
+.159
+E0128
+E0128: (Line ##): Unassigned labels found and the "-f" option was not used.
+	Only some of the labels have been assigned pin numbers in your
+	source file.  To assign the others, either do it manually or
+	specify the "-f" option on the command line.
+.160
+E0129
+E0129: Expect a number after `XXX' keyword.
+	A number is expected after "XXX" keyword which represents the number
+	of labels in the list.  "XXX" is either "@@ILCH" or "@@IREG."  Place
+	the correct number there in accordance with the EQN file format.
+.161
+W0130
+W0130: OR/XOR operator in @@define statement.
+	An OR ("+") or XOR (":+:") operator was used in the @@define block.
+	The @@define statement performs an exact substitution of the defined
+	string for the defined word.  No logical grouping is implied or
+	enforced.  The designer should be wary of the precedence of AND over
+	OR and XOR after the string has been substituted into the equations.
+.162
+E0133
+E0133: Unable to select a device from file `XXX'.
+	When the argument following the -d option begins with "@@," the
+	string following the "@@" character is a file containing a list
+	of device names to select from.  The most likely cause of this
+	error message is that the device selection file "XXX" is empty.
+.163
+E0134
+E0134: Pin assignment operator `@@' is not supported; use `='.
+	Some equations file formats allow a pin assignment which look
+	like "pinName @@ P15," which is not supported in our format.
+	Please change this to "pinName = 15."
+.164
+E0201
+E0201: Expect a number after the string "#$ PINS/NODES".
+	The number which declares the number of labels in the "#$ PINS/NODES"
+	statement is missing.  If the file was hand-generated or altered,
+	count the number of labels and insert the proper number.  If it
+	was automatically generated, please consult your representative.
+.165
+E0202
+E0202: Missing `.i' number.
+	The ".i" statement which declares the number of inputs in the PLA map
+	is missing.  Please see the documentation on the PLA file format.
+	If the PLA file was automatically generated, please consult your
+	representative.
+.166
+W0203
+W0203: Extra `.i' ignored.
+	The ".i" statement has already been declared previously.  Only the
+	first ".i" statement is valid.  Please see the documentation on the
+	PLA file format.  If the PLA file was automatically generated,
+	please consult your representative.
+.167
+E0204
+E0204: Missing `.o' number.
+	The ".o" statement which declares the number of outputs in the PLA
+	map is missing.  Please see the documentation on the PLA file format.
+	If the PLA file was automatically generated, please consult your
+	representative.
+.168
+W0205
+W0205: Extra `.o' ignored.
+	The ".o" statement has already been declared previously.  Only
+	the first ".o" statement is valid.  Please see the documentation
+	on the PLA file format.  If the PLA file was automatically generated,
+	please consult your representative.
+.169
+E0206
+E0206: Cannot handle multiple-valued functions.
+	The ".mv" statement which declares multiple-valued labels is not
+	supported in this program.  Please see the documentation on the PLA
+	file format.  If the PLA file was automatically generated, please
+	consult your representative.
+.170
+W0207
+W0207: Invalid type `XXX' in .type statement.
+	The type "XXX" in the ".type" statement is invalid.  The allowed types
+	are "f," "fd," "fr," and "fdr."  Please see the documentation on the
+	PLA file format.  If the PLA file was automatically generated, please
+	consult your representative.
+.171
+E0208
+E0208: Incorrect number of outputs in `.phase' statement.
+	The number of characters in the ".phase" string must match the number
+	of outputs in the PLA map.  Please see the documentation on the PLA
+	file format. If the PLA file was automatically generated, please
+	consult your representative.
+.172
+E0209
+E0209: Invalid character `X' in .phase statement.
+	The ".phase" statement consists of a string of 0's and 1's with length
+	equal to the number of outputs.  Please see the documentation on the
+	PLA file format.  If the PLA file was automatically generated, please
+	consult your representative.
+.173
+E0210
+E0210: Unknown or unsupported keyword `XXX'.
+	The keyword "XXX" is either unknown or not supported.  Please see the
+	documentation on the PLA file format.  If the PLA file was
+	automatically generated, please consult your representative.
+.174
+E0211
+E0211: Missing `.ilb' statement.
+	The ".ilb" statement is missing.  It specifies input labels for the
+	inputs of the PLA table.  The ".i" statement specifies the number of
+	input labels that should be in the ".ilb" list.  Please see the
+	documentation on the PLA file format.  If the PLA file was automatically
+	generated, please consult your representative.
+.175
+E0212
+E0212: Missing `.ob' statement.
+	The ".ob" statement is missing.  It specifies the output labels for
+	the outputs of the PLA table.  The ".o" statement specifies the
+	number of output labels that should be in the ".ob" list.  Please
+	see the documentation on the PLA file format.  If the PLA file was
+	automatically generated, please consult your representative.
+.176
+E0213
+E0213: Incorrect number of labels in `XXX' statement.
+	The number of labels in the statement of type "XXX" is incorrect.
+	"XXX" can be a "#$ PINS," "#$ NODES," ".ilb" or ".ob" statement.
+	Please see the documentation on the PLA file format.  If the PLA file
+	was automatically generated, please consult your representative.
+.177
+W0214
+W0214: Product term spans more than one line.
+	The term is on more than one line.  This could indicate a syntax
+	error.
+.178
+E0215
+E0215: Illegal character `X' (##) in PLA table.
+	The character "X" (with ASCII value ##) in the PLA table is illegal.
+	Please see the documentation on the PLA file format.  If the PLA file
+	was automatically generated, please consult your representative.
+.179
+E0216
+E0216: Invalid label `XXX'.
+	An invalid label "XXX" found.  A label in the PLA format cannot begin
+	with a "-," "+" or ":."
+.180
+W0217
+W0217: Invalid pin assignment for label `XXX' is ignored.
+	The pin assigned to the label "XXX" is invalid and is ignored.
+	Consult the data sheet for the device to select a correct pin
+	assignment.
+.181
+E0218
+E0218: .Y must be specified before `XXX'.
+	The .Y (either ".i" or ".o") must be specified before "XXX" (".ilb"
+	or ".ob" or the PLA table).  Please see the documentation on the PLA
+	file format.  If the PLA file was automatically generated, please
+	consult your representative. You may have attempted to use the wrong
+	type of file as input.
+.182
+E0219
+E0219: Identical labels `label' in `XXX' statement is found.
+	There is more than one instance of "label" in the "XXX" statement.
+	"XXX" can be a "#$ PINS," "#$ NODES," ".ilb" or ".ob" statement.
+	You should rename one of the labels in question.
+.183
+W0220
+W0220: Extra #$ TOOL statement ignored.
+	The "#$ TOOL" statement specifies the software that generated the
+	PLA file.  There are multiple "#$ TOOL" statements in the PLA file,
+	so only the first one is read while subsequent ones are ignored.
+.184
+E0301
+E0301: Missing $VNUM number.
+	A number indicating the number of vectors in the file is expected
+	after the $VNUM keyword.  Either delete the optional $VNUM line or
+	insert the correct number of vectors which follow.
+.185
+W0302
+W0302: Extra $VNUM ignored.
+	More than one $VNUM encountered in the vector file.  The first one
+	will be the valid number of vectors.  You should delete the incorrect
+	line.
+.186
+E0303
+E0303: Missing $PIN number.
+	A number indicating the number of labels in the pin list is expected
+	after the $PIN keyword.  Count the number of labels and insert the
+	correct number.  Please see the documentation of the VEC file format.
+.187
+E0304
+E0304: Unknown or unsupported keyword `XXX'.
+	The keyword "XXX" is either unknown or not supported.  Please see
+	the documentation of the VEC file format.
+.188
+E0305
+E0305: `file_name': Not an intermediate vector file.
+	"file_name" is not an intermediate vector file.
+.189
+E0306
+E0306: Incorrect number of labels in $PIN declaration.
+	The number of labels does not match the number after the $PIN keyword.
+	Count the number of labels and correct the number specified after the
+	$PIN keyword.
+.190
+W0307
+W0307: Vector span more than one line.
+	The vector span more than one line.  This could indicate a possible
+	error in the vector file.  Please consult the VEC file format
+	description.
+.191
+E0308
+E0308: Illegal character `X' in vector.
+	There is an illegal character "X" in the vector.  Please consult the
+	VEC file format description.
+.192
+E0309
+E0309: Missing $PIN statement in file `XXX'.
+	The $PIN statement is required.  Please consult the VEC file format
+	description.
+.193
+E0310
+E0310: P field must be defined before any V fields in vector file `XXX'.
+	Since the P field indicates the order of the test conditions in the
+	vectors, it must come before any V fields which defines the vectors.
+	Please consult the VEC file format description.
+.194
+E0311
+E0311: Missing pin numbers in P Field of vector file `XXX'.
+	The P field indicates the order of the test conditions in the vectors.
+	The P field begins with a "P" followed by a list of space-separated
+	numbers equal to the number of pins for the device and ends with a
+	"*."  The list of numbers in the P field must match the number of
+	pins for the device.
+.195
+E0312
+E0312: Invalid character `?' in P Field of vector file `XXX'.
+	The P field indicates the order of the test conditions in the vectors.
+	The P field begins with a "P" followed by a list of space-separated
+	numbers equal to the number of pins for the device and ends with a
+	"*."  Only numbers are expected in the P Field.
+.196
+E0313
+E0313: Missing `*' to end the P Field in vector file `XXX'.
+	The P field indicates the order of the test conditions in the vectors.
+	The P field begins with a "P" followed by a list of space-separated
+	numbers equal to the number of pins for the device and ends with a
+	"*."  The "*" is required as a delimiter to indicate the end of the
+	P field.
+.197
+E0314
+E0314: Missing `*' to end vector ## of vector file `XXX'.
+	The V field begins with a "V" followed by a vector number.  This
+	is followed by a list of the test conditions equal to the number
+	of pins for the device.  Finally a "*" is used as a delimiter to
+	end the V field.  The "*" is missing for vector ##.
+.198
+E0315
+E0315: Missing $BUS number.
+	A number indicating the number of signals in the bus is missing.
+	Please refer to the VEC file format description.
+.199
+E0316
+E0316: Unknown/Bad vector format in file `XXX'.
+	The file "XXX" does not conform to the VEC file format or the
+	JEDEC Test Vector format.  Check the file to make sure that is
+	your vector file.
+.200
+E0317
+E0317: Missing $LOOP number.
+	The number indicating how many times a vector or group of vectors
+	must be iterated through is missing.
+.201
+E0318
+E0318: Mismatched `$END' and `$LOOP' statements.
+	The number of $END and $LOOP keywords in the vector file should be
+	the same.
+.202
+E0319
+E0319: Missing $PROBE number.
+	A number indicating the number of labels in the probe list is expected
+	after the $PROBE keyword.  Count the number of labels in the statement
+	and insert the correct number.
+.203
+W0401
+W0401: Missing/invalid pin number for label `label' in file `filename'.
+	A pin number is expected after the label "label" in the JEDEC file.
+	This pin number is either missing or invalid for the device.
+.204
+W0402
+W0402: Default labels will be used for equations.
+	The program attempts to extract label names from the "NOTE PINS" or
+	"NOTE NODES" statements in the JEDEC file.  If it is not successful
+	for any reason, default labels will be created instead.
+.205
+W0403
+W0403: More than one label assigned to pin ## in file `XXX'.
+	The pin number ## has been assigned to more than one label within
+	the JEDEC file "XXX."  This is illegal.
+.206
+E0404
+E0404: Incorrect QF value for `XXX'.  Correct value is ####.
+	The QF field specifies the maximum number of fuses in the JEDEC
+	fusemap.  The QF value is incorrect for the device "XXX," and should
+	be #### for that device.  You have probably specified an incorrect
+	device on the command line.  If the file and device type were
+	automatically generated, please contact your representative.
+.207
+E0405
+E0405: Fuse number in L field is greater than QF value.
+	The QF value specifies the maximum number of fuses in the JEDEC
+	fusemap.  It is an error if a fuse number in an L field exceeds
+	the QF value.  You have probably specified an incorrect device
+	on the command line.  If the file and device type were automatically
+	generated, please contact your representative.
+.208
+E0406
+E0406: Incorrect QP value for `XXX'.  Correct value is ##.
+	The QP field specifies the number of pins for the device "XXX."  The
+	QP value is incorrect in the JEDEC map, and should be ## for that
+	device.  You have probably specified an incorrect device on the
+	command line.  If the file and device type were automatically
+	generated, please contact your representative.
+.209
+E0407
+E0407: Illegal character `X' in JEDEC fusemap ignored.
+	The illegal character "X" in the JEDEC fusemap was found and is being
+	ignored.  Only 0's and 1's are allowed in the JEDEC fusemap (or L field).
+.210
+E0408
+E0408: Illegal macrocell fuse configuration in JEDEC map.
+	The macrocell fuse configuration in the JEDEC map is incorrect.
+	Please check the JEDEC file for possible missing macrocell fuses.
+.211
+E0409
+E0409: No fuse number found in JEDEC file `XXX'.
+	There is no fuse map information (L fields) found in the JEDEC file.
+	This indicates an incorrect JEDEC file or some non-standard file
+	format.  Go back to the program that originally created the JEDEC map.
+.212
+E0410
+E0410: Illegal JEDEC field character `X' (##).
+	An illegal JEDEC field character "X" (decimal value ##) was found in
+	the JEDEC file.  See JEDEC Standard 3-A for the valid list of field
+	characters.  If you are unable to determine the problem, contact your
+	representative.
+.213
+E0411
+E0411: F Field must appear before L Field in JEDEC file.
+	The F field indicates what the default fuse state is if the fuse is
+	not specified in the JEDEC file.  It must appear before any of the L
+	fields which define the fuse states.
+.214
+E1001
+E1001: Design not found.
+	The file name that you specified on the command line is empty.
+.215
+E1002
+E1002: Unknown block names `XXX'.
+	The program only recognizes the block names HEADER, DEFINITION,
+	EQUATION, STATE_DIAGRAM, TRUTH_TABLE, and VECTOR.  Check your
+	spelling and then consult Chapter 9.
+.216
+E1003
+E1003: Pin type definition expected.
+	The program expected one of INPUT, OUTPUT, FEEDBACK, or STATEBIT as
+	the pin type.  Please check your spelling and then see Section 4.2.
+.217
+E1004
+E1004: Unknown keyword `XXX'.
+	The word XXX is not a keyword, but by its placement in the file it
+	should be.  Check the spelling of the keyword (including underscore
+	("_") characters) or the syntax of the line previous to this one.
+.218
+E1005
+E1005: Device name expected.
+	A device name is expected after the DEVICE keyword.  Please see
+	Section 4.2.
+.219
+E1006
+E1006: UES string expected.
+	A UES string is expected after the UES keyword.  Please see Section 4.2.
+.220
+E1007
+E1007: Set label name expected.
+	The program expected a set label before the "=" since the right-hand
+	side is a set.  See Section 10.9 for a discussion of sets.
+.221
+E1008
+E1008: `=' expected in set assignment.
+	The program expected an "=" between the set label and the set
+	definition.  See Section 10.9 for a discussion of sets.
+.222
+E1009
+E1009: Invalid set notation `XXX'.
+	XXX should be a set and look something like [a,b,c,d,...].
+	Please see Section 10.9 for a discussion of sets.
+.223
+E1010
+E1010: Pin label expected before delimiter `X'.
+	The program expected to see a pin label before the delimiter.
+	Please see Section 4.2.
+.224
+E1011
+E1011: Pin number expected before delimiter `X'.
+	The program expected to see a pin number following the label.
+	Please see Section 4.2.
+.225
+E1012
+E1012: Invalid pin number `XXX'.
+	Pin number XXX consist of characters other than alphanumeric,
+	"_," or "~."  Remove the invalid characters or consult Section 10.3.
+.226
+E1013
+E1013: Attribute expected before delimiter `X'.
+	Please see Section 10.3.
+.227
+E1014
+E1014: Unknown pin attribute `XXX'.
+	The program only recognized the attributes COM, REG, D, DE, JK,
+	LCH, RST, SET, HOLD, TOGGLE, and BURIED.  Check your spelling or
+	consult Section 4.2.
+.228
+E1015
+E1015: HOLD/TOGGLE is not allowed with COM attribute.
+	Combinatorial outputs cannot perform either the hold or toggle
+	functions.  Either give the output a different type of attribute
+	or eliminate the hold or toggle function.
+.229
+E1016
+E1016: HOLD/TOGGLE is not allowed with output D/REG attribute.
+	D-type or registered pins cannot implement the hold or toggle
+	functions when declared as OUTPUT, but will be able to implement
+	HOLD if you redeclare it as FEEDBACK.
+.230
+E1020
+E1020: State_name expected before delimiter `X'.
+	The program expected the name of the state and didn't find it.
+	See Section 5.5.
+.231
+E1021
+E1021: State `XXX' already defined.
+	State XXX is already defined before this definition.  Please rename it.
+.232
+E1022
+E1022: Branching for state `XXX' already defined.
+	State XXX has already been assigned as a branching condition in one
+	of the previous statements.
+.233
+E1023
+E1023: Whitespace is not allowed between base and number.
+	No whitespace is allowed between the number base ("^b," "^d," "^h,"
+	or "^o") and the number itself.
+.234
+E1024
+E1024: `XXX' require more than 15 statebits.
+	The number defined by XXX will required more than 15 statebits.
+	Due to the limitations of currently-available devices, only 15
+	statebits are allowed in the current version of the software.
+.235
+E1025
+E1025: State `XXX' and `YYY' have the same statebit assignment.
+	State XXX and state YYY have the same statebit combination
+	assigned in the current state (see the listing file).  The
+	states must be unique.
+.236
+E1026
+E1026: Invalid character `X' in a decimal number.
+	A character other than 0-9 is used for a decimal number.
+.237
+E1027
+E1027: Invalid character `X' in a octal number.
+	A character other than 0-7 is used for an octal number.
+.238
+E1028
+E1028: Invalid character `X' in a hex number.
+	A character other than 0-9, a-f, or A-F is used for a hexadecimal
+	number.
+.239
+E1029
+E1029: Invalid character `X' in a binary number.
+	A character other than 0 or 1 is used for a binary number.
+.240
+E1030
+E1030: Invalid base symbol `X'.
+	Character other than b, B, o, O, d, D, h, or H is used for a number
+	base.
+.241
+E1031
+E1031: Only JK register can toggle (!).
+	Only JK output registers can be used to toggle logic (!) in the
+	truth_table block.  Try using a JK register for this signal or
+	rewrite the equation as two separate equations, one for the signal
+	being low and the other for when it is high.
+.242
+E1032
+E1032: Cannot hold (?) or toggle (!) input pin.
+	Hold or toggle logic ( ? or ! ) cannot be used for an input pin.
+.243
+E1033
+E1033: `X' is not allowed in truth table.
+	A character other than 1, 0, -, X, !, or ? is used in the truth table.
+.244
+E1034
+E1034: Only JK/DE register can hold (?).
+	Only JK or DE registers can use hold logic (?) in the truth_table
+	block. Either change the type of output pin or create two separate
+	equations, one for the signal being high, and the other for when it
+	is low.
+.245
+E1035
+E1035: Input label expected before delimiter `X'.
+	An input label is expected before the delimiter "X" in the truth_table
+	block.
+.246
+E1036
+E1036: Undefined identifier `XXX' for TTIN.
+	XXX must be defined in the definition block before using it in a
+	TTIN list.
+.247
+E1037
+E1037: Output label expected before delimiter `X'.
+	An output label is expected before the delimiter "X" in the
+	truth_table block.
+.248
+E1038
+E1038: State_name expected.
+	The program expects a state_name for the present state between
+	the keyword "STATE" and the character ":."
+.249
+E1039
+E1039: NOT operator is not allowed in state_name.
+	A NOT operator ("/" or "!") is not allowed as part of a state_name.
+.250
+E1040
+E1040: IF/GOTO/CASE keyword or equation expected.
+	The program expects an IF, GOTO, or CASE keyword or an equation
+	after the character ":."
+.251
+E1041
+E1041: Branching condition not defined for state `XXX'.
+	A branching condition of type if-then-else, goto, or case must
+	be defined for state XXX.  Every state requires at least one
+	branching condition.
+.252
+E1042
+E1042: Only one branching condition allowed for each state.
+	Every state can only have one branching condition, it can be
+	either if-then-else, goto or case.
+.253
+E1043
+E1043: `;' expected before `XXX'.
+	A ";" is expected before XXX.  Some sort of delimiters are required
+	to break up the lines in the source file.
+.254
+E1044
+E1044: Expression is longer than ## characters.
+	The expression is more than the maximum number of characters.
+	Please shorten it by using simpler expressions or shorter signal
+	names, or intermediate variables.
+.255
+E1045
+E1045: `X' is not allowed in identifier name.
+	Only alphanumeric, "_" or "~" characters are allowed within an
+	identifier.
+.256
+E1046
+E1046: Identifier expected in expression <expression>.
+	The expression either terminates with a logical operator or there
+	is no identifier between two logical operators.  Check the line
+	in question.
+.257
+E1048
+E1048: Logical operator expected in expression <expression>.
+	There is no logical operator between two identifiers in the expression.
+.258
+E1049
+E1049: Next state_name expected.
+	The program expects the state_name for the next state before
+	the ";" character.
+.259
+E1050
+E1050: Keyword `XXX' is not allowed as next state_name.
+	Keywords are not allowed to be used as a state_name, but XXX was
+	found where next state_name is expected.  You probably forgot the
+	state_name and/or a semicolon.
+.260
+E1051
+E1051: State assignment is not allowed in state_diagram.
+	Statebit combination assignments can only be done in the
+	definition block.
+.261
+E1052
+E1052: `;' expected after `XXX'.
+	There should be a ";" after XXX.  Please insert it and recompile.
+.262
+E1053
+E1053: `XXX' is not allowed as identifier name.
+	XXX contains characters other than alphanumeric, "_" or "~."
+	Please check your spelling or change the identifier name.
+.263
+E1054
+E1054: Input string too long - ## <input string>.
+	Input string exceeds ## characters, where the size of ## depends
+	on the type of input string.  Shorten this line by breaking it up
+	or changing identifier names.
+.264
+E1055
+E1055: `]' expected before End of File.
+	While examining a set notation, the program encountered the end of
+	the file before the "]" character.  Looks like you forgot it or your
+	file got eaten by unseen forces.
+.265
+E1056
+E1056: Comma expected between two set elements.
+	There was no "," found between two set elements in the set
+	notation. "," is used to delimit set elements.
+.266
+E1057
+E1057: Missing/invalid assignment operator - `XXX'.
+	The program encountered XXX instead of "=" or ":=" for
+	assignment.  "=" is for combinatorial assignment, and ":=" should
+	be used for registered assignments.
+.267
+E1058
+E1058: Keyword `XXX' expected instead of `YYY'.
+	Encountered string YYY at a place where keyword XXX is expected.
+	Check your spelling and syntax. You may have attempted to use the
+	wrong type of file as input.
+.268
+E1059
+E1059: Delimiter `X' expected instead of `X'.
+	Encountered character "X" instead of an expected delimiter "X."
+	Check your syntax.  You may have forgotten a begin or end statement.
+.269
+E1060
+E1060: Duplicate definition/assignment of `XXX'.
+	Pin XXX is either defined more than once in the definition block or
+	assigned with logical function more than once in the equation block
+	or within the same state.
+.270
+E1061
+E1061: `XXX' is used more than once.
+	The symbol XXX is used for more than one definition.
+	This is a no-no.
+.271
+E1062
+E1062: Dot extensions is not allowed in expression <expression>.
+	Dot extensions can only appear on the left hand side of an equation,
+	i.e.,  as part of an output extension.  It should not be used on the
+	right hand side of an equation.
+.272
+E1063
+E1063: `XXX' is not defined in output/feedback.
+	XXX is used as an output or a feedback pin, but it is not defined in
+	the definition block.
+.273
+E1064
+E1064: Extension `XXX' is not allowed for COM output.
+	XXX is not a valid extension for the combinatorial type of output.
+	See Section 10.4.
+.274
+E1065
+E1065: Extension `XXX' is not allowed for GLOBAL.
+	XXX is not a valid extension to be used with a global keyword.
+	See Section 10.4.
+.275
+E1066
+E1066: `XXX' is not a valid extension.
+	XXX is not a valid extension in OPAL syntax.  See Section 10.4.
+.276
+E1067
+E1067: `XXX' is not a valid extension for `YYY'.
+	XXX is not a valid extension for YYY type of register.
+	See Section 10.4.
+.277
+E1068
+E1068: Duplicate assignment of `XXX'.
+	Pin XXX is assigned with a logical function more than once,
+	either in the equation block or within the same state.
+.278
+E1069
+E1069: Input pin `XXX' used as output.
+	XXX is declared as an input pin, but is used as an output pin in
+	your design.
+.279
+E1070
+E1070: Statebit `XXX' cannot be used output in state_diagram.
+	It is forbidden to manipulate statebits in the state_diagram as
+	it will alter the design of the state machine.
+.280
+E1071
+E1071: Toggle can only be used with JK register.
+	Toggle logic ("!") can only be assigned to a JK register.
+	Either change the type of output register that you are using
+	or break it up into two separate equations, one for when the
+	signal is high, and the other for when it is low.
+.281
+E1072
+E1072: Hold can only be used with JK or DE register.
+	Hold logic ("?") can only be assigned to a JK or DE register.
+	Either change the type of output register that you are using or
+	break it up into two separate equations, one for when the signal
+	is high, and the other for when it is low.
+.282
+E1073
+E1073: Set expression cannot be assigned to single variable.
+	A single variable can be assigned to a set but a set can not be
+	assigned a single variable.
+.283
+E1074
+E1074: Mismatch in number of set elements <left set> <right set>.
+	The number of set elements must be the same when both of the sets
+	are used to perform logical or relational operation.
+.284
+E1075
+E1075: `XXX' is not defined in input/feedback.
+	XXX is used as an input or feedback pin, but it is not defined
+	in the definition block.
+.285
+E1076
+E1076: Temp variable must be completely defined before used.
+	A temporary variable must be completely defined before it can
+	be used on the right hand side of an equation.  Recursive
+	definition is not allowed.
+.286
+E1077
+E1077: Syntax error in expression <expression> ^ - <msg>.
+	There is an syntax error in the expression located at the position
+	point by "^" and the error is explained in <msg>.
+.287
+E1078
+E1078: Syntax error in set expression <expression>.
+	There is a general syntax error in the set expression.  If it isn't
+	apparent, see Section 11.9.
+.288
+E1079
+E1079: `)' expected in expression <expression>.
+	The program found an opening parenthesis, but not a closing one.
+.289
+E1080
+E1080: `(` expected in expression <expression>.
+	The program found a closing parenthesis, but not an opening one.
+.290
+E1081
+E1081: Relational operator expected in expression <expression>.
+	See Section 11.8 if the error isn't apparent.
+.291
+E1082
+E1082: Illegal operator `XXX' in relational expression <expression>.
+	The program encountered an operator other than ==, !=, >=, <=, >
+	or < for a relational operation.
+.292
+E1083
+E1083: More than one relational operator in expression <expression>.
+	This is not permitted in the OPL syntax.
+.293
+E1084
+E1084: Constant ## is too big for the set.
+	The program can't compare the number ## with the set, as the number
+	has more binary bits than the number of elements in the set.
+	See Section 11.9.
+.294
+E1085
+E1085: Mismatch number of set elements <set1>  <set2>.  [Only ONE output
+	is generated after relational operation.]
+	The number of set elements in the two sets involved in the relational
+	operation is not the same.  If the optional message is displayed,
+	either <set1> or <set2> is the result of a relational operation and
+	only one output is generated after the relational operation.
+.295
+E1086
+E1086: `XXX' is not a set.  [Only ONE output is generated after relational
+	operation.]
+	If the optional message is displayed, XXX is the result of an relational
+	operation and only one output is generated after relational operation.
+	Otherwise, it just doesn't look like a set.  See Section 11.9.
+.296
+E1087
+E1087: hold(?), toggle(!) and don't care(-) not allowed in logical operation.
+	Hold (?), toggle (!) and don't care (-) symbols can only be assigned
+	to an appropriate output by itself, not as part of a logical expression.
+.297
+E1088
+E1088: State `ALL' cannot be used with `GOTO' branching.
+	If "GOTO" is used for the "ALL" state, the state machine will always
+	be stuck at a state that the "GOTO" branched to.  We're so sure that
+	this is not what you meant that we made it an error and not a warning.
+.298
+E1089
+E1089: Only one next state allowed in state `ALL'.
+	In the "ALL" state, the machine can only branch to a single state
+	using "IF" branching.
+.299
+E1090
+E1090: Branching from state ALL conflicting with branching from state
+	`XXX' to state `YYY'.
+	If you use the ALL option, there cannot be any other branching from
+	out of the state.
+.300
+E1091
+E1091: State `XXX' has no branching condition.
+	State "XXX" is defined, but no branching has been assigned.
+.301
+E1092
+E1092: Mutual exclusion is required in `if-then-else' branching condition.
+	The branching conditions defined by "if-then-else" statement is not
+	mutually exclusive.
+.302
+E1093
+E1093: `X' is not allowed in test vector.
+.303
+E1094
+E1094: `X' is not allowed for output pin.
+	X is an illegal character.
+.304
+E1095
+E1095: `X' is not allowed for statebit pin.
+	X is an illegal character.
+.305
+E1096
+E1096: `X' is not allowed for input pin.
+	X is an illegal character.
+.306
+E1097
+E1097: Unable to complement Super voltage `X'.
+	The identifier in the vector list is different from the definition
+	block (one has a "/" prefix, and the other does not).  In order to
+	write the stimulus/response at the physical pin (identifier in
+	definition block), the program will invert the corresponding vector
+	character in the vector block, but it is unable to complement "X"
+	which is a super voltage character.
+.307
+E1098
+E1098: `X' is not allowed for buried pin.
+	X is an illegal character.
+.308
+E1099
+E1099: Defined identifier expected before delimiter `X'.
+	There should be an identifier on this line, but there isn't.
+.309
+E1100
+E1100: `XXX' is not a defined identifier.
+	XXX is not previously defined in the design.  Check your spelling.
+.310
+E1101
+E1101: Too many identifiers in the list - ##.
+	The number of identifiers in the vector list must be less than ##.
+.311
+E1102
+E1102: D/REG statebits can only have RST as default.
+	D or REG types of register can only have RST as their default when
+	they are used as statebits.
+.312
+E1103
+E1103: `XXX' has been completely assigned previously.
+	An extension that will affect logical output of XXX is used where
+	XXX has been completely assigned.
+.313
+E1104
+E1104: `XXX' has been partially assigned previously.
+	XXX has been partially assigned, with an extension that will affect
+	the logical output, and it cannot be completely assigned again.
+.314
+E1105
+E1105: Can only handle less than ## state_diagrams.
+	Currently, there is a limit of ## separate state_diagram blocks within
+	the same file.
+.315
+E1106
+E1106: `XXX' is not a defined statebit signal.
+	The signal XXX must be declared in the definition block as a STATEBIT
+	signal.  You should check your spelling and the definition.  FEEDBACK
+	signals cannot be used as statebits.
+.316
+E1107
+E1107: `XXX' is already used in the same state_diagram.
+	XXX has been used more than once as a defined statebit within the same
+	state diagram.
+.317
+E1108
+E1108: Only one definition block is allowed.
+	Although multiple blocks of any other type are allowed, the number of
+	definition blocks is limited to one.
+.318
+E1109
+E1109: `X' is not allowed in `YYY' vector format.
+	The "YYY" vector format only allows certain characters.  All of the
+	formats allow the characters x, X, z, and Z, for don't care and high
+	impedance respectively.  BIN format also allows the digits 0 and 1.
+	OCT format permits the digits 0-7, and HEX allows 0-9, a-f, and A-F.
+.319
+E1110
+E1110: Identifier number ## missing in `XXX'.
+	A set was not properly defined since you either have zero identifiers,
+	or too many commas.  It's also possible that you forgot an identifier
+	in the set.
+.320
+E1111
+E1111: `XXX' is already used within the same vector block.
+	You can't declare a signal more than once within the same vector block.
+	You are probably using XXX both individually and within a set within
+	the vector block.
+.321
+E1112
+E1112: Pin number `XXX' is used more than once.
+	In the declaration section, you assigned the same pin number to more
+	than one signal label.
+.322
+E1113
+E1113: Bad branching condition from state `XXX' to `YYY'.
+	A statebit is used in the branching condition which conflicts with
+	the current state.  For example, "if (statebit_00) ..." is an error
+	if the current state is even, i.e., statebit_00 is 0.
+.323
+E1114
+E1114: Dot extension is not allowed for intermediate variable `XXX'.
+	A dot extension can only be used for defined outputs.  Either remove
+	the dot extension for the intermediate variable or declare the
+	variable in the definition block.
+.324
+E1115
+E1115: Only one `case' is allowed for each state.
+	Only one "case" is needed for a case statement.  All branching
+	conditions should be enclosed within a single "case" and "endcase."
+.325
+E1116
+E1116: Duplicate assignment of `XXX' using `->' and `:='.
+	XXX is assigned within a particular state using "->" and it is
+	also being assigned using ":=" in a state which branches to this
+	state.  This is an error since it is not clear what the design
+	intends.  See Section 10.8.1 for a discussion of the use of these
+	assignment operators.
+.326
+E1117
+E1117: The `->' operator cannot be used with state all/undefined.
+	In the current release of the software, this feature is not supported.
+.327
+E1118
+E1118: The `->' operator cannot be used in `with/endwith'.
+	It isn't clear what you intend with this line.  Use the ":="
+	operator instead.
+.328
+E1119
+E1119: Neither of the operands is a set.
+	Both operands for the arithmethic operation must be in set notation.
+.329
+E1120
+E1120: Unknown operator `XXX' in arithmetic operation.
+	Operator XXX is not a supported arithmetic operator.
+	See Section 10.8.4 for a list of arithmetic operators.
+.330
+E1122
+E1122: Number of characters in the set is more than ##.
+	This module is unable to support more than ## characters in a set
+	notation.  Please simplify the set.
+.331
+E1123
+E1123: Number of PLA map inputs is more than ##.
+	This module is unable to support more than ## inputs in a PLA map.
+	If this is a problem, please consult your representative.
+.332
+E1124
+E1124: FB and PIN attributes can only be used with feedback/node.
+	FB and PIN attributes are meant to distinguish different feedback paths,
+	so they can only be used with feedback and node signals.
+.333
+E1125
+E1125: The array size is too large when expanded.
+	The number of characters for the vector notation when expanded is too
+	large. Try reducing the array size or the word length of identifier used.
+.334
+E1126
+E1126: `XXX' is not a valid vector notation.
+	Vectors must be of the form "name[##:##]."  For example, "bit[0:7]."
+	For more information, see Section X.X.X.
+.335
+E1127
+E1127: State number expected before delimiter `X'.
+	A State_Name must be of the format "state = ##."  If there are multiple
+	State_Names, then they must be separated by commas.
+.336
+E1128
+E1128: Unable to share state bit `XXX' with one-hot encoding.
+	In one-hot encoding state assignment, each state bit represents a
+	unique state, and therefore can not be shared between two state
+	diagrams.  Either modify your design or don't use one-hot encoding.
+.337
+E1129
+E1129: Argument expected before delimiter `X'.
+	Macro argument expected before the delimiter "X."
+.338
+E1130
+E1130: Prototype file for macros is bad.
+	The prototype file for macros is corrupted.  Please regenerate the
+	file or contact your representative.
+.339
+E1131
+E1131: Number of arguments does not match.
+	Number of arguments in the macro does not match the macro defined
+	the prototype file.
+.340
+E1132
+E1132: `XXX' is not a macro.
+	Unable to locate "XXX" as a defined macro in the prototype file.
+.341
+E1133
+E1133: `XXX' declared as buried feedback/node but not used as input/output.
+	Since "XXX" is buried, it is an error to use only the input or only
+	the output portion of the signal. Both input and output of the
+	feedback must be used.
+.342
+E1134
+E1134: More than one method of state assignment is chosen.
+	The user can only chose from MAPL, PAL, SEQ or OHE as a method for
+	assigning state numbers in state diagram.
+.343
+E1135
+E1135: Missing/Invalid number `XXX'.
+	"XXX" is not a valid number.  It should be an integer.
+.344
+E1136
+E1136: `XXX' is not a valid set label in this vector block.
+	"XXX" is declared within this vector block.  It might be a valid
+	set label, but does not appear in the label list of this block.
+.345
+E1137
+E1137: Too many arguments in LOOP statement.
+	There should be at most two arguments (the second is optional) for
+	each set label in the loop statement.  For example:
+.346
+E1138
+E1138: `#' can only be used as a dummy vector character.
+.347
+E1139
+E1139: `#' should be used as the dummy character instead of `X'.
+.348
+E1140
+E1140: The polarity of `XXX' is different from the label list.
+.349
+W1141
+W1141: Attribute expected from ().
+.350
+W1142
+W1142: Input is always visible, BURIED attribute ignored.
+.351
+W1143
+W1143: State attributes ignored for input pin.
+.352
+W1145
+W1145: Number of columns not consistent in term ##.
+.353
+W1146
+W1146: Extra `;' ignored.
+.354
+W1147
+W1147: `:=' used for dot extension assignment.
+.355
+W1148
+W1148: `:=' used for combinatorial assignment.
+.356
+W1149
+W1149: Combinatorial output might change before the clock.
+.357
+W1150
+W1150: `=' used for non-combinatorial assignment.
+.358
+W1151
+W1151: Register output will only change after a clock.
+.359
+W1152
+W1152: The number `XXX' is treated as `[Y,Y,Y]'.
+.360
+W1154
+W1154: Expression is always false.
+.361
+W1155
+W1155: Expression is always true.
+.362
+W1156
+W1156: `XXX' declared as YYY but not used [as ZZZ].
+.363
+W1157
+W1157: State_name `XXX' defined but not used.
+.364
+W1158
+W1158: First branching condition is always false at state `XXX'.
+.365
+W1159
+W1159: First branching condition is always true at state `XXX'.
+.366
+W1160
+W1160: Branching condition ## in state `XXX' is a subset of previous
+	conditions.
+.367
+W1161
+W1161: Branching after condition ## in state `XXX' is not possible.
+.368
+W1162
+W1162: Not enough bits assigned for all states, extra statebits created.
+.369
+W1163
+W1163: Number of character not consistent in line ##.
+.370
+W1164
+W1164: Output XXX is always the same when moving from state YYY to state ZZZ.
+.371
+W1165
+W1165: `XXX' is used in another state_diagram.
+.372
+W1166
+W1166: Not enough statebits allocated for state_diagram `XXX'.
+.373
+W1167
+W1167: Statebits should have the same polarity as in the definition block.
+.374
+W1168
+W1168: Number format expected.
+.375
+W1169
+W1169: Unknown number format `XXX'.
+.376
+W1170
+W1170: `XXX' is only partially assigned in `block_type' block.
+.377
+W1171
+W1171: The `->' operator can only be used in the state diagram block.
+.378
+W1172
+W1172: Duplicate assignment of `XXX' using `->' and with/endwith.
+.379
+W1173
+W1173: Unable to handle "state UNDEFINED" in one hot encoding.
+.380
+W1174
+W1174: The branching condition for state `XXX' is not complete.
+.381
+W1175
+W1175: The range for symbol and number is different. `XX' `YY'.
+.382
+W1176
+W1176: Duplicate definition of FB/PIN attribute.
+.383
+W1177
+W1177: `XXX' should have the same polarity as in the definition block. 
+.384
+W1178
+W1178: XXX for INPUT can only be used for GAL6001.
+.385
+W1179
+W1179: Unable to use -a mapl option on multiple state diagrams.
+.386
+W1180
+W1180: Nested comment found.
+.387
+E1201
+E1201: Invalid extension `XXX' for label `XXX'.
+.388
+E1202
+E1202: Matching labels of extensions .X1 and .X2 must be adjoining.
+.389
+E1203
+E1203: Missing XOR extension or XOR extensions are not inorder; .ie, LABEL.X1
+	LABEL.X2.
+.390
+E1204
+E1204: Number of pins unspecified.
+.391
+E1205
+E1205: Missing pla map.
+.392
+E1206
+E1206: `Keyword' is not recognized as a valid keyword.
+.393
+E1207
+E1207: .i and .o must be specified before .ilb and .ob.
+.394
+E1208
+E1208: Pin label `XXX' has an illegal pin number assignment.
+.395
+E1209
+E1209: Illegal character `:' in pin label.
+.396
+E1210
+E1210: Incorrect extension `XXX' for label `XXX' or XOR extensions must
+	follow all other extensions.
+.397
+E1211
+E1211: Missing #$ `keyword' number.
+.398
+E1212
+E1212: Missing pinlist labels for #$ PINS statement.
+.399
+E1213
+E1213: Missing pin label or illegal use of `.'.
+.400
+E1214
+E1214: Pin number `XXX' was assigned twice.
+.401
+E1215
+E1215: Missing .i pin number.
+.402
+E1216
+E1216: Missing .o pin number.
+.403
+E1217
+E1217: Missing .type attribute.
+.404
+E1218
+E1218: Incorrect number of .phase attributes.
+.405
+E1219
+E1219: Missing .p number.
+.406
+E1220
+E1220: Input file is not a PLA file.
+.407
+E1221
+E1221: Missing .ob statement.
+.408
+E1222
+E1222: Missing .ilb statement.
+.409
+E1223
+E1223: Row `XXX' of pla map has missing data.
+.410
+E1224
+E1224: Invalid character `X' in PLA table.
+.411
+E1225
+E1225: Excess data in row `XXX' of PLA table.
+.412
+E1226
+E1226: Missing flag before `XXX' on command line.
+.413
+E1227
+E1227: Missing input file on command line.
+.414
+E1228
+E1228: Extension `XXX' only allowed for feedback labels.
+.415
+E1229
+E1229: Extension `XXX' is not accepted.
+.416
+E1230
+E1230: Label `XXX' has an invalid character `X'.
+.417
+E1231
+E1231: Duplicate labels of `label'.
+.418
+E1232
+E1232: Label `XXX' is missing `XXX' extension.
+.419
+E1233
+E1233: Can't reallocate.
+.420
+E1234
+E1234: Missing input labels for #$IREG or #$ILCH statement.
+.421
+E1235
+E1235: Missing input label after #$IREG or #$ILCH or illegal use of `.'.
+.422
+W1236
+W1236: `XXX' is not recognized as a #$ keyword.
+.423
+W1237
+W1237: The previous .i is ignored.
+.424
+W1238
+W1238: The previous .o is ignored.
+.425
+W1239
+W1239: Invalid type `XXX' in .type statement.
+.426
+W1240
+W1240: Product terms span more than one line.
+.427
+E1241
+E1241: Cannot exceed 500 product terms.
+.428
+W1242
+W1242: `XXX' is not recognized as a #$ PROPERTY statement.
+.429
+W1243
+W1243: `XXX' file newer than `YYY' file.
+.430
+E1401
+E1401: Missing equations filename on command line.
+.431
+W1402
+W1402: Both -j and -k options specified.  "-X" option ignored.
+.432
+W1403
+W1403: UES `ues_string' on command line is ignored for device `XXX'.
+.433
+E1404
+E1404: Unable to do automatic pin assignment for device `XXX'.
+.434
+E1405
+E1405: P field must be defined before any V fields in vector file `XXX'.
+.435
+E1406
+E1406: Missing pin numbers in P Field of vector file `XXX'.
+.436
+E1407
+E1407: Invalid character `?' in P Field of vector file `XXX'.
+.437
+E1408
+E1408: Missing `*' to end the P Field in vector file `XXX'.
+.438
+E1409
+E1409: Missing test conditions for vector ## in file `XXX'.
+.439
+E1410
+E1410: Missing `*' to end vector ## of vector file `XXX'.
+.440
+W1411
+W1411: `vec_file': vector ##: Invalid character `X' for `pin_type' pin ##.
+.441
+E1413
+E1413: Pin ## in `gal_name' is not an I/O pin in Medium-PAL mode.
+.442
+I1414
+I1414: Using Registered-PAL mode with no registered outputs.
+.443
+W1415
+W1415: Clock term ignored for COM output (pin ##).
+.444
+E1416
+E1416: `XXX' term must be high to bypass register for output pin ##.
+.445
+E1417
+E1417: Label `XXX' (pin ##) specified to be both a JK and DE macrocell.
+.446
+E1418
+E1418: Label `XXX' (pin ##) cannot be a combinatorial macrocell.
+.447
+E1419
+E1419: Both clock and CE function defined for label `XXX' (pin ##).
+.448
+E1420
+E1420: `label': Declared as both latched and registered input.
+.449
+E1421
+E1421: Pins M-N must be configured to the same input type.
+.450
+E1423
+E1423: Pin ## is an output/buried node and cannot be an input.
+.451
+E1424
+E1424: Too many product terms for output `XXX'.
+.452
+E1425
+E1425: Multiple dedicated output enables declared.
+.453
+E1426
+E1426: Insufficient `pin_type' pins in device `XXX' to fit equations.
+.454
+E1427
+E1427: Wrong pin assignment for label `XXX' (pin ##).
+.455
+E1428
+E1428: Unable to assign `pin_type' label `XXX'.
+.456
+E1429
+E1429: Cannot set `pin_type' pin for label `XXX' (pin ##) to VCC or GND.
+.457
+E1430
+E1430: Label `XXX' (pin ##) is not an output.
+.458
+E1431
+E1431: Term ## is not a `XXX' term.
+.459
+E1432
+E1432: No more OE terms to disable I/O pin ## used as input only.
+.460
+W1433
+W1433: No more OE terms to disable unused I/O pin ##.
+.461
+E1434
+E1434: Global `XXX' equation is invalid.
+.462
+E1435
+E1435: Label `XXX' (pin ##) is not an input to the AND array.
+.463
+E1436
+E1436: Out of `term_type' terms for label `XXX' (pin ##).
+.464
+E1437
+E1437: `label': No `type' terms at pin ## in device `XXX'.
+.465
+E1438
+E1438: `label': Pin ## is not a dedicated `pin_type' pin.
+.466
+E1439
+E1439: `label': No active low `function' in device `XXX'.
+.467
+E1440
+E1440: Label `XXX' cannot be assigned to pin ## (`pintype').
+.468
+E1441
+E1441: Missing assignment operator in equation for output `XXX'.
+.469
+E1442
+E1442: Equation for label `XXX' has already been defined.
+.470
+E1443
+E1443: Multiple clocks defined.  Device `XXX' has one clock pin only.
+.471
+E1444
+E1444: The dedicated OE pin ## in device `XXX' is active low.
+.472
+W1445
+W1445: Dedicated OE pin ## is not an input for the term in `XXX.OE'.
+.473
+I1446
+I1446: Output enable is an AND of a dedicated OE pin and an OE product term.
+.474
+E1447
+E1447: Conflicting register types for label `XXX'.
+.475
+E1448
+E1448: Wrong polarity for label `XXX' (Pin ##).
+.476
+E1449
+E1449: Invalid extension(s) `ext' for `type' output `XXX'.
+.477
+E1450
+E1450: Label `XXX' requires an OE, but pin ## does not have one.
+.478
+W1451
+W1451:  No test condition for label `L'.  Character `X' used instead. 
+.479
+E1452
+E1452: `XXX' is expected to be an active-low dedicated OE (pin ##).
+.480
+E1453
+E1453: `XXX': Latch input not available in device `deviceName'. 
+.481
+E1454
+E1454: `XXX': Register input not available in device `deviceName'. 
+.482
+E1455
+E1455: Unknown/Bad vector format in file `XXX'. 
+.483
+E1456
+E1456: Equations defined for both `XXX' (pin ##1) and `YYY' (node ##2).
+.484
+E1457
+E1457: Same pin assigned to labels 'XXX' and 'YYY'.
+.485
+E1601
+E1601: Missing equations filename on command line.
+	The input equations filename is missing on the command line.
+	The default extension is .eqn.
+.486
+E1602
+E1602: Conflicting register types for label `XXX' in the equations.
+	There are conflicting register types declared for the label "XXX"
+	in the equations.  This is usually caused by mismatched dot extensions
+	for the label "XXX."
+.487
+E1603
+E1603: Invalid extensions for COM output label `XXX'.
+	A combinatorial output usually does not have any valid dot extensions
+	associated with it.  See Section 6.5.
+.488
+E1605
+E1605: `label': OPAL does not support RS Flip-Flop.
+	T and RS Flip-flops are not supported by OPAL.
+.489
+E1606
+E1606: `label': OPAL does not support T Flip-Flop.
+	T and RS Flip-flops are not supported by OPAL.
+.490
+E1607
+E1607: Missing assignment operator in equation for output `XXX'.
+	The assignment operator ":=" or "=" is missing in the equation for
+	the output "XXX."
+.491
+E1608
+E1608: Equation for label `XXX' has already been defined.
+	There is more than one equation defined for the same label "XXX."
+.492
+W1609
+W1609: `XXX': Feedback via input register/latch ignored.
+	Feedbacks via an input register or input latch are not supported in
+	the OPAL language.  The input register or latch is not present in
+	the output file.
+.493
+W1610
+W1610: No equation defined for the buried node `XXX'.
+	There is no equation defined for the buried node "XXX," but it is
+	found as a feedback in some of the other equations.
+.494
+E1801
+E1801: Missing JEDEC filename on command line.
+	The input JEDEC filename is missing on the command line.  The
+	default extension is .jed.
+.495
+E1802
+E1802: Illegal input mode for GAL6001.
+	The macrocell configuration bits LATCH = 0 and SYN = 1 were
+	specified for an input or input/output latch macrocell for
+	the GAL6001 device.  This is an invalid input mode on the device.
+.496
+E1803
+E1803: Duplicate label `XXX' found.
+	There is more than one instance of the label "XXX" in the "NOTE PIN"
+	or "NOTE NODE" statements in the JEDEC file.
+.497
+E1804
+E1804: Device name not found in file `XXX'.
+	The device name could not be found in the JEDEC file "XXX."
+	For the device name to be recognized automatically, it must
+	begin with "PAL," "GAL," "PLA," or "MAPL," as listed in Appendix G.
+	In addition, it must be prior to the first "*" character in the file.
+	You can either specify the device name on the command line, or edit
+	the JEDEC file to conform to these requirements.
+.498
+E2001
+E2001: Device name not found in file `XXX'.
+	The device name is not found in the JEDEC file "XXX."  You can
+	either specify the device name on the command line with the "-d"
+	option or edit the JEDEC file by placing the device name at the
+	beginning of the file.
+.499
+E2002
+E2002: Unable to convert PAL device `XXX'.
+	This module does not support device XXX. Please refer to Section 6.2
+	for a list of PAL devices that can be converted to supported GALs.
+.500
+E2003
+E2003: Illegal character `X' in UES string `XXX'.
+	The UES string specified with the "-u" option on the command line
+	must consists of alphanumeric characters only.
+.501
+E2004
+E2004: Missing PAL JEDEC filename on command line.
+	The program expected the PAL JEDEC filename to be specified on the
+	command line.  The default extension is .jed.
+.502
+E2005
+E2005: XXX: Invalid/unsupported GAL specified on command line.
+	The GAL device name specified with the -g option on the command line
+	is either invalid or not supported.  Please refer to Section 6.2 for
+	a list of supported devices.
+.503
+E2006
+E2006: Cannot convert `PALxxxx' to `GALxxxx'.
+	The PAL device "PALxxxx" cannot be converted to the GAL device
+	"GALxxxx."   Please refer to Section 6.2 for the correct GAL
+	to convert to.
+.504
+E2201
+E2201: Output file `XXX' will overwrite input file.
+	The output PLA file "XXX" will overwrite the input PLA file because
+	they have the same filename.  Note that the output PLA file has a
+	default extension of ".pl1."
+.505
+E2202
+E2202: Device `XXX' is not supported by this program.
+	This program supports the MAPL128 and MAPL144 only.
+.506
+E2203
+E2203: Missing input PLA filename on command line.
+	The program expected an input PLA filename to be specified on the
+	command line.  The default extension is .pla.
+.507
+E2204
+E2204: Identical labels (`XXX') found in .ob list.
+	You should rename one of the labels.
+.508
+E2205
+E2205: Mismatched extensions on labels `label1' and `label2'.
+	The labels "label1" and "label2" have extensions that do not match.
+	For example, the "o1.d" and "o1.j" do not match.  Refer to Section 7.3.
+.509
+E2206
+E2206: Unknown target bit `XXX'.
+	Internal error.  The target bit "XXX" is not a state or feedback bit.
+	Please contact the representative listed at the front of the manual.
+.510
+E2207
+E2207: More than one term specified for OE of label `XXX'.
+	The output enable for label "XXX" is a sum of more than one product
+	term.  MAPL128/144 has single term OEs only.  You should rewrite
+	your output enable equations.
+.511
+I2208
+I2208: Total number of terms in device `XXX' exceeded.
+	The total number of terms has been exceeded during the expansion
+	phase of the partitioning.  Try minimizing the design at all steps
+	of the compilation process, including the minimization option for
+	FITMAPL.
+.512
+I2209
+I2209: Unable to fit into device `XXX'.
+	The PLA map cannot fit into the device "XXX."  Try minimizing the
+	PLA map prior to FITMAPL and specify the minimization option for
+	FITMAPL.
+.513
+E2210
+E2210: No more state bits to select as target bit.
+	There are no state bits available in the design that can be selected
+	as a target bit to do the partitioning.  If this causes the fitting
+	to fail, try defining one or more of your outputs as feedbacks.
+.514
+I2211
+I2211: Attempted to fit onto one array but failed.
+	The program tried to fit the design into one array but failed to do so.
+	This is because there are no available state bits to be used as a target
+	bit for partitioning.  If you wish the design to fit onto one page,
+	you might try minimizing before FITMAPL and specifying the minimization
+	option for FITMAPL.
+.515
+I2212
+I2212: Number of terms per array (##) exceeded by some state(s).
+	The number of terms for each state cannot exceed the number of terms
+	available for each array (page) in the device.  This is due to the
+	fact that all terms for any single state must be placed in same array.
+	Try minimizing prior to FITMAPL and specifying the minimization option
+	for FITMAPL.
+.516
+I2213
+I2213: Maximum number of arrays has been reached.
+	The partitioning of the design into the multiple arrays has exceeded
+	the available number of arrays in the device.  Try minimizing prior
+	to FITMAPL and specifying the minimization option for FITMAPL.
+.517
+E2214
+E2214: Too many labels in "#$ PINS" and "#$ NODES" statements.
+	The total number of labels in both "#$ PINS" and "#$ NODES" statements
+	is greater than the total number of labels in both .ilb and .ob
+	statements. This is not possible and could indicate a syntax error in
+	the "#$ PINS" or "#$ NODES" statements.
+.518
+E2215
+E2215: `label': No combinatorial outputs available in device `XXX'.
+	"label" is a combinatorial output, but there are no combinatorial
+	outputs available in device "XXX."  Redefine the output as one of
+	the clocked types of outputs.
+.519
+E2216
+E2216: Invalid dot extension .XXX for `device' macrocells.
+	The dot extension .XXX is not applicable for the macrocells on that
+	device.  Try redefining the signals in question as a different type
+	of signal.
+.520
+E2217
+E2217: Out of output enable terms.
+	There are only three output enable terms and a dedicated OE pin for
+	all the I/O pins in the MAPL128/144.  Try eliminating some of your
+	enable terms or removing all pin preassignments and allowing FITMAPL
+	to assign them itself.
+.521
+E2218
+E2218: Invalid extensions/combination of extensions for label `XXX'.
+	The extensions for the label "XXX" are either not valid or there is
+	a mismatch in the extensions for the same label.
+.522
+E2219
+E2219: Multiple product terms for reset function.
+	There is only one product term to reset all the registers in the device.
+.523
+E2220
+E2220: No sum term output enables in device `XXX'.
+	Only single term OEs or dedicated pin OE available in device "XXX."
+	If you need that functionality, try doing it with an input pin.
+.524
+E2221
+E2221: No sum term clocks in device `XXX'.
+	The device "XXX" has only one dedicated clock pin for all the registers.
+	Sum term clocks are not allowed.
+.525
+E2222
+E2222: The clock signal `XXX' is set to a constant value #.
+	The clock signal "XXX" is set to constant value of 0 or 1.
+	Try eliminating any clock equations that you might have.
+.526
+E2223
+E2223: Multiple clocks defined.  Device `XXX' has only one clock pin.
+	The device "XXX" has only one dedicated clock pin for all the
+	registers. There is more than one clock defined.
+.527
+E2224
+E2224: Invalid pin assignment for label `XXX':##.
+	The pin number ## assigned to the label "XXX" is invalid.
+.528
+E2225
+E2225: Active low clock `XXX' is not allowed in device `XXX'.
+	There are no active low clock signals available in the device "XXX."
+.529
+E2226
+E2226: Cannot assign a pin number to label `XXX'.
+	No matching pin can be found for the label "XXX."  Therefore a
+	pin number cannot be assigned to label "XXX."  If you created
+	any pin preassignments, try removing them and allowing FITMAPL
+	to assign all the pins.
+.530
+E2227
+E2227: `XXX':## (page bit) is not an input to the control term array.
+	The label "XXX" (assigned to pin ##), which is a page bit, is not
+	an input to the control term array for this device.  Try using
+	this signal as a feedback instead of a page bit.
+.531
+W2228
+W2228: Device defaults to `device' if not specified in the PLA file.
+	If the device name is not specified in the PLA file or on the
+	command line, the device defaults to "device."
+.532
+E2229
+E2229: Label `XXX' requires buried feedback from a register.
+	A true ".Q" extension to a D-type register has the feedback from
+	the register, not from the pin where a tri-state buffer (output
+	enable) may interfere with the feedback.  Only buried feedbacks on
+	the MAPL devices meet this requirement.
+.533
+W2230
+W2230: -d `comdev' overrides device name `pladev' in PLA file `XXX'.
+	The device name "comdev" on the command line overrides the device
+	name "pladev" in the PLA file "XXX."
+.534
+W2231
+W2231: -reg[syn] option is currently not supported.
+	The register synthesis option is currently not supported.
+.535
+W2232
+W2232: -str[ategy] `XXX' on command line is not supported.
+	The fitting strategy option "XXX" is not supported.  Refer to the
+	manual page for FITMAPL for the supported fitting strategies.
+.536
+W2233
+W2233: Number of arrays in device cannot exceed 8.
+	The total number of arrays in MAPL128/144 is 8.  You can specify the
+	number of arrays to be less than 8 with the -p option.
+.537
+W2234
+W2234: Number of terms per array cannot exceed 16.
+	The number of terms for each array in the MAPL128/144 is 16.  You
+	can specify the number of terms per array to be less than 16 with
+	the -t option.
+.538
+W2235
+W2235: All OE terms used.  No OE term to disable unused outputs.
+	To keep unused output pins from being driven, the fitter attempts to
+	set their Output Enable (OE) product term to Ground.  This warning
+	indicates that the three OE product terms in the MAPL128 were used
+	for other purposes.  You should be wary not to connect these unused
+	output pins.
+.539
+I2236
+I2236: Try `minimize' strategy if you have not already done so.
+	Often, if a design does not fit into the MAPL, specifying minimization
+	("-m" or "-str minimize") will simplify the design enough so that it
+	will fit.
+.540
+E2237
+E2237: XXX:##: Pre-assigned OE term is not supported in this version.
+	This message will arise if you attempt to fit an already fitted ABEL
+	MAPL PLA file;  you should use the ".TT2" file.
+.541
+E2238
+E2238: Label `XXX' requires feedback from external pin.
+	The label "XXX" can only be assigned to a pin with external pin
+	feedback.  This is due to the use of the ".PIN" extension.
+.542
+W2239
+W2239: Changed extension for label `XXX' from `.Q' to `.FB'.
+	The label "XXX" which is specified to have buried register feedback
+	could not be assigned to a pin with buried register feedback.  Since
+	a pin with external pin feedback is available, the label was assigned
+	to that pin and the ".Q" extension been changed to ".FB" extension to
+	reflect the change in the feedback type.
+.543
+W2240
+W2240: Input pin ## assigned to #$NODE label `XXX'.
+	The label "XXX" which is a dedicated input pin is specified as a
+	#$NODE label.  Dedicated inputs are usually specified as #$PIN labels.
+.544
+E2242
+E2242: Internal Error!  Wrong number of inputs/outputs in a term.
+	An internal error has occurred.  The sum of the input and output
+	labels does not match the number of inputs and outputs for each term.
+	If you get this error, contact your representative.
+.545
+W2243
+W2243: Changed extension for label `XXX' from `.FB' to `.Q'.
+	The label "XXX" which is specified to have external pin feedback
+	could not be assigned to a pin with external pin feedback.  Since
+	a pin with buried feedback is available, the label was assigned to
+	that pin and the ".FB" extension is changed to ".Q" extension to
+	reflect the change in the feedback type.
+.546
+E2244
+E2244: Second register of ILMC must be clocked by CLK pin.
+	The second register (nearer to the AND array) of an ILMC, which will
+	be used if the ILMC is configured for double buffer input, must be
+	clocked by the CLK pin.
+.547
+E2245
+E2245: `XXX': No preset for ILMCs.
+	There is no preset for the ILMCs in a MAPL2 device.
+.548
+E2246
+E2246: `XXX': Out of <TERMTYPE> terms in FPLA control array.
+	There are no more terms of type <TERMTYPE> in the FPLA control array
+	for the label "XXX." <TERMTYPE> could be "INIT," "OE," "ILMC Clock"
+	or "ILMC Init."
+.549
+E2247
+E2247: `XXX': Out of <TERMTYPE> terms in PAL control array.
+	There are no more terms of type <TERMTYPE> in the PAL control array for
+	the label `XXX'. <TERMTYPE> could be "INIT" or "OE."
+.550
+E2248
+E2248: Clock for label `XXX' is always LOW.
+	The label "XXX" has a clock that is always LOW.
+.551
+E2249
+E2249: Clock for label `XXX' is always HIGH.
+	The label "XXX" has a clock that is always HIGH.
+.552
+E2250
+E2250: Multiple term clock for label `XXX'.
+	The clock for the label "XXX" is a sum of two or more terms.
+	Only a dedicated pin clock or a single term clock is available
+	in a MAPL2 device.
+.553
+E2251
+E2251: XXX: FPLA OLMCs must be clocked by CLK pin.
+	The label "XXX," which is assigned to an FPLA OLMC, must be clocked
+	by the CLK pin.
+.554
+E2252
+E2252: Pin ## is not connected to an ILMC.
+	The pin number ## is not connected to an ILMC.  There are only 16
+	I/O pins with ILMCs.
+.555
+E2253
+E2253: Cannot assign both pin/node ##1 and ##2 to PAL row RR.
+	Only one pin (or node) can be assigned to each PAL or FPLA row.
+.556
+E2254
+E2254: Cannot assign both pin/node ##1 and ##2 to FPLA row RR.
+	Only one pin (or node) can be assigned to each PAL or FPLA row.
+.557
+E2255
+E2255: `XXX' is not an input to PAL array.
+	The label `XXX' is not an input into the PAL AND array.
+.558
+E2256
+E2256: `XXX' is not an input to FPLA array.
+	The label `XXX' is not an input into the FPLA AND array.
+.559
+E2257
+E2257: Pin/node ## is not connected to an OLMC.
+	The pin or node ## which is assigned to an output or feedback is not
+	connected to an OLMC.
+.560
+E2258
+E2258: Both set and reset defined for label `XXX'.
+	The label "XXX', which is assigned to a PAL output, has both set
+	and reset defined.  You can define either a set or a reset, but
+	not both.
+.561
+E2259
+E2259: `XXX' and `YYY' are assigned to the same OLMC.
+	The labels "XXX" and "YYY" are assigned to the same OLMC.  One label
+	could be assigned to the external pin while the other is assigned to
+	the buried node but sharing the same OLMC.
+.562
+E2260
+E2260: Clock `XXX' must be assigned to CLK pin ##.
+	The clock label "XXX," which is found to be clocking one or more
+	FPLA OLMCs, must be assigned to the CLK pin ##.
+.563
+E2261
+E2261: Multiple pins/nodes assigned to same inner-connect.
+	Only one pin or node can be assigned to an inner-connect.
+.564
+E2262
+E2262: No assigned pin for label `XXX'.
+	There is no pin or node number assigned to the label "XXX."  This is
+	a check done after automatic pin assignment has been completed.
+	This message usually indicate an internal program error.
+.565
+E2263
+E2263: Pin ## assigned to labels `XXX' and `YYY'.
+	A pin (or node) number cannot be assigned to more than one label.
+.566
+E2264
+E2264: Cannot assign <labeltype> `XXX'.
+	A pin (or node) number could not be assigned to the label "XXX,"
+	which is of type <labeltype>.  <labeltype> could be an input, output,
+	feedback, com output, latch input, or double buffer input.
+.567
+E2265
+E2265: Incorrect pin (or node) ## assigned to label `XXX'.
+	The user assigned pin (or node) number ## is incorrect for the label
+	`XXX'.
+.568
+E2266
+E2266: `XXX': Invalid latch input.
+	The label "XXX" is an invalid latch input.
+.569
+E2267
+E2267: `XXX' must be declared as a #$NODE label.
+	The label "XXX" must be declared as a #$NODE label because it has been
+	assigned a buried node number.
+.570
+W2268
+W2268: PLA term ## is absent from JEDEC fuse map.
+	This is an internal error.  The PLA term ## has not been written into
+	the JEDEC fuse map for some reason.  Please contact your National
+	representative.
+.571
+E2269
+E2269: XXX: Invalid or unsupported extension.
+	The label "XXX" has an invalid or unsupported extension for MAPL2
+	devices.
+.572
+E2270
+E2270: Duplicate .ilb label `XXX'.
+	There are two or more occurrences of the label "XXX" in the .ilb
+	statement.
+.573
+E2271
+E2271: XXX: Invalid PAL extension.
+	The label "XXX" has an invalid extension for a PAL output.
+.574
+E2272
+E2272: XXX: Invalid FPLA extension.
+	The label "XXX" has an invalid extension for a FPLA output.
+.575
+E2273
+E2273: Mismatched extensions .E1 and .E2 for label `XXX'.
+	The extensions .E1 and .E2 for the label "XXX" do not match.
+	This could be due to conflicting register types or more than one
+	reset or preset defined.
+.576
+E2274
+E2274: XXX: Invalid combinatorial output for FPLA array.
+	The label "XXX" is a combinatorial output that is assigned to the
+	FPLA array.  However, there are no combinatorial outputs available
+	in the FPLA array.
+.577
+E2275
+E2275: Out of product terms for `XXX'.
+	This message appears when all the product terms for a particular PAL
+	output or the product terms for a particular page in the FPLA AND
+	array has been assigned.
+.578
+E2276
+E2276: Multiple feedback types declared for label `XXX'.
+	The current version of fitmapl2 allows only one feedback type (eg
+	.fb, .q, or .pin) to be declared for each label with feedback.
+.579
+E2277
+E2277: Pre-assigned pin # cannot be assigned to label `XXX'.
+	This message appears only if the ILMCs are used as registered or
+	double buffered inputs and the pre-assigned I/O pin does not match
+	the corresponding ILMC node.
+.580
+W2401
+W2401: No test conditions defined for label `XXX' in file `file_name'.
+	No test conditions were defined for the input label "XXX," so it
+	is assumed to be low for the entire simulation period.
+.581
+W2402
+W2402: Stimulus for label `XXX' is LOW for entire simulation period.
+	No test conditions were defined for the input label "XXX" so it was
+	set LOW for the entire simulation period.
+.582
+E2403
+E2403: Expecting a number after -p option.
+	A number specifying the period for each vector is required after
+	"-p" option on the command line.
+.583
+E2404
+E2404: Missing JEDEC filename on command line.
+	The input JEDEC filename is missing on the command line.  The default
+	extension is .jed.
+.584
+W2405
+W2405: Period specified with -p switch must be a multiple of 5.
+	The period that is specified with the "-p" switch must be a multiple
+	of 5.  If not, it will be rounded off to the nearest multiple of 5.
+.585
+W2406
+W2406: Period is rounded off to ##.
+	The period must be specified in multiples of 5.  If not, it will be
+	rounded off to the nearest multiple of 5.
+.586
+E2409
+E2409: Illegal input mode for GAL6001.
+	Refer to error 1802 for description.
+.587
+W2410
+W2410: Label `XXX' is always unknown (X) in file `XXX'.
+	Refer to warning 2612 for description.
+.588
+E2411
+E2411: Bus label `XXX' not found in JEDEC file `YYY'.
+	The label 'XXX' specified in a bus statement in the	vector file is
+	not found in the JEDEC file.
+.589
+E2412
+E2412: Device name not found in `XXX'.
+	Refer to error 3402 for description.
+.590
+E2601
+E2601: No test conditions defined for label `XXX' in file `file_name'.
+	No test conditions were defined for the input label "XXX," so it is
+	assumed to be low for the entire simulation period.
+.591
+E2602
+E2602: Stimulus for label `XXX' is LOW for entire simulation period.
+	No test conditions were defined for the input label "XXX" so it was
+	set LOW for the entire simulation period.
+.592
+E2603
+E2603: Expecting a number after -p option.
+	A number specifying the period for each vector is required after "-p"
+	option on the command line.
+.593
+E2604
+E2604: Missing input PLA filename on command line.
+	The input PLA filename is missing on the command line. The default
+	extension is .pla.
+.594
+W2605
+W2605: Period specified with -p switch must be a multiple of 5.
+	The period that is specified with the "-p" switch must be a multiple
+	of 5.  If not, it will be rounded off to the nearest multiple of 5.
+.595
+W2606
+W2606: Period is rounded off to ##.
+	The period must be specified in multiples of 5. If not, it will be
+	rounded off to the nearest multiple of 5.
+.596
+E2607
+E2607: Undefined clock for label `XXX'.
+	There is no clock defined for the label "XXX."  This type of signal
+	requires a clocked input.  A default clock can be specified for your
+	design with the output signal "global.c."
+.597
+E2608
+E2608: Multiple SET signals defined for label `XXX'.
+	There is more than one SET signal defined for the label "XXX."
+	This feature does not exist on any supported devices, so please check
+	your design.
+.598
+E2609
+E2609: Multiple RESET signals defined for label `XXX'.
+	There is more than one RESET signal defined for the label "XXX."
+	This feature does not exist on any supported devices, so please
+	check your design.
+.599
+E2610
+E2610: Mismatched dot extensions for label `XXX'.
+	There is a mismatch in the dot extensions defined for the label "XXX."
+	For example, you cannot use both ".D" and ".J" on the same label.
+.600
+E2611
+E2611: `XXX': Invalid or unsupported dot extension `ext'.
+	Invalid or unsupported dot extensions are found for the label "XXX."
+	Compare this with the list of valid dot extensions, and correct it
+	if necessary.
+.601
+W2612
+W2612: Label `LLL' is always unknown (X) in file `FFF'.
+	The label "LLL" is always unknown (X) in the vector file "FFF."
+	Since this provides no signal checking for that signal, not specifying
+	the signal as always unknown can detect errors in your design.
+.602
+E2613
+E2613: `XXX' must be a feedback label.
+	The label "XXX" which has a dot extension of .Q, .FB or .PIN is used as
+	an input only.  Only feedbacks are allowed to use the .Q, .FB or .PIN
+	extensions.
+.603
+E2801
+E2801: Missing LST filename on command line.
+	The input LST filename is missing on the command line.
+	The default extension is .lst.
+.604
+W2802
+W2802: V%04d: %s: Driving an enabled output.
+	An output with no tristate (ie always enabled) or an I/O with enable
+	tristate is being driven as an input.
+.605
+E2803
+E2803: Expecting a number after -p option.
+	Refer to error 2403 for description.
+.606
+W2804
+W2804: Incorrect number of vectors in file 'XXX'.
+	The number of vectors in the OPALsim output LST file does not match
+	the number of vectors in the vector file.
+.607
+W2805
+W2805: Period specified with -p switch must be a multiple of 5.
+	Refer to error 2405 for description.
+.608
+W2806
+W2806: Period is rounded off to ##.
+	Refer to error 2406 for description.
+.609
+E2807
+E2807: Incorrect number of probe signals in `XXX'.
+	The number of probe signals in the LST file 'XXX' does not match the
+	number of probe signals specified in the circuit file
+.610
+E3001
+E3001: Device name not found in file `XXX'.
+	The device name is not found in the JEDEC file "XXX."  You can
+	either specify the device name on the command line with the "-d"
+	option or edit the JEDEC file by placing the full device name at
+	the beginning of the file.
+.611
+E3002
+E3002: XXX: Not an XOR PAL device.
+	This device to be converted is not an XOR PAL.  Only XOR PALs are
+	supported by this program.
+.612
+E3003
+E3003: Illegal character `X' in UES string `XXX'.
+	The UES string specified with the "-u" option on the command line
+	must consists of alphanumeric characters only.
+.613
+E3004
+E3004: Missing PAL JEDEC filename on command line.
+	The program expected the PAL JEDEC filename to be specified on the
+	command line.  The default extension is ".jed."
+.614
+E3005
+E3005: Can convert to GAL20V8, GAL22V10, or GAL6001 only.
+	This module converts XOR PALs to either a GAL20V8, GAL22V10, or
+	GAL6001 only.  For other devices, manually run JED2EQN and EQN2JED.
+.615
+E3006
+E3006: Unable to convert the file `XXX'.
+	The PAL JEDEC file "XXX" cannot be converted to either a GAL20V8
+	or a GAL22V10.  The reason for this should be made clear by the
+	other error messages.
+.616
+I3007
+I3007: Module `XXX' is available in the full OPAL package only.
+	XOR2GAL utilizes many of the modules in the OPAL package for its
+	translation.  All of those modules must be accessable for XOR2GAL
+	to run.
+.617
+W3008
+W3008: Pins 1 and 13 were swapped to fit into the GAL6001.
+	Due to the multiple clock pins on the 6001, those pins may have to
+	be swapped when converting from an XOR device.
+.618
+W3009
+W3009: Pin-to-pin compatibility was not maintained for the GAL22V10.
+	Some designs converted from the XOR PALs into a GAL22V10 may have
+	to have some of its output pins swapped to fit it into the device.
+	For the reasons behind this, examine the GAL22V10 architecture.
+.619
+E3200
+E3200: To minimize MAPL designs, use "OPL2PLA -A MAPL" and "FITMAPL -M".
+	PLAmin cannot minimize designs intended for the MAPL device.  Use
+	the mentioned set of commands to minimize the design.
+.620
+W3201
+W3201: Could not determine architecture type -- using PAL.
+	The device type is unknown since it was not specified on the command
+	line and could not be found in the input file.  In addition, the
+	architecture type was not specified on the command line.  PLAmin
+	will minimize the design with the default PAL architecture.
+.621
+W3202
+W3202: Could not determine product term polarity type -- using FIXED.
+	The device type is unknown since it was not specified on the
+	command line and could not be found in the input file.  In addition,
+	the product term polarity type was not specified on the command line.
+	PLAmin will minimize the design with the default FIXED product term
+	polarity.
+.622
+E3401
+E3401: Missing JEDEC filename on command line.
+	The input JEDEC filename is missing on the command line.
+	The default extension is .eqn.
+.623
+E3402
+E3402: Device name not found in file `XXX'.
+	The device name was not found in the JEDEC file "XXX." You can
+	either specify the device name on the command line with the "-d"
+	option or edit the JEDEC file by placing the device name at the
+	beginning of the file.
+
+.End

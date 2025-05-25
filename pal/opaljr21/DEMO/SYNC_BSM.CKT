@@ -1,0 +1,74 @@
+$ sync_bsm
+$ JED2CKT -- JEDEC File to OPALsim Circuit/Macro Translator (Version V055)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from sync_bsm.jed. Date: 3-24-92
+$ DEVICE MAPL128
+$ PERIOD 20
+
+.LIB sync_bsm.mac
+
+* U1 sync_bsm 2 clock cpu_addr_hit local_bus_free local_bg cpu_clr
++ cpu_go local_addr_oen bus_addr_ien bus_error bus_lock bus_end_tr
++ cpu_int local_br GND local_bgack local_as load_packet_count
++ bus_br bus_bgack bus_as local_addr_ien bus_addr_oen dma_error
++ bus_bg bus_addr_hit xfer_count_zero packet_count_zero VCC
+
+clock CLK 0 4 600 = LLLHL
+cpu_addr_hit INPUT 0 20 = L
+cpu_addr_hit INPUT 160 20 = H
+cpu_addr_hit INPUT 280 20 = L
+local_bus_free INPUT 0 20 = L
+local_bus_free INPUT 40 20 = LH
+local_bus_free INPUT 340 20 = H
+local_bus_free INPUT 440 20 = H
+local_bus_free INPUT 540 20 = H
+local_bg INPUT 0 20 = L
+local_bg INPUT 60 20 = H
+local_bg INPUT 340 20 = H
+local_bg INPUT 440 20 = H
+local_bg INPUT 540 20 = H
+cpu_clr INPUT 0 20 = L
+cpu_clr INPUT 500 20 = H
+cpu_clr INPUT 600 20 = H
+cpu_go INPUT 0 20 = L
+cpu_go INPUT 300 20 = H
+cpu_go INPUT 500 20 = H
+cpu_go INPUT 600 20 = L
+bus_error INPUT 0 20 = L
+bus_error INPUT 380 20 = L
+bus_error INPUT 480 20 = L
+bus_error INPUT 580 20 = H
+bus_lock INPUT 0 20 = L
+bus_lock INPUT 100 20 = HHL
+bus_lock INPUT 240 20 = LHL
+bus_end_tr INPUT 0 20 = L
+bus_end_tr INPUT 100 20 = H
+bus_end_tr INPUT 240 20 = LH
+bus_end_tr INPUT 380 20 = H
+bus_end_tr INPUT 480 20 = H
+bus_end_tr INPUT 580 20 = H
+bus_bg INPUT 0 20 = L
+bus_bg INPUT 180 20 = LH
+bus_bg INPUT 320 20 = H
+bus_bg INPUT 420 20 = H
+bus_bg INPUT 520 20 = H
+bus_addr_hit INPUT 0 20 = LH
+bus_addr_hit INPUT 120 20 = LL
+xfer_count_zero INPUT 0 20 = L
+xfer_count_zero INPUT 380 20 = L
+xfer_count_zero INPUT 480 20 = H
+packet_count_zero INPUT 0 20 = L
+packet_count_zero INPUT 380 20 = H
+packet_count_zero INPUT 480 20 = H
+
+.BUS page ps2*U1 ps1*U1 ps0*U1
+
+.PROBE page clock cpu_addr_hit local_bus_free local_bg cpu_clr
++ cpu_go bus_error bus_lock bus_end_tr bus_bg bus_addr_hit xfer_count_zero
++ packet_count_zero cpu_int local_br local_bgack local_as bus_addr_ien
++ local_addr_oen load_packet_count bus_br bus_bgack bus_as local_addr_ien
++ bus_addr_oen dma_error
+
+.TIME 619
+
+.END

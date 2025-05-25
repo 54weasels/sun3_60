@@ -1,0 +1,25 @@
+; JED2EQN -- JEDEC file to Boolean Equations disassembler (Version V063)
+; Copyright (c) National Semiconductor Corporation 1990-1993
+; Disassembled from 1590-01.jed. Date: 3-25-120
+
+chip 1590-01 PAL16L8
+
+i1=1 i2=2 i3=3 i5=5 i8=8 i9=9 GND=10 i11=11 o12=12 f13=13 o16=16 
+f17=17 f18=18 VCC=20 
+
+equations
+
+/f18 = /i2 * /i1 * /i3
+f18.oe = /i2 * /i1 * /i3
+/f17 = /i2 * /i1 * /i3
+f17.oe = /i2 * /i1 * /i3
+/o16 = /f18
+    + /f17
+    + /i2 * /i1 * /i3
+o16.oe = /i5
+/f13 = /f13 * i11
+    + /i8 * i11
+f13.oe = /i5
+/o12 = /i8 * /f13
+    + f13 * /i9
+o12.oe = /i5

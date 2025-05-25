@@ -1,0 +1,69 @@
+
+DLsim Logic Circuit Analysis (Version 3.02)
+Copyright (c) 1990 CADsim Technologies. All rights reserved.
+
+Memory     = 302312
+Signals    = 103         Externals  = 3           Elements   = 107   
+Probes     = 9           Buses      = 1           Macros     = 1     
+Sim length = 299         Step time  = 1           Samples    = 31    
+
+
+    $ decode3                                                             
+
+    A C   A N A L Y S I S 
+
+
+                ////////%
+                OOOOOOOOD
+                01234567E
+                        C
+                        O
+                        D
+                        E
+                        _
+                        I
+                        N
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+                         
+      TIME
+         0      ZZZZZZZZ0
+         2      100000000
+        20      100000001
+        22      010000001
+        40      010000002
+        42      001000002
+        60      001000003
+        62      000100003
+        80      000100004
+        82      000010004
+       100      000010005
+       102      000001005
+       120      000001006
+       122      000000106
+       140      000000107
+       142      000000017
+       160      000000016
+       162      000000106
+       180      000000105
+       182      000001005
+       200      000001004
+       202      000010004
+       220      000010003
+       222      000100003
+       240      000100002
+       242      001000002
+       260      001000001
+       262      010000001
+       280      010000000
+       282      100000000
+       299      100000000
+ 
+Simulation Completed Normally.

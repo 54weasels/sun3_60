@@ -1,0 +1,37 @@
+$ sodavend
+$ PLA2CKT -- PLA File to OPALsim Circuit/Macro Translator (V019)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from sodavend.pl1. Date: 3-20-92
+$ PERIOD 20
+
+.LIB sodavend.mac
+
+* U1 sodavend 2 clk1 clk rst sel_soda ret_coins dime_i quarter_i
++ nickel_i overflow enough dime quarter nickel coins clear o4
++ o3 o2 o1 o0 sb3 sb2 sb1 sb0 pgbit~00 pgbit~01 pgbit~02 ret_quarter
++ ret_dime ret_nickel give_soda errorlight
+
+clk1 CLK 0 4 = LLLHL
+clk CLK 0 4 1960 = LLLHL
+rst INPUT 0 20 = HLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+sel_soda INPUT 0 20 = L
+sel_soda INPUT 800 20 = HLLLLLLHLLLLLLLLLLLLLHLLLLLLLLLL
+ret_coins INPUT 0 20 = LLLLLLLLLLLLLLLLHLLLLLLLLLLLLLLL
+dime_i INPUT 0 20 = LLHLLLLLLLLLLLLLLLLLLLLLHLLLLLLL
+dime_i INPUT 1280 20 = HLLLLLLLLLLLLLLLLLLLHLLLLLLLLLLL
+quarter_i INPUT 0 20 = LLLLLLLLLLHLLLLLLLLLLLLLLLLLHLLL
+quarter_i INPUT 720 20 = HLLLLLLHLLLLLHLLLHLLLLLLLLLLLLLL
+quarter_i INPUT 1360 20 = HLLLHLLLHLLLHLLLLLLLLLLLLLHLLLL
+nickel_i INPUT 0 20 = LLLLLLHLLLLLLLLLLLLLLLLLLLLLLLLL
+nickel_i INPUT 640 20 = HLLLLLLLLLLLLLLLLLLLLLLLLHLLLLLL
+nickel_i INPUT 1780 20 = HLLLLLLLLL
+
+.BUS cnt o4 o3 o2 o1 o0
+
+.PROBE clk rst nickel_i nickel dime_i dime quarter_i quarter coins
++ cnt ret_coins sel_soda overflow enough clear ret_quarter ret_dime
++ ret_nickel give_soda errorlight
+
+.TIME 1979
+
+.END

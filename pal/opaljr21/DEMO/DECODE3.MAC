@@ -1,0 +1,93 @@
+$ decode3
+$ JED2CKT -- JEDEC File to OPALsim Circuit/Macro Translator (Version V055)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from decode3.jed. Date: 3-20-92
+$ DEVICE PAL16L8
+
+.MACRO decode3 dly p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13
++ p14 p15 p16 p17 p18 p19 p20
+
+np2 INV 0 p2
+np3 INV 0 p3
+np4 INV 0 p4
+a0 AND 0 VCC
+a1 AND 0 np2 np3 np4
+a2 AND 0 np2 np3 p4
+a3 AND 0 np2 p3 np4
+a4 AND 0 np2 p3 p4
+a5 AND 0 p2 np3 np4
+a6 AND 0 p2 np3 p4
+a7 AND 0 p2 p3 np4
+a8 AND 0 VCC
+a9 AND 0 np2 np3 np4
+a10 AND 0 np2 np3 p4
+a11 AND 0 np2 p3 np4
+a12 AND 0 np2 p3 p4
+a13 AND 0 p2 np3 np4
+a14 AND 0 p2 np3 p4
+a15 AND 0 p2 p3 p4
+a16 AND 0 VCC
+a17 AND 0 np2 np3 np4
+a18 AND 0 np2 np3 p4
+a19 AND 0 np2 p3 np4
+a20 AND 0 np2 p3 p4
+a21 AND 0 p2 np3 np4
+a22 AND 0 p2 p3 np4
+a23 AND 0 p2 p3 p4
+a24 AND 0 VCC
+a25 AND 0 np2 np3 np4
+a26 AND 0 np2 np3 p4
+a27 AND 0 np2 p3 np4
+a28 AND 0 np2 p3 p4
+a29 AND 0 p2 np3 p4
+a30 AND 0 p2 p3 np4
+a31 AND 0 p2 p3 p4
+a32 AND 0 VCC
+a33 AND 0 np2 np3 np4
+a34 AND 0 np2 np3 p4
+a35 AND 0 np2 p3 np4
+a36 AND 0 p2 np3 np4
+a37 AND 0 p2 np3 p4
+a38 AND 0 p2 p3 np4
+a39 AND 0 p2 p3 p4
+a40 AND 0 VCC
+a41 AND 0 np2 np3 np4
+a42 AND 0 np2 np3 p4
+a43 AND 0 np2 p3 p4
+a44 AND 0 p2 np3 np4
+a45 AND 0 p2 np3 p4
+a46 AND 0 p2 p3 np4
+a47 AND 0 p2 p3 p4
+a48 AND 0 VCC
+a49 AND 0 np2 np3 np4
+a50 AND 0 np2 p3 np4
+a51 AND 0 np2 p3 p4
+a52 AND 0 p2 np3 np4
+a53 AND 0 p2 np3 p4
+a54 AND 0 p2 p3 np4
+a55 AND 0 p2 p3 p4
+a56 AND 0 VCC
+a57 AND 0 np2 np3 p4
+a58 AND 0 np2 p3 np4
+a59 AND 0 np2 p3 p4
+a60 AND 0 p2 np3 np4
+a61 AND 0 p2 np3 p4
+a62 AND 0 p2 p3 np4
+a63 AND 0 p2 p3 p4
+or19 OR 0 a1 a2 a3 a4 a5 a6 a7
+p19 TINV dly a0 or19
+or18 OR 0 a9 a10 a11 a12 a13 a14 a15
+p18 TINV dly a8 or18
+or17 OR 0 a17 a18 a19 a20 a21 a22 a23
+p17 TINV dly a16 or17
+or16 OR 0 a25 a26 a27 a28 a29 a30 a31
+p16 TINV dly a24 or16
+or15 OR 0 a33 a34 a35 a36 a37 a38 a39
+p15 TINV dly a32 or15
+or14 OR 0 a41 a42 a43 a44 a45 a46 a47
+p14 TINV dly a40 or14
+or13 OR 0 a49 a50 a51 a52 a53 a54 a55
+p13 TINV dly a48 or13
+or12 OR 0 a57 a58 a59 a60 a61 a62 a63
+p12 TINV dly a56 or12
+.EOM

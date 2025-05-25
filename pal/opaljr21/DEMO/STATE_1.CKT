@@ -1,0 +1,23 @@
+$ state_1
+$ JED2CKT -- JEDEC File to OPALsim Circuit/Macro Translator (Version V055)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from state_1.jed. Date: 3-20-92
+$ DEVICE GAL16V8
+$ PERIOD 20
+
+.LIB state_1.mac
+
+* U1 state_1 2 clk reset nc nc nc nc nc nc nc GND /oe nc nc reg_hold
++ sb1 sb2 sb3 sb4 nc VCC
+
+clk CLK 0 4 760 = LLLHL
+reset INPUT 0 20 = LHLLLLLLLLLLLLLHLLLLLLLLLLLLLLLL
+/oe INPUT 0 20 = HLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+
+.BUS in_state sb1 sb2 sb3 sb4
+
+.PROBE clk reset /oe reg_hold in_state
+
+.TIME 779
+
+.END

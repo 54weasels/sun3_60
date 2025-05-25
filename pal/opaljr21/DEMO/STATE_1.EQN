@@ -1,0 +1,51 @@
+A state machine design using G16V8 with register default set to HOLD.
+Copyright National Semiconductor Corp, 1992.
+
+;Translated from NSC formatted PLA file.
+
+CHIP  state_1 16V8
+
+ clk=1 reset=2 /oe=11 reg_hold=14 sb1=15
+ sb2=16 sb3=17 sb4=18
+
+EQUATIONS
+
+sb1 := /reset * sb1 * /sb2 * /sb3 * /sb4
+      + /reset * /sb1 * sb2 * sb3 * sb4
+
+sb2 := /reset * /sb1 * /sb2 * sb3 * sb4
+      + /reset * /sb1 * sb2 * /sb4
+      + /reset * /sb1 * sb2 * /sb3
+
+sb3 := /reset * /sb1 * sb3 * /sb4
+      + /reset * /sb1 * /sb3 * sb4
+
+sb4 := /reset * /sb2 * /sb3 * /sb4
+      + /reset * /sb1 * /sb4
+
+reg_hold := reg_hold * /sb3
+      + reg_hold * sb1
+      + reg_hold * sb2
+      + reg_hold * sb4
+      + /reset * /sb1 * sb2 * sb3 * sb4
+      + reset * reg_hold
+
+reg_hold.C = clk
+
+sb4.C = clk
+
+sb3.C = clk
+
+sb2.C = clk
+
+sb1.C = clk
+
+reg_hold.OE = oe
+
+sb4.OE = oe
+
+sb3.OE = oe
+
+sb2.OE = oe
+
+sb1.OE = oe

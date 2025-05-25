@@ -1,0 +1,47 @@
+; JED2EQN -- JEDEC file to Boolean Equations disassembler (Version V063)
+; Copyright (c) National Semiconductor Corporation 1990-1993
+; Disassembled from 1583-02.jed. Date: 3-25-120
+
+chip 1583-02 PAL20L8
+
+i1=1 i2=2 i3=3 i4=4 i5=5 i6=6 i7=7 i8=8 i9=9 i10=10 i11=11 GND=12 
+i13=13 i14=14 o15=15 o16=16 o17=17 o18=18 f19=19 o20=20 o21=21 
+o22=22 VCC=24 
+
+equations
+
+/o22 = /i7 * i9 * /i10
+    + /i2 * /i3 * /i4 * i5 * /i6 * /i7 * i9
+o22.oe = /i13
+/o21 = /i7 * i9 * /i11
+    + /i7 * i9 * /i10
+    + /i5 * /i6 * /i7 * i9
+    + /i2 * /i3 * /i4 * i5 * /i6 * /i7 * i9
+    + /i2 * i3 * i4 * i5 * /i6 * /i7 * i9
+o21.oe = /i13
+/o20 = /i8 * /i11
+    + /i10 * /i14
+    + /i4 * /i5 * /i6 * /i8
+    + /i3 * i4 * /i5 * /i6 * /i8
+    + /i2 * /i3 * /i4 * i5 * /i6 * /i14
+o20.oe = /f19
+/f19 = /i8 * /i11
+    + /i10 * /i14
+    + /i4 * /i5 * /i6 * /i8
+    + /i3 * i4 * /i5 * /i6 * /i8
+    + /i2 * /i3 * /i4 * i5 * /i6 * /i14
+f19.oe = vcc
+/o18 = /i1
+    + /i2 * /i3 * /i4 * /i5 * /i6 * /i7 * i8 * i9
+o18.oe = /i13
+/o17 = /i1
+    + /i2 * /i3 * /i4 * /i5 * /i6 * /i7 * i8 * /i9
+o17.oe = /i13
+/o16 = /i1
+    + /i7 * i8 * i9 * /i11
+    + i2 * /i3 * /i4 * /i5 * /i6 * /i7 * i8 * i9
+o16.oe = /i13
+/o15 = /i1
+    + /i7 * i8 * /i9 * /i11
+    + i2 * /i3 * /i4 * /i5 * /i6 * /i7 * i8 * /i9
+o15.oe = /i13

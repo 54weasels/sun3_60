@@ -1,0 +1,259 @@
+begin header
+
+  Synchronous Bus Control State Machine - Dave Hawley
+  Copyright National Semiconductor Corp, 1992.
+  An example using MAPL128 ;
+
+end header
+
+
+begin definition
+
+ 
+
+device  mapl128 ;
+inputs
+	clock,cpu_go, cpu_clr, local_bg, local_bus_free, cpu_addr_hit,
+	packet_count_zero, xfer_count_zero, bus_addr_hit,
+        bus_bg, bus_end_tr, bus_lock, bus_error;
+
+outputs
+        cpu_int, local_br, local_bgack, local_as,
+        bus_addr_ien, local_addr_oen, load_packet_count,
+        bus_br, bus_bgack, bus_as,
+        local_addr_ien, bus_addr_oen, dma_error;
+
+end definition
+
+
+begin equation
+global.c = clock;
+end equation
+
+
+begin state_diagram
+ 
+state idle :
+  if bus_addr_hit then s_request
+    with local_br := 1;
+    endwith
+  else
+    if cpu_addr_hit then m_request
+      with bus_br := 1;
+      endwith
+    else
+      if cpu_go then d_bus_req
+        with bus_br := 1;
+        endwith
+      else idle;
+ 
+ 
+state s_request :
+  if local_bg * local_bus_free then s_access
+    with local_bgack := 1;
+         local_br := 0;
+    endwith
+  else s_request
+    with local_br := 1;
+    endwith;
+ 
+state s_access :
+  goto s_transfer
+    with local_bgack := 1;
+         bus_addr_ien := 1;
+         local_as := 1;
+    endwith;
+ 
+state s_transfer :
+  case bus_end_tr * /bus_lock : idle;
+       bus_end_tr * bus_lock : s_locked
+         with local_bgack := 1;
+         endwith;
+       /bus_end_tr : s_transfer
+         with local_bgack := 1;
+              bus_addr_ien := 0;
+              local_as := 1;
+         endwith;
+  endcase;
+ 
+state s_locked :
+  case bus_addr_hit : s_access
+         with local_bgack := 1;
+         endwith;
+       /bus_addr_hit * /bus_lock : idle;
+       /bus_addr_hit * bus_lock : s_locked
+         with local_bgack := 1;
+         endwith;
+  endcase;
+ 
+ 
+state m_request :
+  if bus_bg then m_access
+    with bus_bgack := 1;
+         bus_br := 0;
+    endwith
+  else m_request
+    with bus_br := 1;
+    endwith;
+ 
+state m_access :
+  goto m_transfer
+    with bus_bgack := 1;
+         local_addr_ien := 1;
+         bus_as := 1;
+    endwith;
+ 
+state m_transfer :
+  case bus_end_tr * /bus_lock : idle;
+       bus_end_tr * bus_lock : m_locked
+         with bus_bgack := 1;
+         endwith;
+       /bus_end_tr : m_transfer
+         with bus_bgack := 1;
+              local_addr_ien := 0;
+              bus_as := 1;
+         endwith;
+  endcase;
+ 
+state m_locked :
+  case cpu_addr_hit : s_access
+         with bus_bgack := 1;
+         endwith;
+       /cpu_addr_hit * /bus_lock : idle;
+       /cpu_addr_hit * bus_lock : s_locked
+         with bus_bgack := 1;
+         endwith;
+  endcase;
+ 
+ 
+state d_bus_req :
+  if bus_bg then d_local_req
+    with bus_bgack := 1;
+         bus_br := 0;
+         local_br := 1;
+    endwith
+  else d_bus_req
+    with bus_br := 1;
+    endwith;
+ 
+state d_local_req :
+  if local_bg * local_bus_free then d_access
+    with bus_bgack := 1;
+         local_bgack := 1;
+         local_br := 0;
+    endwith
+  else d_local_req
+    with bus_bgack := 1;
+         local_br := 1;
+    endwith;
+ 
+state d_access :
+  goto d_transfer
+    with bus_bgack := 1;
+         local_bgack := 1;
+         bus_addr_oen := 1;
+         local_addr_oen := 1;
+         bus_as := 1;
+         local_as := 1;
+    endwith;
+ 
+state d_transfer :
+  case bus_end_tr * /bus_error * /packet_count_zero * /xfer_count_zero :
+       d_bus_req
+         with bus_br := 1;
+         endwith;
+       bus_end_tr * /bus_error * packet_count_zero * /xfer_count_zero :
+       d_next_packet
+         with load_packet_count := 1;
+         endwith;
+       bus_end_tr * /bus_error * packet_count_zero * xfer_count_zero :
+       d_end_dma
+         with cpu_int := 1;
+         endwith;
+       bus_end_tr * /bus_error * /packet_count_zero * xfer_count_zero :
+       d_end_dma
+         with cpu_int := 1;
+              dma_error := 1;
+         endwith;
+       bus_end_tr * bus_error : d_end_dma
+         with cpu_int := 1;
+              dma_error := 1;
+         endwith;
+       /bus_end_tr : d_transfer
+         with bus_bgack := 1;
+              local_bgack := 1;
+              bus_addr_oen := 0;
+              local_addr_oen := 0;
+              bus_as := 1;
+              local_as := 1;
+         endwith;
+  endcase;
+ 
+state d_next_packet :
+  goto d_bus_req
+    with load_packet_count := 0;
+         bus_br := 1;
+    endwith;
+ 
+state d_end_dma :
+  case cpu_clr * /cpu_go : idle;
+       cpu_clr * cpu_go : d_bus_req
+         with bus_br := 1;
+         endwith;
+       /cpu_clr * cpu_go : d_end_dma
+         with cpu_int := 1;
+              dma_error := 1;
+         endwith;
+       /cpu_clr * /cpu_go : d_end_dma
+         with cpu_int := 1;
+         endwith;
+  endcase;
+  
+end state_diagram
+
+
+begin vector
+clock,cpu_addr_hit,local_bus_free,local_bg,cpu_clr,cpu_go,bus_error,bus_lock,
+bus_end_tr,bus_bg,bus_addr_hit,xfer_count_zero,packet_count_zero,
+cpu_int,local_br,local_bgack,local_as,bus_addr_ien,local_addr_oen,
+load_packet_count,bus_br,bus_bgack,bus_as,local_addr_ien,bus_addr_oen,
+dma_error;
+
+c000000000000  LLLLLLLLLLLLL   
+cxxxxxxxxx1xx  LHLLLLLLLLLLL   
+cx0xxxxxxxxxx  LHLLLLLLLLLLL   
+cx11xxxxxxxxx  LLHLLLLLLLLLL   
+cxxxxxxxxxxxx  LLHHHLLLLLLLL   
+cxxxxxx11xxxx  LLHLLLLLLLLLL   
+cxxxxxx1xx0xx  LLHLLLLLLLLLL   
+cxxxxxx0xx0xx  LLLLLLLLLLLLL   
+
+c1xxxxxxxxxxx  LLLLLLLHLLLLL   
+cxxxxxxxx0xxx  LLLLLLLHLLLLL   
+cxxxxxxxx1xxx  LLLLLLLLHLLLL   
+cxxxxxxxxxxxx  LLLLLLLLHHHLL   
+cxxxxxx00xxxx  LLLLLLLLHHLLL   
+cxxxxxx11xxxx  LLLLLLLLHLLLL   
+c0xxxxx0xxxxx  LLLLLLLLLLLLL   
+
+cxxxx1xxxxxxx  LLLLLLLHLLLLL   
+cxxxxxxxx1xxx  LHLLLLLLHLLLL   
+cx11xxxxxxxxx  LLHLLLLLHLLLL   
+cxxxxxxxxxxxx  LLHHLHLLHHLHL   
+cxxxxx0x1xx01  LLLLLLHLLLLLL   
+cxxxxxxxxxxxx  LLLLLLLHLLLLL   
+cxxxxxxxx1xxx  LHLLLLLLHLLLL   
+cx11xxxxxxxxx  LLHLLLLLHLLLL   
+cxxxxxxxxxxxx  LLHHLHLLHHLHL   
+cxxxxx0x1xx11  HLLLLLLLLLLLL   
+cxxx11xxxxxxx  LLLLLLLHLLLLL   
+
+cxxxxxxxx1xxx  LHLLLLLLHLLLL   
+cx11xxxxxxxxx  LLHLLLLLHLLLL   
+cxxxxxxxxxxxx  LLHHLHLLHHLHL   
+cxxxxx1x1xxxx  HLLLLLLLLLLLH   
+cxxx10xxxxxxx  LLLLLLLLLLLLL   
+
+end vector
+
+

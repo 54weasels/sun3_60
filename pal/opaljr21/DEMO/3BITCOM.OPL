@@ -1,0 +1,54 @@
+begin header
+  A 3-bit comparator design using relational operation.
+  Copyright National Semiconductor Corp, 1992.
+  The loop capability for test vector is also illustrated in this example
+end header
+
+begin definition
+ device gal16v8;         { Select the device to be Gal16V8      }
+ input a[0:2]=[3:1],     { Assign a0,a1,a2 to pin 3, 2 and 1    }
+       compare=5,	 { Assign comparee to pin 5             }
+       b[2:0]=[7:9];	 { Assign b0,b1,b2 to pin 7, 8 and 9    }
+ output (com) lt=13,     { Assign lt ( less than ) to pin 13    }        
+              eq=15,	 { Assign eq ( equal ) to pin 15        }        
+              gt=17;	 { Assign gt ( greater than ) to pin 17 }        
+ set seta=a[2:0],        { Assign set label seta and setb to    }
+     setb=b[2:0];	 { a[2:0] and b[2:0]                    }
+end definition
+
+begin equation
+
+ eq = ( seta == setb ) * compare ;
+ gt = ( seta >  setb ) * compare ;
+ lt = ( seta <  setb ) * compare ;
+
+end equation
+
+begin vector
+{ Deifne the order of simulus for vectors }
+compare,seta,setb; 
+{ Signals below are not included in the vector, but will be observed at
+  view time, and will also be included during checksim }
+PROBE lt,eq,gt ;           
+
+1 000 000    { check signal 'eq'      }
+0 000 000    { disable the compare    }
+
+1 111 110    { check signal 'gt'      }
+0 111 110    { disable the compare    }
+
+1 011 100    { check signal 'lt'      }
+0 011 100    { disable the compare    }
+
+{ Perform an exhaustive test. 'seta' will run from 0 to 7 and 'setb' will
+  also run from 0 to 7 for each value of 'seta'. The character 'I' in the 
+  loop is to indicate dummy input stimulus, which will be replaced by 
+  value of 'seta' and 'setb' during simulation }
+
+LOOP 8 ( seta=0 )
+LOOP 8 ( setb=0 )
+1 III III   
+END
+END
+
+end vector

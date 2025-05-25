@@ -1,0 +1,40 @@
+$ sodavend
+$ JED2CKT -- JEDEC File to OPALsim Circuit/Macro Translator (Version V055)
+$ Copyright (c) National Semiconductor Corporation 1990,1991
+$ Translated from sodavend.jed. Date: 3-20-92
+$ DEVICE MAPL244
+$ PERIOD 20
+
+.LIB sodavend.mac
+
+* U1 sodavend 2 nc nc nc rst coins quarter dime GND GND clk sel_soda
++ nickel enough overflow VCC VCC PCLK ret_nickel give_soda errorlight
++ nc ret_coins dime_i quarter_i nickel_i clear o4 o3 o2 GND GND
++ o1 o0 sb3 sb2 sb1 VCC VCC ICLK sb0 ret_quarter /OE ret_dime
++ nc
+
+clk CLK 0 4 1960 = LLLHL
+rst INPUT 0 20 = HLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+sel_soda INPUT 0 20 = L
+sel_soda INPUT 800 20 = HLLLLLLHLLLLLLLLLLLLLHLLLLLLLLLL
+ret_coins INPUT 0 20 = LLLLLLLLLLLLLLLLHLLLLLLLLLLLLLLL
+dime_i INPUT 0 20 = LLHLLLLLLLLLLLLLLLLLLLLLHLLLLLLL
+dime_i INPUT 1280 20 = HLLLLLLLLLLLLLLLLLLLHLLLLLLLLLLL
+quarter_i INPUT 0 20 = LLLLLLLLLLHLLLLLLLLLLLLLLLLLHLLL
+quarter_i INPUT 720 20 = HLLLLLLHLLLLLHLLLHLLLLLLLLLLLLLL
+quarter_i INPUT 1360 20 = HLLLHLLLHLLLHLLLLLLLLLLLLLHLLLL
+nickel_i INPUT 0 20 = LLLLLLHLLLLLLLLLLLLLLLLLLLLLLLLL
+nickel_i INPUT 640 20 = HLLLLLLLLLLLLLLLLLLLLLLLLHLLLLLL
+nickel_i INPUT 1780 20 = HLLLLLLLLL
+
+.BUS page ps2*U1 ps1*U1 ps0*U1
+
+.BUS cnt o4 o3 o2 o1 o0
+
+.PROBE page clk rst nickel_i nickel dime_i dime quarter_i quarter
++ coins cnt ret_coins sel_soda overflow enough clear ret_quarter
++ ret_dime ret_nickel give_soda errorlight
+
+.TIME 1979
+
+.END

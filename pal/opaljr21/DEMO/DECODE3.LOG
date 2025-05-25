@@ -1,0 +1,101 @@
+
+OPL2PLA - OPAL design entry compiler V016
+Copyright (c) National Semiconductor Corporation 1991,1992
+
+
+Input Pins
+==========
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+a15                  2          com      visible              
+a14                  3          com      visible              
+a13                  4          com      visible              
+
+Output Pins
+===========
+Pin name         pin number     arch     visible   default
+--------         ----------     ----     -------   -------
+/o0                  12         com      visible      rst     
+/o1                  13         com      visible      rst     
+/o2                  14         com      visible      rst     
+/o3                  15         com      visible      rst     
+/o4                  16         com      visible      rst     
+/o5                  17         com      visible      rst     
+/o6                  18         com      visible      rst     
+/o7                  19         com      visible      rst     
+
+set notations
+=============
+DECODE_IN       = [a15,a14,a13]
+
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Document file for decode3.eqn
+Device: 16L8
+
+Pin   Label               Type
+---   -----               ----
+2     a15                 pos,com input
+3     a14                 pos,com input
+4     a13                 pos,com input
+12    /o0                 neg,com output
+13    /o1                 neg,com output
+14    /o2                 neg,com output
+15    /o3                 neg,com output
+16    /o4                 neg,com output
+17    /o5                 neg,com output
+18    /o6                 neg,com output
+19    /o7                 neg,com output
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+Device Utilization:
+
+No of dedicated inputs used               :  3/10 (30.0%)
+No of dedicated outputs used              :  2/2  (100.0%)
+No of feedbacks used as dedicated outputs :  6/6  (100.0%)
+
+		------------------------------------------
+		Pin   Label                 Terms Usage
+		------------------------------------------
+		19    o7.oe                 1/1   (100.0%)
+		19    o7                    6/7   (85.7%)
+		18    o6.oe                 1/1   (100.0%)
+		18    o6                    6/7   (85.7%)
+		17    o5.oe                 1/1   (100.0%)
+		17    o5                    6/7   (85.7%)
+		16    o4.oe                 1/1   (100.0%)
+		16    o4                    6/7   (85.7%)
+		15    o3.oe                 1/1   (100.0%)
+		15    o3                    6/7   (85.7%)
+		14    o2.oe                 1/1   (100.0%)
+		14    o2                    6/7   (85.7%)
+		13    o1.oe                 1/1   (100.0%)
+		13    o1                    6/7   (85.7%)
+		12    o0.oe                 1/1   (100.0%)
+		12    o0                    6/7   (85.7%)
+		------------------------------------------
+		Total Terms                64/64  (100.0%)
+		------------------------------------------
+
+EQN2JED - Boolean Equations to JEDEC file assembler (Version V059)
+Copyright (c) National Semiconductor Corporation 1990,1991
+
+                            Chip diagram (DIP)
+
+                             ._____    _____.
+                             |     \__/     |
+                             |  1        20 | VCC
+                         a15 |  2        19 | /o7
+                         a14 |  3        18 | /o6
+                         a13 |  4        17 | /o5
+                             |  5        16 | /o4
+                             |  6        15 | /o3
+                             |  7        14 | /o2
+                             |  8        13 | /o1
+                             |  9        12 | /o0
+                         GND | 10        11 | 
+                             |______________|

@@ -1,0 +1,41 @@
+	OPALjr Example
+	Copyright National Semiconductor Corp, 1993.
+
+	16-TO-4 PRIORITY ENCODER
+
+CHIP 16_4_PRI GAL20V8
+
+D3  D4  D5  D6  D7  D8  D9  D10 D11 D12 D13 GND
+D14 D15 NC  ANY Y3  Y2  Y1  Y0  D0  D1  D2  VCC
+
+EQUATIONS
+
+ Y0 =  D15
+    + /D14* D13
+    + /D14*/D12* D11
+    + /D14*/D12*/D10* D9
+    + /D14*/D12*/D10*/D8* D7
+    + /D14*/D12*/D10*/D8*/D6* D5
+    + /D14*/D12*/D10*/D8*/D6*/D4* D3
+    + /D14*/D12*/D10*/D8*/D6*/D4*/D2* D1
+    
+ Y1 =  D15
+    +  D14
+    + /D13*/D12* D11
+    + /D13*/D12* D10
+    + /D13*/D12*/D9*/D8* D7
+    + /D13*/D12*/D9*/D8* D6
+    + /D13*/D12*/D9*/D8*/D5*/D4* D3
+    + /D13*/D12*/D9*/D8*/D5*/D4* D2
+
+ Y2 =  D15 + D14 + D13 + D12
+    + /D11*/D10*/D9*/D8* D7
+    + /D11*/D10*/D9*/D8* D6
+    + /D11*/D10*/D9*/D8* D5
+    + /D11*/D10*/D9*/D8* D4
+    
+/Y3 = /D15*/D14*/D13*/D12*/D11*/D10*/D9*/D8
+
+/ANY = /D15*/D14*/D13*/D12*/D11*/D10*/D9*/D8
+      */D7*/D6*/D5*/D4*/D3*/D2*/D1*/D0
+
