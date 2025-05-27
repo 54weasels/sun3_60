@@ -20,6 +20,7 @@ Current version is a 4-layer board - check the build/version log in the producti
 ## TODO
 - For the current board layout, at a high level
   - add more RAM - either moving to 4MB 30-pin SIMMs, or redesign around 72-pin SIMMs, or both
+  - replace a few unobtainium or exceedingly cumbersome components like the bipolar PROM for the idprom
 - Moving to a new layout, can add a lot more in
   - FPU
   - SCSI
