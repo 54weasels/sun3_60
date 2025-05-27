@@ -1,10 +1,12 @@
+![V1 board](../../images/V1_3_60_front.jpg)
+
 # Known problems with the current version
 ## CRITICAL issues
 If you do not fix these issues, the board will not work:
 - Fix RESET- on CPU is not connected to anything, needs to be patched with a jump wire
 - On the root schematic, SIMM C.S3- was connected to C.S3 on Memory. This requires breaking two traces and reconnecting to a different point.
 
-## Other workarounds
+## Other workarounds and non-critical bugs
 
 ### Keyboard/mouse
 The Keyboard/Mouse serial communication controller (SCC) is not installed. Without it, the DIAG self tests will pass but then system will lock up waiting at the extended tests prompt:
@@ -43,7 +45,12 @@ Neither of these options are really good, so there's a boot prom modification in
 The schematics call for U408 to be a hex inverting buffer for the serial port, but we need it to be straight through - this is happening because we didn't implement the whole RS232 level logic.
 Alternatively you can just leave out the buffer altogether and just hook up to U408 pin 1 for transmit, and pin 9 for receive - but you're losing some protection in doing that.
 
+### TOD
+The circuit for U303 32.768Khz clock for the TOD is very weird and should be replaced with a standard capacitor to ground model. Right now adding the variable capacitor in-line causes the TOD to not work/not interrupt anymore. Leaving it out means a much more speedy clock than normal.
+
 ## Bad placement/footprint
 - U402 oscillator for serial is more common as DIP16, you can easily make an adaptor or purchase the correct size
 - for the SIMM holder I purchased, the bottom mechanical support is too big for the hole
 - a few capacitor footprints are smaller than the part that needs to go in there.
+- Original S500 pulldown resistor for the differential signals is a 10-pin SIP 40.2 1% unobtainium deal. It's not even fully used at the moment since the coax section is deleted. This will be moved to discrete 40.2 ohm resistors as soon as possible.
+- 
