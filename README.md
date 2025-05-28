@@ -35,8 +35,7 @@ Current version is a 4-layer board - check the build/version log in the producti
 - Where is storage, and can we get some modern solution?
   - SCSI is next, but is quite big and will increase the board size by ~20%. SCSI-to-SD can be used easily. More fancy solutionsl like SCSI-to-SATA are not likely to happen.
 - Can we get rid of the PALs?
-  - All but one chip - U312 in DECODE which is a PAL8L14 can be found as GALs and burned with TL866. The PAL8L14 is a bit hard to find as well, but there are some solutions to replace it with either non-programmable components as described in [The 3/60 Adventure](http://john.ccac.rwth-aachen.de:8000/misc/sun3_60.html) or with two GALs as described in [GALs replace PAL](https://github.com/pdaderko/Arcadia/tree/main/GAL8L14). I've tried neither of those and ended up just programming PALs and GALs with a BP Microsystems 1200 programmer.
-  - One of the GALs U107 RESET is a PAL20X10A whose GAL variant doesn't exist in the TL866 list so it's rather hard to program.
+  - YES, see the note on the [PAL page](pal/Readme.md)
 - How about FPGAs?
   - Most likely not.
 - What's the deal with video?
