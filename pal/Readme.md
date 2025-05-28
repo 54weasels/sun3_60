@@ -9,6 +9,11 @@ If you don't, you can find GALs for most of the chips and burn them with commodi
 The PAL8L14A (1589-01) at U312 is very hard to find, see the main page README for alternatives.
 Similarly the GAL20XV10 alternative for the PAL20X10A (1595-01) at U107 is not burnable with mainstream programmers.
 
+## Note on availability
+All but one chip - U312 in DECODE which is a PAL8L14 can be found as GALs and generally burned with TL866. The PAL8L14 is a bit hard to find as well, but there are some solutions to replace it with either non-programmable components as described in [The 3/60 Adventure](http://john.ccac.rwth-aachen.de:8000/misc/sun3_60.html) or with two GALs as described in [GALs replace PAL](https://github.com/pdaderko/Arcadia/tree/main/GAL8L14). I've tried neither of those and ended up just programming PALs and GALs with a BP Microsystems 1200 programmer.
+
+U107 RESET is a PAL20X10A whose GAL variant doesn't exist in the TL866 list so it's rather hard to program.
+
 ## PAL mapping
 Some of the notes are missing as I'm incrementally building and validating. For the first version (without the SCSI and VIDEO), not all the chips listed below are needed. Sadly, the problematic ones above are.
 
